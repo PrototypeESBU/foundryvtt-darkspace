@@ -1,0 +1,69 @@
+@use "overrides";
+
+@font-face {
+	font-family: "Rocket-Rinder";
+	src: url("../fonts/rocket-rinder.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+.darkspace {
+    h1 {
+        font-family: "Rocket-Rinder";
+        color:black;
+        font-size: 36px;
+        i {
+            font-style: normal;   
+            font-size: 42px;
+        }
+    }
+
+    h2 {
+        font-family: "Rocket-Rinder";
+        font-size: 18px;
+    }
+
+    input {
+        background: none;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.05)
+        }
+    }
+
+    .larger {
+        font-size: 16px;
+    }
+
+    .DS-box {
+        border: 2px solid black;
+        padding: 8px;
+    }
+
+    .spacer-grid {
+        flex: 0px;
+        display: grid;
+        grid-template-columns: 270px 200px;
+        grid-column-gap: 8px;
+    }
+
+    .connector {
+        height: 0px;
+        width: 0px;
+        border: 1px solid black;
+        position: relative;
+        &.left {
+            width: 8px;
+            left: -15px;
+            top: 5px;
+        }
+        &.top {
+            height: 8px;
+            left: 50%;
+            top: -39px;
+        }
+    }
+
+
+}

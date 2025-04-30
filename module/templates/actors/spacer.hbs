@@ -1,0 +1,101 @@
+<form class="darkspace" autocomplete="off" style="padding:8px;display:flex;column-gap:8px;">
+    <div class="spacer-grid">
+        <!-- col 1 -->
+        <div class="grid-1-columns">
+            <div class="centered">
+                <h1><i>D</i>ark<i>S</i>pace</h1>
+                <h2 style="line-height:0px;margin-bottom:8px">Spacer</h2>
+            </div>
+            <div class="DS-box grid-2-columns">
+                {{> stats }}
+            </div>
+
+            <div class="DS-box grid-2-columns">
+                <div>{{> actors/player/abilities/hp }}</div>
+
+                {{> actors/player/abilities/ac }}
+
+                {{#> ui/sd-box header-label="Rep"}}
+                {{/ui/sd-box}}
+                
+                {{> actors/player/abilities/luck }}
+
+                {{> actors/player/details/level }}
+
+                {{> actors/player/details/xp }}
+            </div>
+
+        </div>
+        <!-- col 2 -->
+        <div class="grid-1-columns">
+            {{#> ui/sd-box header-label="Name"}}
+                <input
+				name="name"
+				type="text"
+				value="{{actor.name}}"
+				placeholder="Name"
+			    />
+            {{/ui/sd-box}}
+
+            {{#> ui/sd-box header-label="Archetype"}}
+                <div class="connector left"></div>
+                Archetype
+            {{/ui/sd-box}}
+
+            {{> actors/player/details/background }}
+
+            {{#> ui/sd-box header-label="Species"}}
+                <input
+				name="system.species"
+				type="text"
+				value="{{ system.species }}"
+				placeholder="Species Name"
+			    />
+            {{/ui/sd-box}}
+
+            {{#> ui/sd-box header-label="Motivation"}}
+                Motivation
+            {{/ui/sd-box}}
+
+            {{#> ui/sd-box header-label="Ship Name"}}
+                Ship Name
+            {{/ui/sd-box}}
+
+            {{#> ui/sd-box header-label="Ship Role"}}
+                Ship Role
+            {{/ui/sd-box}}
+        </div>
+    </div>
+    <!-- col 3 -->
+    <div class="flexcol" style="flex:2">
+        <nav class="SD-nav flex0" data-group="primary" style="margin:0px 0px 4px">
+
+            <a class="navigation-tab active" data-tab="tab-inventory">
+                Gear
+            </a>
+            <a class="navigation-tab" data-tab="tab-talents">
+                {{localize "SHADOWDARK.sheet.player.tab.talents"}}
+            </a>
+            <a class="navigation-tab" data-tab="tab-notes">
+                {{localize "SHADOWDARK.sheet.player.tab.notes"}}
+            </a>
+            <a class="navigation-tab" data-tab="tab-effects">
+                {{localize "SHADOWDARK.sheet.item.tab.effects"}}
+            </a>
+
+        </nav>
+        
+        <section class="SD-content-body flex1" style="padding:0px;border:2px solid black">
+            <section class="tab tab-inventory" data-group="primary" data-tab="tab-inventory">
+                {{> actors/player/inventory/equipped-gear }}
+                {{> actors/player/inventory/carried-gear }}
+                {{> actors/player/inventory/stashed-gear }}
+            </section>
+            {{> actors/player/talents }}
+            {{> actors/_partials/effects }}
+            {{> actors/player/notes }}
+        </section>
+
+    </div>
+
+</form>
