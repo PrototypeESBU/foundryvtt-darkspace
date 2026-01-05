@@ -13,7 +13,7 @@ Hooks.on("init", () => {
     Object.assign(CONFIG.Item.dataModels, {"darkspace.Component": models.Component});
 
     Actors.registerSheet("darkspace", sheets.SpacerSheet, {
-        types: ["Player", "darkspace.Spacer"],
+        types: ["darkspace.Spacer"],
         makeDefault: true,
     });
 

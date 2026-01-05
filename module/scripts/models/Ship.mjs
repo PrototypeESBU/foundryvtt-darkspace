@@ -1,6 +1,5 @@
-import {PlayerSD} from "./SDBase.mjs";
-
-export default class Ship extends PlayerSD {
+import { ActorBaseSD } from "/systems/shadowdark/src/models/_ActorBaseSD.mjs";
+export default class Ship extends ActorBaseSD {
     static defineSchema() {
         const fields = foundry.data.fields;
         const schema = {

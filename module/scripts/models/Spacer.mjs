@@ -1,5 +1,4 @@
-import {PlayerSD} from "./SDBase.mjs";
-
+import { default as PlayerSD } from "/systems/shadowdark/src/models/PlayerSD.mjs";
 export default class Spacer extends PlayerSD {
     static defineSchema() {
         const fields = foundry.data.fields;

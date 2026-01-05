@@ -1,4 +1,5 @@
-export default class Component extends foundry.abstract.TypeDataModel {
+import { BaseItemSD } from "/systems/shadowdark/src/models/items/_BaseItemSD.mjs";
+export default class Component extends BaseItemSD {
     static defineSchema() {
         const fields = foundry.data.fields;
 
