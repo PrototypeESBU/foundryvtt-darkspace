@@ -4,3 +4,4 @@ node_modules/
 /module/css
 darkspace-compiled*
 package-lock.json
+CLAUDE.md
