@@ -1,0 +1,21 @@
+{{#if attacks.length}}
+<div class="DS-box ds-attacks-section">
+    <div class="header"><label>Attacks</label></div>
+    <div class="content">
+        {{#each attacks as |attack|}}
+        <div class="ds-attack-row" data-item-id="{{attack.id}}">
+            <span class="attack-name">{{attack.name}}</span>
+            {{#if attack.system.damageType}}
+            <span class="attack-type">{{attack.system.damageType}}</span>
+            {{/if}}
+            {{#if attack.system.damage}}
+            <span class="attack-damage">{{attack.system.damage}}</span>
+            {{/if}}
+            {{#if attack.system.range}}
+            <span class="attack-range">{{attack.system.range}}</span>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/if}}

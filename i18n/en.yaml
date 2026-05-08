@@ -1,0 +1,9 @@
+TYPES.Actor.darkspace.Spacer: Spacer
+TYPES.Actor.darkspace.Ship: Ship
+TYPES.Item.darkspace.Archetype: Archetype
+TYPES.Item.darkspace.Component: Component
+TYPES.Item.darkspace.ShipArmor: Ship Armor
+TYPES.Item.darkspace.ShipClass: Ship Class
+TYPES.Item.darkspace.ShipWeapon: Ship Weapon
+TYPES.Item.darkspace.Species: Species
+TYPES.Item.darkspace.Weapon: Weapon

@@ -1,0 +1,69 @@
+<form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Weapon Name" />
+        </div>
+    </header>
+
+    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div class="form-group">
+                <label>Damage Type</label>
+                <select name="system.damageType">
+                    <option value="Melee"      {{#if (eq system.damageType "Melee")}}selected{{/if}}>Melee</option>
+                    <option value="Projectile" {{#if (eq system.damageType "Projectile")}}selected{{/if}}>Projectile</option>
+                    <option value="Energy"     {{#if (eq system.damageType "Energy")}}selected{{/if}}>Energy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select name="system.size">
+                    <option value=""       {{#if (eq system.size "")}}selected{{/if}}>&mdash;</option>
+                    <option value="Light"  {{#if (eq system.size "Light")}}selected{{/if}}>Light</option>
+                    <option value="Medium" {{#if (eq system.size "Medium")}}selected{{/if}}>Medium</option>
+                    <option value="Heavy"  {{#if (eq system.size "Heavy")}}selected{{/if}}>Heavy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Weapon Type</label>
+                <select name="system.type">
+                    {{selectOptions config.WEAPON_TYPES selected=system.type localize=false}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Range</label>
+                <select name="system.range">
+                    {{selectOptions config.RANGES selected=system.range localize=false}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Handedness</label>
+                <select name="system.handedness">
+                    <option value=""  {{#if (eq system.handedness "")}}selected{{/if}}>&mdash;</option>
+                    <option value="1h" {{#if (eq system.handedness "1h")}}selected{{/if}}>1H</option>
+                    <option value="2h" {{#if (eq system.handedness "2h")}}selected{{/if}}>2H</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Damage (1H)</label>
+                <select name="system.damage.oneHanded">
+                    <option value="">&mdash;</option>
+                    {{selectOptions config.WEAPON_BASE_DAMAGE selected=system.damage.oneHanded localize=false}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Damage (2H)</label>
+                <select name="system.damage.twoHanded">
+                    <option value="">&mdash;</option>
+                    {{selectOptions config.WEAPON_BASE_DAMAGE selected=system.damage.twoHanded localize=false}}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

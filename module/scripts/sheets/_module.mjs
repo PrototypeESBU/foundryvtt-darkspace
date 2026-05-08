@@ -1,2 +1,9 @@
-export {default as SpacerSheet} from "./spacer.mjs";
-export {default as ShipSheet} from "./ship.mjs";
+export {default as ArchetypeSheet}  from "./items/archetype.mjs";
+export {default as ComponentSheet}  from "./items/component.mjs";
+export {default as ShipArmorSheet}  from "./items/shipArmor.mjs";
+export {default as ShipClassSheet}  from "./items/shipClass.mjs";
+export {default as ShipSheet}       from "./ship.mjs";
+export {default as ShipWeaponSheet} from "./items/shipWeapon.mjs";
+export {default as SpacerSheet}     from "./spacer.mjs";
+export {default as SpeciesSheet}    from "./items/species.mjs";
+export {default as WeaponSheet}     from "./items/weapon.mjs";

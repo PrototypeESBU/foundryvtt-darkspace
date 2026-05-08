@@ -1,0 +1,43 @@
+<form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Ship Class Name" />
+        </div>
+    </header>
+
+    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
+        <div class="form-group">
+            <label>Hull Size</label>
+            <input name="system.hullSize" type="text" value="{{system.hullSize}}" placeholder="Light" />
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div class="form-group">
+                <label>Min Crew</label>
+                <input name="system.crewMin" type="number" value="{{system.crewMin}}" />
+            </div>
+            <div class="form-group">
+                <label>Max Crew</label>
+                <input name="system.crewMax" type="number" value="{{system.crewMax}}" />
+            </div>
+            <div class="form-group">
+                <label>System Slots</label>
+                <input name="system.systemSlots" type="number" value="{{system.systemSlots}}" />
+            </div>
+            <div class="form-group">
+                <label>Feature Slots</label>
+                <input name="system.featureSlots" type="number" value="{{system.featureSlots}}" />
+            </div>
+            <div class="form-group">
+                <label>Cargo Slots</label>
+                <input name="system.cargoSlots" type="number" value="{{system.cargoSlots}}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

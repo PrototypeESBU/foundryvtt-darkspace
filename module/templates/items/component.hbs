@@ -1,0 +1,37 @@
+<form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Component Name" />
+        </div>
+    </header>
+
+    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;align-items:end">
+            <div class="form-group">
+                <label>Type</label>
+                <select name="system.type">
+                    <option value="System"  {{#if (eq system.type "System")}}selected{{/if}}>System</option>
+                    <option value="Feature" {{#if (eq system.type "Feature")}}selected{{/if}}>Feature</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Slots</label>
+                <input name="system.slots" type="number" value="{{system.slots}}" min="1" />
+            </div>
+            <div class="form-group" style="text-align:center">
+                <label>Online</label>
+                <input name="system.online" type="checkbox" {{#if system.online}}checked{{/if}} />
+            </div>
+            <div class="form-group" style="text-align:center">
+                <label>Damaged</label>
+                <input name="system.damaged" type="checkbox" {{#if system.damaged}}checked{{/if}} />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

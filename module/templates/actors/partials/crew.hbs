@@ -1,0 +1,19 @@
+<div class="DS-box ds-crew-roster">
+    <div class="header"><label>Crew Roster</label></div>
+    <div class="content">
+        {{#each crew as |member|}}
+        <div class="ds-crew-member" data-uuid="{{member.uuid}}">
+            <img class="ds-crew-avatar" src="{{member.img}}" alt="{{member.name}}" />
+            <a class="ds-crew-name content-link" data-uuid="{{member.uuid}}">{{member.name}}</a>
+            {{#if ../owner}}
+            <a class="ds-crew-remove" data-action="crew-remove" title="Remove">
+                <i class="fas fa-times"></i>
+            </a>
+            {{/if}}
+        </div>
+        {{/each}}
+        {{#if owner}}
+        <div class="ds-crew-hint">Drop a Spacer actor here to add crew</div>
+        {{/if}}
+    </div>
+</div>

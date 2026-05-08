@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "node:path";
 import * as css from "./utils/css.mjs";
 import * as javascript from "./utils/javascript.mjs";
+import * as lang from "./utils/lang.mjs";
 
 /********************/
 /*      Config      */
@@ -15,6 +16,7 @@ const MODULE_SOURCE_PATH = "./module";
 /********************/
 export const build = gulp.parallel(
 		css.compile,
+		lang.compile,
 		//javascript.lint,
 		javascript.compile
 );
@@ -25,12 +27,14 @@ export const build = gulp.parallel(
 export const watch = gulp.series(
 	gulp.parallel(
 		css.compile,
+		lang.compile,
 		//javascript.lint,
 		javascript.compile
 	),
 
 	gulp.parallel(
 		css.watchUpdates,
+		lang.watchUpdates,
 		javascript.watchUpdates
 	)
 );

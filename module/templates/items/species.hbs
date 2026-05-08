@@ -1,0 +1,33 @@
+<form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Species Name" />
+        </div>
+    </header>
+
+    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
+        <fieldset>
+            <legend>Ability Bonuses</legend>
+            <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:4px;text-align:center">
+                {{#each (array "str" "int" "dex" "wis" "con" "cha") as |ability|}}
+                <div>
+                    <label style="font-size:11px;text-transform:uppercase">{{ability}}</label>
+                    <input name="system.abilityBonuses.{{ability}}" type="number"
+                        value="{{lookup ../system.abilityBonuses ability}}" style="width:100%;text-align:center" />
+                </div>
+                {{/each}}
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <label>Traits</label>
+            {{editor system.traits target="system.traits" button=true owner=owner editable=editable}}
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

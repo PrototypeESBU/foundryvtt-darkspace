@@ -2,6 +2,7 @@
 *.code-workspace
 node_modules/
 /module/css
+/module/lang
 darkspace-compiled*
 package-lock.json
 CLAUDE.md

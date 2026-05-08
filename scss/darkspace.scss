@@ -15,7 +15,7 @@
         font-size: 36px;
         border: none;
         i {
-            font-style: normal;   
+            font-style: normal;
             font-size: 42px;
         }
     }
@@ -67,5 +67,150 @@
         }
     }
 
+    // ── Single-page sheet layout ─────────────────────────────────────────────
+
+    .ds-sheet-col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .ds-col-fixed-270 {
+        flex: 0 0 270px;
+        width: 270px;
+    }
+
+    .ds-col-fixed-200 {
+        flex: 0 0 200px;
+        width: 200px;
+    }
+
+    .ds-col-fixed-220 {
+        flex: 0 0 220px;
+        width: 220px;
+    }
+
+    .ds-col-flex {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    // ── Spacer sheet ─────────────────────────────────────────────────────────
+
+    .ds-attacks-col {
+        flex: 1 1 auto;
+        min-height: 80px;
+        overflow-y: auto;
+    }
+
+    .ds-talents-section {
+        flex: 1 1 0;
+        min-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .content {
+            flex: 1 1 0;
+            overflow-y: auto;
+            min-height: 0;
+        }
+    }
+
+    .ds-gear-section {
+        flex: 0 0 auto;
+
+        .ds-gear-header-extras {
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            input[type="number"] {
+                width: 52px;
+                text-align: right;
+            }
+        }
+
+        .ds-gear-list {
+            max-height: 220px;
+            overflow-y: auto;
+        }
+    }
+
+    .ds-unset {
+        color: #aaa;
+    }
+
+    .ds-role-tag {
+        display: inline-block;
+        background: #111;
+        color: #fff;
+        font-size: 10px;
+        padding: 1px 6px;
+        margin: 1px 2px;
+    }
+
+    // ── Ship sheet ───────────────────────────────────────────────────────────
+
+    .ds-ac-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .ds-ac-derived {
+        .header label {
+            font-size: 10px;
+        }
+
+        .content {
+            font-size: 14px;
+        }
+    }
+
+    .ds-ship-section {
+        flex: 0 0 auto;
+
+        .header span a {
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+
+    .ds-cargo-section {
+        flex: 1 1 auto;
+        min-height: 80px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .content {
+            flex: 1 1 0;
+            overflow-y: auto;
+            min-height: 0;
+        }
+    }
+
+    .ds-ac-cell {
+        flex: 0 0 36px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .ds-component-status {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        flex: 0 0 auto;
+
+        input[type="checkbox"] {
+            width: 14px;
+            height: 14px;
+            margin: 0;
+        }
+    }
 
 }

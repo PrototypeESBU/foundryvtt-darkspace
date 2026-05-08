@@ -4,8 +4,8 @@
 	"description": "",
     "version": "0.1",
     "compatibility": {
-        "minimum": "12",
-        "verified": "12"
+        "minimum": "13",
+        "verified": "14"
     },
    "esmodules": [
         "darkspace-compiled.mjs"
@@ -13,13 +13,26 @@
     "styles": [
         "css/darkspace.css"
     ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
     "documentTypes": {
         "Actor": {
             "Spacer": {},
             "Ship": {}
         },
         "Item": {
-            "Component": {}
+            "Archetype":  {},
+            "Component":  {},
+            "ShipArmor":  {},
+            "ShipClass":  {},
+            "ShipWeapon": {},
+            "Species":    {},
+            "Weapon":     {}
         }
     },
     "relationships": {
