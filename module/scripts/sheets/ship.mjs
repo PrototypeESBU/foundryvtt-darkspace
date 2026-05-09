@@ -3,10 +3,14 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
     /** @inheritdoc */
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            scrollY: [".ds-col-flex"],
+            scrollY: [".SD-content-body"],
             width: 1100,
             height: 700,
-            tabs: [],
+            tabs: [{
+                navSelector: ".SD-nav",
+                contentSelector: ".SD-content-body",
+                initial: "tab-systems",
+            }],
         });
     }
 
@@ -17,11 +21,8 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
 
     /** @override */
     async getData(options) {
-        // Bypass PlayerSheetSD.getData() which assumes system.level exists.
-        // Call ActorSheetSD.getData() directly, then add only what the ship template needs.
         const context = await shadowdark.sheets.ActorSheetSD.prototype.getData.call(this, options);
 
-        // Fields required by the stats.hbs and hp.hbs partials
         context.abilities    = this.actor.system.abilities;
         context.maxHp        = this.actor.system.attributes?.hp?.max ?? 0;
         context.editingHp    = this.editingHp ?? false;
@@ -39,7 +40,6 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
         context.attacks  = items.filter(i => i.type === "darkspace.ShipWeapon");
         context.cargo    = items.filter(i => !shipTypes.has(i.type));
 
-        // Resolve crew UUIDs to actor stubs
         context.crew = await Promise.all(
             (this.actor.system.crew ?? []).map(async c => {
                 const actor = await fromUuid(c.uuid).catch(() => null);
@@ -51,7 +51,6 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
             })
         );
 
-        // Resolve ship class UUID to name
         if (this.actor.system.class) {
             const shipClass = await fromUuid(this.actor.system.class).catch(() => null);
             context.shipClassName = shipClass?.name ?? "";
@@ -71,6 +70,41 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
         if (!this.isEditable) return;
 
         html.find("[data-action=crew-remove]").click(event => this._onCrewRemove(event));
+
+        html.find("[data-action=item-edit]").click(event => {
+            const itemId = event.currentTarget.dataset.itemId;
+            this.actor.items.get(itemId)?.sheet.render(true);
+        });
+
+        html.find("[data-action=toggle-online]").change(event => {
+            const itemId = event.currentTarget.dataset.itemId;
+            const item = this.actor.items.get(itemId);
+            if (item) item.update({ "system.online": event.currentTarget.checked });
+        });
+
+        html.find("[data-action=toggle-damaged]").change(event => {
+            const itemId = event.currentTarget.dataset.itemId;
+            const item = this.actor.items.get(itemId);
+            if (item) item.update({ "system.damaged": event.currentTarget.checked });
+        });
+
+        html.find("[data-action=ship-attack]").click(event => this._onShipAttack(event));
+    }
+
+    /** @override */
+    async _onItemCreate(event) {
+        event.preventDefault();
+        const itemType = event.currentTarget.dataset.itemType;
+        const subtype  = event.currentTarget.dataset.componentSubtype;
+
+        const itemData = {
+            name:   `New ${subtype ?? itemType.split(".")[1]}`,
+            type:   itemType,
+            system: subtype ? { type: subtype } : {},
+        };
+
+        const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
+        newItem.sheet.render(true);
     }
 
     async _onCrewRemove(event) {
@@ -80,11 +114,34 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
         await this.actor.update({ "system.crew": crew });
     }
 
+    async _onShipAttack(event) {
+        event.preventDefault();
+        const itemId = event.currentTarget.dataset.itemId;
+        const item = this.actor.items.get(itemId);
+        if (!item) return;
+
+        const formula = item.system.damage || "1d6";
+        const roll = await new Roll(formula).evaluate();
+        roll.toMessage({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: `${this.actor.name} fires ${item.name}`,
+        });
+    }
+
     /** @override */
     async _onDrop(event) {
         const data = TextEditor.getDragEventData(event);
+
+        if (data?.type === "Item") {
+            const item = await fromUuid(data.uuid).catch(() => null);
+            if (item?.type === "darkspace.ShipClass") {
+                await this.actor.update({ "system.class": data.uuid });
+                return;
+            }
+        }
+
         if (data?.type === "Actor") {
-            const actor = await fromUuid(data.uuid);
+            const actor = await fromUuid(data.uuid).catch(() => null);
             if (actor?.type === "darkspace.Spacer") {
                 const crew = [...(this.actor.system.crew ?? [])];
                 if (!crew.some(c => c.uuid === data.uuid)) {
@@ -94,6 +151,7 @@ export default class ShipSheet extends shadowdark.sheets.PlayerSheetSD {
                 return;
             }
         }
+
         return super._onDrop(event);
     }
 }

@@ -1,0 +1,16 @@
+{
+  "_id": "CNUa0XLyVlBnqTAl",
+  "name": "Roughneck",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Mining, hauling, or salvaging, you work best in extreme environments.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!CNUa0XLyVlBnqTAl"
+}

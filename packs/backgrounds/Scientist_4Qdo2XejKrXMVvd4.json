@@ -1,0 +1,16 @@
+{
+  "_id": "4Qdo2XejKrXMVvd4",
+  "name": "Scientist",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You seek discovery through experimentation rather than study.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!4Qdo2XejKrXMVvd4"
+}

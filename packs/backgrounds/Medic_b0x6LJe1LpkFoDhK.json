@@ -1,0 +1,16 @@
+{
+  "_id": "b0x6LJe1LpkFoDhK",
+  "name": "Medic",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You know anatomy, surgery, and first aid.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!b0x6LJe1LpkFoDhK"
+}

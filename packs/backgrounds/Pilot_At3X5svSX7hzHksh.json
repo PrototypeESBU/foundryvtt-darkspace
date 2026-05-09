@@ -1,0 +1,16 @@
+{
+  "_id": "At3X5svSX7hzHksh",
+  "name": "Pilot",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Pirate, privateer, or merchant &mdash; the stars are yours.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!At3X5svSX7hzHksh"
+}

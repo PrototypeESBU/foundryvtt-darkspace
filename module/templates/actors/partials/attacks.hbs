@@ -1,21 +1,26 @@
-{{#if attacks.length}}
-<div class="DS-box ds-attacks-section">
-    <div class="header"><label>Attacks</label></div>
-    <div class="content">
-        {{#each attacks as |attack|}}
-        <div class="ds-attack-row" data-item-id="{{attack.id}}">
-            <span class="attack-name">{{attack.name}}</span>
-            {{#if attack.system.damageType}}
-            <span class="attack-type">{{attack.system.damageType}}</span>
-            {{/if}}
-            {{#if attack.system.damage}}
-            <span class="attack-damage">{{attack.system.damage}}</span>
-            {{/if}}
-            {{#if attack.system.range}}
-            <span class="attack-range">{{attack.system.range}}</span>
-            {{/if}}
-        </div>
-        {{/each}}
+{{#each attacks.melee}}
+    <div class="attack item" data-item-id="{{this.item._id}}" data-item-uuid="{{this.itemUuid}}">
+        <a
+            class="rollable"
+            data-action="item-attack"
+            data-attack-type="melee"
+            data-item-id="{{this.itemUuid}}"
+        >
+            <i class="fa-solid fa-dice-d20"></i>
+            {{> actors/player/abilities/weapon-attack }}
+        </a>
     </div>
-</div>
-{{/if}}
+{{/each}}
+{{#each attacks.ranged}}
+    <div class="attack item" data-item-id="{{this.item._id}}" data-item-uuid="{{this.itemUuid}}">
+        <a
+            class="rollable"
+            data-action="item-attack"
+            data-attack-type="ranged"
+            data-item-id="{{this.itemUuid}}"
+        >
+            <i class="fa-solid fa-dice-d20"></i>
+            {{> actors/player/abilities/weapon-attack }}
+        </a>
+    </div>
+{{/each}}

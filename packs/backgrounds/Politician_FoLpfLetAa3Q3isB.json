@@ -1,0 +1,16 @@
+{
+  "_id": "FoLpfLetAa3Q3isB",
+  "name": "Politician",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You navigate bureaucracy like some navigate the stars.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!FoLpfLetAa3Q3isB"
+}

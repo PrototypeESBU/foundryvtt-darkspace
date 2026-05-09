@@ -1,0 +1,16 @@
+{
+  "_id": "x6YPWMwVUARuOfY0",
+  "name": "Outlaw",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You're a wanted criminal hiding from jail or worse.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!x6YPWMwVUARuOfY0"
+}

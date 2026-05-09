@@ -34,7 +34,7 @@ Hooks.on("init", () => {
     // Restrict the Item creation dialog to Darkspace types only
     const _origItemCreateDialog = Item.createDialog;
     Item.createDialog = function(data={}, createOptions={}, options={}) {
-        options.types ??= ["darkspace.Archetype", "darkspace.Component", "darkspace.ShipArmor", "darkspace.ShipClass", "darkspace.ShipWeapon", "darkspace.Species", "darkspace.Weapon"];
+        options.types ??= ["Background", "darkspace.Archetype", "darkspace.Component", "darkspace.ShipArmor", "darkspace.ShipClass", "darkspace.ShipWeapon", "darkspace.Species", "darkspace.Weapon"];
         return _origItemCreateDialog.call(this, data, createOptions, options);
     };
 
@@ -83,6 +83,15 @@ Hooks.on("init", () => {
     Items.registerSheet("darkspace", sheets.WeaponSheet, {
         types: ["darkspace.Weapon"],
         makeDefault: true,
+    });
+
+    // Override Shadowdark's hardcoded " gp" suffix with " cr"
+    Handlebars.registerHelper("displayCost", item => {
+        let costInCr = item.system.cost.gp
+            + (item.system.cost.sp / 10)
+            + (item.system.cost.cp / 100);
+        costInCr = costInCr * item.system.quantity;
+        return costInCr.toString().concat(" cr");
     });
 
     // load templates

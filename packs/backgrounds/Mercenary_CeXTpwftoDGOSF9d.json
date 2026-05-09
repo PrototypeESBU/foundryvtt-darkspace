@@ -1,0 +1,16 @@
+{
+  "_id": "CeXTpwftoDGOSF9d",
+  "name": "Mercenary",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You would fight friend and foe alike for your credits.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!CeXTpwftoDGOSF9d"
+}

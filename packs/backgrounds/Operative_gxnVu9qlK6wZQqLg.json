@@ -1,0 +1,16 @@
+{
+  "_id": "gxnVu9qlK6wZQqLg",
+  "name": "Operative",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You have crime syndicate connections, contacts, and debts.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!gxnVu9qlK6wZQqLg"
+}

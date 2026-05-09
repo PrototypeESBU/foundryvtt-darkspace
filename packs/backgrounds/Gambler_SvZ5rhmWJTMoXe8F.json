@@ -1,0 +1,16 @@
+{
+  "_id": "SvZ5rhmWJTMoXe8F",
+  "name": "Gambler",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You never turn down a good bet.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!SvZ5rhmWJTMoXe8F"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "UkPwg4ff5XOQ34AG",
+  "name": "Celebrity",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You've traveled far with your charm and talent.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!UkPwg4ff5XOQ34AG"
+}

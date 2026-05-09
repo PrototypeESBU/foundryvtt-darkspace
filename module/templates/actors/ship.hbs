@@ -1,75 +1,188 @@
 <form class="darkspace" autocomplete="off" style="padding:8px;display:flex;column-gap:8px;">
-    <div class="spacer-grid">
-        <!-- col 1 -->
-        <div class="grid-1-columns">
-            <div class="centered">
-                <h1><i>D</i>ark<i>S</i>pace</h1>
-                <h2 style="line-height:0px;margin-bottom:8px">Ship Sheet</h2>
-            </div>
-            <div class="DS-box grid-2-columns">
-                {{> stats }}
-            </div>
 
-            <div class="DS-box grid-2-columns">
-                <div>{{> actors/player/abilities/hp }}</div>
-                {{> actors/player/abilities/ac }}
-            </div>
-
-            <div class="DS-box">
-                {{> actors/player/notes }}
-            </div>
-
+    <!-- Col 1: Stats & Notes (270px fixed) -->
+    <div class="ds-sheet-col ds-col-fixed-270">
+        <div class="centered">
+            <h1><i>D</i>ark<i>S</i>pace</h1>
+            <h2 style="line-height:0;margin-bottom:8px">Ship Sheet</h2>
         </div>
-        <!-- col 2 -->
-        <div class="grid-1-columns">
-            {{#> ui/sd-box header-label="Name"}}
-                <input
-				name="name"
-				type="text"
-				value="{{ actor.name }}"
-				placeholder="Name"
-			    />
-            {{/ui/sd-box}}
-
-            {{#> ui/sd-box header-label="Ship Class"}}
-                Ship Class
-            {{/ui/sd-box}}
-
-            {{#> ui/sd-box header-label="Ship Role"}}
-                Crew Roster
-            {{/ui/sd-box}}
+        <div class="DS-box grid-2-columns">
+            {{> stats }}
+        </div>
+        <div class="DS-box grid-2-columns">
+            <div>{{> actors/player/abilities/hp }}</div>
+            <div class="ds-ac-col">
+                {{#> ui/sd-box header-label="Proj. AC" class="ds-ac-derived"}}
+                    {{acProjectile}}
+                {{/ui/sd-box}}
+                {{#> ui/sd-box header-label="Energy AC" class="ds-ac-derived"}}
+                    {{acEnergy}}
+                {{/ui/sd-box}}
+            </div>
+        </div>
+        <div class="DS-box ds-attacks-col">
+            <div class="header"><label>Attacks</label></div>
+            <div class="content">
+                {{#each attacks as |item|}}
+                <div class="ds-attack-card item" data-item-id="{{item.id}}">
+                    <div class="ds-attack-info">
+                        <span class="ds-attack-name">{{item.name}}</span>
+                        <span class="ds-attack-type-tag">{{item.system.damageType}}</span>
+                    </div>
+                    <div class="ds-attack-stats">
+                        {{#if item.system.damage}}
+                        <span class="ds-attack-stat"><label>Damage</label>{{item.system.damage}}</span>
+                        {{/if}}
+                        {{#if item.system.range}}
+                        <span class="ds-attack-stat"><label>Range</label>{{item.system.range}}</span>
+                        {{/if}}
+                        {{#if item.system.energyCost}}
+                        <span class="ds-attack-stat"><label>Energy</label>{{item.system.energyCost}}</span>
+                        {{/if}}
+                    </div>
+                    {{#if owner}}
+                    <button type="button" class="ds-roll-btn" data-action="ship-attack" data-item-id="{{item.id}}">
+                        <i class="fas fa-dice-d20"></i> Fire
+                    </button>
+                    {{/if}}
+                </div>
+                {{/each}}
+                {{#unless attacks.length}}
+                <span class="ds-unset" style="font-size:11px">No weapons equipped</span>
+                {{/unless}}
+            </div>
         </div>
     </div>
-    <!-- col 3 -->
-    <div class="flexcol" style="flex:2">
-        <nav class="SD-nav flex0" data-group="primary" style="margin:0px 0px 4px">
 
-            <a class="navigation-tab active" data-tab="tab-inventory">
-                Gear
-            </a>
-            <a class="navigation-tab" data-tab="tab-talents">
-                {{localize "SHADOWDARK.sheet.player.tab.talents"}}
-            </a>
-            <a class="navigation-tab" data-tab="tab-notes">
-                {{localize "SHADOWDARK.sheet.player.tab.notes"}}
-            </a>
-            <a class="navigation-tab" data-tab="tab-effects">
-                {{localize "SHADOWDARK.sheet.item.tab.effects"}}
-            </a>
+    <!-- Col 2: Ship Identity (200px fixed) -->
+    <div class="ds-sheet-col ds-col-fixed-200">
+        {{#> ui/sd-box header-label="Name"}}
+            <input name="name" type="text" value="{{ actor.name }}" placeholder="Ship Name" />
+        {{/ui/sd-box}}
 
+        {{#> ui/sd-box header-label="Class"}}
+            {{#if shipClassName}}
+                <a class="content-link" data-uuid="{{shipClassUuid}}">{{shipClassName}}</a>
+            {{else}}
+                <span class="ds-unset">Drop Ship Class here</span>
+            {{/if}}
+        {{/ui/sd-box}}
+
+        {{#> ui/sd-box header-label="Credits"}}
+            <input name="system.credits" type="number" value="{{system.credits}}" min="0" />
+        {{/ui/sd-box}}
+
+        {{> crew }}
+    </div>
+
+    <!-- Col 3+: Tabbed ship content -->
+    <div class="ds-sheet-col ds-col-flex" style="overflow:hidden">
+        <nav class="SD-nav flex0" data-group="primary" style="margin:0 0 4px">
+            <a class="navigation-tab active" data-tab="tab-systems">Ship Systems</a>
+            <a class="navigation-tab" data-tab="tab-cargo">Cargo</a>
+            <a class="navigation-tab" data-tab="tab-attacks">Notes</a>
         </nav>
-        
-        <section class="SD-content-body flex1" style="padding:0px;border:2px solid black">
-            <section class="tab tab-inventory" data-group="primary" data-tab="tab-inventory">
-                {{> actors/player/inventory/equipped-gear }}
-                {{> actors/player/inventory/carried-gear }}
-                {{> actors/player/inventory/stashed-gear }}
-            </section>
-            {{> actors/player/talents }}
-            {{> actors/_partials/effects-tab }}
-            
-        </section>
+        <section class="SD-content-body flex1" style="padding:0;overflow:auto;border:2px solid black">
 
+            <!-- Tab: Ship Systems -->
+            <section class="tab tab-systems" data-group="primary" data-tab="tab-systems">
+                <div style="padding:8px;display:flex;flex-direction:column;gap:8px">
+
+                    <div class="ds-ship-top">
+                        <div class="DS-box ds-ship-section">
+                            <div class="header">
+                                <label>Systems</label>
+                                {{#if owner}}
+                                <span><a data-action="item-create" data-item-type="darkspace.Component" data-component-subtype="System"><i class="fas fa-plus"></i></a></span>
+                                {{/if}}
+                            </div>
+                            <div class="content">
+                                {{#each systems as |item|}}
+                                <div class="ds-component-row item" data-item-id="{{item.id}}">
+                                    <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
+                                    <div class="ds-component-status">
+                                        <input type="checkbox" {{#if item.system.online}}checked{{/if}} data-action="toggle-online" data-item-id="{{item.id}}" />
+                                        <span>On</span>
+                                        <input type="checkbox" {{#if item.system.damaged}}checked{{/if}} data-action="toggle-damaged" data-item-id="{{item.id}}" />
+                                        <span>Dmg</span>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="DS-box ds-ship-section">
+                            <div class="header">
+                                <label>Features</label>
+                                {{#if owner}}
+                                <span><a data-action="item-create" data-item-type="darkspace.Component" data-component-subtype="Feature"><i class="fas fa-plus"></i></a></span>
+                                {{/if}}
+                            </div>
+                            <div class="content">
+                                {{#each features as |item|}}
+                                <div class="ds-component-row item" data-item-id="{{item.id}}">
+                                    <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
+                                    <div class="ds-component-status">
+                                        <input type="checkbox" {{#if item.system.online}}checked{{/if}} data-action="toggle-online" data-item-id="{{item.id}}" />
+                                        <span>On</span>
+                                        <input type="checkbox" {{#if item.system.damaged}}checked{{/if}} data-action="toggle-damaged" data-item-id="{{item.id}}" />
+                                        <span>Dmg</span>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="DS-box ds-ship-section">
+                        <div class="header">
+                            <label>Weapons</label>
+                            {{#if owner}}
+                            <span><a data-action="item-create" data-item-type="darkspace.ShipWeapon"><i class="fas fa-plus"></i></a></span>
+                            {{/if}}
+                        </div>
+                        <div class="content">
+                            {{#if attacks.length}}
+                            <div class="ds-weapon-header">
+                                <span>Name</span><span>Type</span><span>Damage</span><span>Range</span><span>Energy</span>
+                            </div>
+                            {{/if}}
+                            {{#each attacks as |item|}}
+                            <div class="ds-weapon-row item" data-item-id="{{item.id}}">
+                                <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
+                                <span>{{item.system.damageType}}</span>
+                                <span>{{item.system.damage}}</span>
+                                <span>{{item.system.range}}</span>
+                                <span>{{item.system.energyCost}}</span>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tab: Cargo -->
+            <section class="tab tab-cargo" data-group="primary" data-tab="tab-cargo">
+                <div style="padding:8px">
+                    {{#each cargo as |item|}}
+                    <div class="ds-cargo-row item" data-item-id="{{item.id}}">
+                        <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
+                    </div>
+                    {{/each}}
+                    {{#unless cargo.length}}
+                    <span class="ds-unset" style="font-size:11px">Drop items here to add cargo</span>
+                    {{/unless}}
+                </div>
+            </section>
+
+            <!-- Tab: Notes -->
+            <section class="tab tab-attacks" data-group="primary" data-tab="tab-attacks">
+                <div style="padding:8px;height:100%;box-sizing:border-box">
+                    {{editor notesHTML target="system.notes" button=true editable=editable engine="prosemirror" collaborate=false}}
+                </div>
+            </section>
+
+        </section>
     </div>
 
 </form>

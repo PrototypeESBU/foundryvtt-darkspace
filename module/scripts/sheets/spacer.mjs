@@ -6,7 +6,7 @@ export default class SpacerSheet extends shadowdark.sheets.PlayerSheetSD {
             scrollY: [".ds-talents-section .content", ".ds-gear-list"],
             width: 1000,
             height: 700,
-            tabs: [],
+            tabs: [{ navSelector: ".SD-nav", contentSelector: ".SD-content-body", initial: "tab-details" }],
         });
     }
 
@@ -43,6 +43,12 @@ export default class SpacerSheet extends shadowdark.sheets.PlayerSheetSD {
         }
 
         context.shipRoles = system.shipRoles ?? [];
+
+        context.motivationChoices = [
+            { value: "survivor", label: game.i18n.localize("DARKSPACE.motivation.survivor") },
+            { value: "vile",     label: game.i18n.localize("DARKSPACE.motivation.vile") },
+            { value: "virtuous", label: game.i18n.localize("DARKSPACE.motivation.virtuous") },
+        ].map(m => ({ ...m, selected: system.motivation === m.value }));
 
         return context;
     }

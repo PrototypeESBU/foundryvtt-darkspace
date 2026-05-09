@@ -5,14 +5,8 @@ export default class Ship extends ActorBaseSD {
         const fields = foundry.data.fields;
         return {
             ...super.defineSchema(),
-            crew: new fields.ArrayField(
-                new fields.SchemaField({
-                    uuid: new fields.StringField({ initial: "" }),
-                    name: new fields.StringField({ initial: "" }),
-                })
-            ),
+            crew: new fields.ArrayField(new fields.DocumentUUIDField()),
             class:   new fields.DocumentUUIDField(),
-            credits: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
         };
     }
 

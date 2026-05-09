@@ -1,0 +1,16 @@
+{
+  "_id": "6IvRO15jNpHGRg2F",
+  "name": "Hacker",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>Datanets are no match for you.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!6IvRO15jNpHGRg2F"
+}

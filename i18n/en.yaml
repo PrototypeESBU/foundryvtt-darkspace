@@ -7,3 +7,8 @@ TYPES.Item.darkspace.ShipClass: Ship Class
 TYPES.Item.darkspace.ShipWeapon: Ship Weapon
 TYPES.Item.darkspace.Species: Species
 TYPES.Item.darkspace.Weapon: Weapon
+SHADOWDARK.coins.gp: CR
+DARKSPACE.sheet.spacer.tab.details: Details
+DARKSPACE.motivation.survivor: Survivor (S)
+DARKSPACE.motivation.vile: Vile (VL)
+DARKSPACE.motivation.virtuous: Virtuous (VR)

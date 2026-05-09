@@ -1,0 +1,16 @@
+{
+  "_id": "D8oIuouW4rCV4nJ1",
+  "name": "Mechanic",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You can fix and tinker on a device or vehicle.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!D8oIuouW4rCV4nJ1"
+}

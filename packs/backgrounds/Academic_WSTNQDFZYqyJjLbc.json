@@ -1,0 +1,16 @@
+{
+  "_id": "WSTNQDFZYqyJjLbc",
+  "name": "Academic",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You seek discovery through study rather than experimentation.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!WSTNQDFZYqyJjLbc"
+}

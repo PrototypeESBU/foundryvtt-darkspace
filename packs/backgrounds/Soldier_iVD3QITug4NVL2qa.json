@@ -1,0 +1,16 @@
+{
+  "_id": "iVD3QITug4NVL2qa",
+  "name": "Soldier",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You serve as a fighter in an organized army.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!iVD3QITug4NVL2qa"
+}

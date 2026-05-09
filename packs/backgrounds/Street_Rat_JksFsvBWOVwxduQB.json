@@ -1,0 +1,16 @@
+{
+  "_id": "JksFsvBWOVwxduQB",
+  "name": "Street Rat",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You know the merciless streets of cities and villainous hives.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!JksFsvBWOVwxduQB"
+}

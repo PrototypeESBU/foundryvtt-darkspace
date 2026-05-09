@@ -4,6 +4,7 @@ import path from "node:path";
 import * as css from "./utils/css.mjs";
 import * as javascript from "./utils/javascript.mjs";
 import * as lang from "./utils/lang.mjs";
+import * as packs from "./utils/packs.mjs";
 
 /********************/
 /*      Config      */
@@ -18,8 +19,11 @@ export const build = gulp.parallel(
 		css.compile,
 		lang.compile,
 		//javascript.lint,
-		javascript.compile
+		javascript.compile,
+		packs.compile
 );
+
+export const exportPacks = gulp.series(packs.exportAll);
 
 /********************/
 /*      WATCH       */
@@ -35,7 +39,8 @@ export const watch = gulp.series(
 	gulp.parallel(
 		css.watchUpdates,
 		lang.watchUpdates,
-		javascript.watchUpdates
+		javascript.watchUpdates,
+		packs.watchUpdates
 	)
 );
 

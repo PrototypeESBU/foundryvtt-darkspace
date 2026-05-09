@@ -1,0 +1,16 @@
+{
+  "_id": "STwEctJeN7sdYi27",
+  "name": "Corpo",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>The ways of the corporate world are second nature to you.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!STwEctJeN7sdYi27"
+}

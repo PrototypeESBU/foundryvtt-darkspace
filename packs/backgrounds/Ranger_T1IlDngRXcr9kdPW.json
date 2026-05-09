@@ -1,0 +1,16 @@
+{
+  "_id": "T1IlDngRXcr9kdPW",
+  "name": "Ranger",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>The frontier is your true home, surviving on stealth and wits.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!T1IlDngRXcr9kdPW"
+}

@@ -35,6 +35,24 @@
             "Weapon":     {}
         }
     },
+    "packs": [
+        {
+            "name": "backgrounds",
+            "label": "DarkSpace Backgrounds",
+            "path": "packs/backgrounds",
+            "type": "Item",
+            "system": "shadowdark"
+        }
+    ],
+    "packFolders": [
+        {
+            "name": "DarkSpace",
+            "sorting": "a",
+            "packs": [
+                "backgrounds"
+            ]
+        }
+    ],
     "relationships": {
         "systems": [
             {

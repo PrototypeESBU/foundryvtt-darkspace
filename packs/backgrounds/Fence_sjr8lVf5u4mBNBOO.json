@@ -1,0 +1,16 @@
+{
+  "_id": "sjr8lVf5u4mBNBOO",
+  "name": "Fence",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You can appraise value and know where to find a buyer.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!sjr8lVf5u4mBNBOO"
+}

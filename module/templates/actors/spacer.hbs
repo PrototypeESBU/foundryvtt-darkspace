@@ -10,59 +10,40 @@
                 {{> stats }}
             </div>
 
-            <div class="DS-box grid-2-columns">
-                <div>{{> actors/player/abilities/hp }}</div>
-
-                {{> actors/player/abilities/ac }}
-
-                {{#> ui/sd-box header-label="Rep"}}
-                {{/ui/sd-box}}
-                
-                {{> actors/player/abilities/luck }}
-
-                {{> actors/player/details/level }}
-
-                {{> actors/player/details/xp }}
-            </div>
+            {{#> ui/sd-box header-label="Attacks"}}
+                <div class="ds-attacks-col">
+                    {{> attacks }}
+                </div>
+            {{/ui/sd-box}}
 
         </div>
         <!-- col 2 -->
-        <div class="grid-1-columns">
-            {{#> ui/sd-box header-label="Name"}}
+        <div class="grid-2-columns">
+            <div class="ds-name-box grid-colspan-2">
                 <input
-				name="name"
-				type="text"
-				value="{{actor.name}}"
-				placeholder="Name"
-			    />
-            {{/ui/sd-box}}
+                    class="ds-name-input"
+                    name="name"
+                    type="text"
+                    value="{{actor.name}}"
+                    placeholder="Name"
+                />
+            </div>
 
-            {{#> ui/sd-box header-label="Archetype"}}
-                <div class="connector left"></div>
-                Archetype
-            {{/ui/sd-box}}
+            <img
+                class="ds-spacer-portrait grid-rowspan-2 grid-colspan-2"
+                src="{{ actor.img }}"
+                data-edit="img"
+                data-tooltip="{{ actor.name }}"
+            />
 
-            {{> actors/player/details/background }}
+            {{> actors/player/abilities/hp }}
 
-            {{#> ui/sd-box header-label="Species"}}
-                <input
-				name="system.species"
-				type="text"
-				value="{{ system.species }}"
-				placeholder="Species Name"
-			    />
-            {{/ui/sd-box}}
+            {{> actors/player/abilities/ac }}
 
-            {{#> ui/sd-box header-label="Motivation"}}
-                Motivation
-            {{/ui/sd-box}}
+            {{> actors/player/abilities/luck }}        
 
-            {{#> ui/sd-box header-label="Ship Name"}}
+            {{#> ui/sd-box header-label="Ship Name" class="grid-colspan-2"}}
                 Ship Name
-            {{/ui/sd-box}}
-
-            {{#> ui/sd-box header-label="Ship Role"}}
-                Ship Role
             {{/ui/sd-box}}
         </div>
     </div>
@@ -70,7 +51,10 @@
     <div class="flexcol" style="flex:2">
         <nav class="SD-nav flex0" data-group="primary" style="margin:0px 0px 4px">
 
-            <a class="navigation-tab active" data-tab="tab-inventory">
+            <a class="navigation-tab active" data-tab="tab-details">
+                {{localize "DARKSPACE.sheet.spacer.tab.details"}}
+            </a>
+            <a class="navigation-tab" data-tab="tab-inventory">
                 Gear
             </a>
             <a class="navigation-tab" data-tab="tab-talents">
@@ -84,8 +68,61 @@
             </a>
 
         </nav>
-        
+
         <section class="SD-content-body flex1" style="padding:0px;border:2px solid black">
+            <section class="tab tab-details" data-group="primary" data-tab="tab-details">
+                <div class="ds-details-grid">
+                    <div class="ds-details-stats-row">
+                        {{#> ui/sd-box header-label="Rep"}}
+                            <input
+                                name="system.renown"
+                                type="number"
+                                value="{{ system.renown }}"
+                                placeholder="0"
+                            />
+                        {{/ui/sd-box}}
+                        {{> actors/player/details/level }}
+                        {{> actors/player/details/xp }}
+                    </div>
+                    <div class="ds-details-fields">
+                        {{#> ui/sd-box header-label="Archetype"}}
+                            {{#if archetypeName}}
+                                <a class="content-link" data-link data-uuid="{{archetypeUuid}}">{{archetypeName}}</a>
+                            {{else}}
+                                <span class="ds-unset">—</span>
+                            {{/if}}
+                        {{/ui/sd-box}}
+
+                        {{> actors/player/details/background }}
+
+                        {{#> ui/sd-box header-label="Species"}}
+                            <input
+                                name="system.species"
+                                type="text"
+                                value="{{ system.species }}"
+                                placeholder="Species Name"
+                            />
+                        {{/ui/sd-box}}
+
+                        {{#> ui/sd-box header-label="Motivation"}}
+                            <select name="system.motivation">
+                                <option value="">—</option>
+                                {{#each motivationChoices}}
+                                    <option value="{{value}}"{{#if selected}} selected{{/if}}>{{label}}</option>
+                                {{/each}}
+                            </select>
+                        {{/ui/sd-box}}
+
+                        {{#> ui/sd-box header-label="Ship Role"}}
+                            Ship Role
+                        {{/ui/sd-box}}
+
+                        <div class="ds-details-full-width">
+                            {{> actors/player/details/languages }}
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="tab tab-inventory" data-group="primary" data-tab="tab-inventory">
                 {{> actors/player/inventory/equipped-gear }}
                 {{> actors/player/inventory/carried-gear }}

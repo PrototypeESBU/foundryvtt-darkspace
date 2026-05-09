@@ -1,0 +1,16 @@
+{
+  "_id": "Br8US1sTiwclMfSs",
+  "name": "Acolyte",
+  "type": "Background",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>You're well-trained in religious rites and doctrines.</p>",
+    "source": {
+      "title": "DarkSpace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!Br8US1sTiwclMfSs"
+}
