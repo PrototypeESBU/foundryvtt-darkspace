@@ -1,0 +1,62 @@
+<div class="spacer-sidebar">
+
+    <div class="ds-sidebar-title ds-col-1 centered">
+        <h1><i>D</i>ark<i>S</i>pace</h1>
+        <h2>Spacer</h2>
+    </div>
+
+    <div class="ds-name-box ds-col-2">
+        <textarea
+            class="ds-name-input"
+            name="name"
+            placeholder="Name"
+            rows="1"
+        >{{actor.name}}</textarea>
+    </div>
+
+    <div class="DS-wrapper ds-col-1 grid-2-columns">
+        {{> stats }}
+    </div>
+
+    <img
+        class="ds-spacer-portrait ds-col-2"
+        src="{{ actor.img }}"
+        data-edit="img"
+        data-tooltip="{{ actor.name }}"
+    />
+
+    <div class="ds-sidebar-attacks ds-col-1 ds-span-3">
+        {{#> ui/ds-box header-label="Attacks"}}
+            <div class="ds-attacks-col">
+                {{> attacks }}
+            </div>
+        {{/ui/ds-box}}
+    </div>
+
+    <div class="ds-sidebar-hp-ac ds-col-2">
+        {{> actors/player/abilities/hp }}
+        {{> actors/player/abilities/ac }}
+    </div>
+
+    <div class="ds-sidebar-luck-slots ds-col-2">
+        {{> actors/player/abilities/luck }}
+        <div class="DS-box">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.gear.slots"}}</label>
+                <span></span>
+            </div>
+            <div class="content">
+                <div class="value-grid{{#if slotsOverCapacity}} ds-over-capacity{{/if}}">
+                    <div>{{slots.total}}</div>
+                    <div>/</div>
+                    <div>{{gearSlots}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#> ui/ds-box header-label="Ship Name" class="ds-sidebar-shipname ds-col-2"}}
+        Ship Name
+    {{/ui/ds-box}}
+
+</div>

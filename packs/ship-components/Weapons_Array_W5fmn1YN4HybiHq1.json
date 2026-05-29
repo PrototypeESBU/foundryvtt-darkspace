@@ -1,0 +1,21 @@
+{
+  "_id": "W5fmn1YN4HybiHq1",
+  "name": "Weapons Array",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship is equipped with weapons. Each weapon requires a gunner to use it. Fire-linked arrays require only one gunner.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!W5fmn1YN4HybiHq1"
+}

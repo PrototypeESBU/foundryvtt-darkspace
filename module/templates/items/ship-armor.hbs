@@ -1,13 +1,8 @@
 <form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-        <div class="header-fields">
-            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Armor Name" />
-        </div>
-    </header>
+    {{> items/item-header placeholder="Armor Name"}}
 
-    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+    <section class="sheet-body flexcol ds-item-body">
+        <div class="ds-form-grid-2">
             <div class="form-group">
                 <label>AC vs Projectile</label>
                 <input name="system.acProjectile" type="number" value="{{system.acProjectile}}" />
@@ -20,7 +15,7 @@
 
         <div class="form-group">
             <label>Description</label>
-            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
         </div>
     </section>
 </form>

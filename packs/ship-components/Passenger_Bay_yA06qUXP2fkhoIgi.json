@@ -1,0 +1,21 @@
+{
+  "_id": "yA06qUXP2fkhoIgi",
+  "name": "Passenger Bay",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>A small bay that seats passengers and stores personal items.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!yA06qUXP2fkhoIgi"
+}

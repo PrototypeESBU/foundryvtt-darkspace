@@ -1,0 +1,21 @@
+{
+  "_id": "BpduI3uZURG8DP1i",
+  "name": "Galley",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>A fully stocked kitchen area. On a successful DC 12 WIS check, the crew don't use a ration during Resting.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!BpduI3uZURG8DP1i"
+}

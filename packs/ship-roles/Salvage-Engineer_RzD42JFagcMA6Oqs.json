@@ -1,0 +1,16 @@
+{
+  "_id": "RzD42JFagcMA6Oqs",
+  "name": "Salvage Engineer",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>A polite term for experts who take apart damaged and scrapped ships.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!RzD42JFagcMA6Oqs"
+}

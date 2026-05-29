@@ -1,0 +1,16 @@
+{
+  "_id": "stNQJG3BW8p8tWkX",
+  "name": "Co-Pilot",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You assist as an additional pilot or gunner.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!stNQJG3BW8p8tWkX"
+}

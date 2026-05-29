@@ -1,0 +1,16 @@
+{
+  "_id": "UFeCEu4ZdoQKWyFL",
+  "name": "Pilot",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You are responsible for maneuvering the ship.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!UFeCEu4ZdoQKWyFL"
+}

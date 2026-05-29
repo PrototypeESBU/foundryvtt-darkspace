@@ -1,0 +1,10 @@
+<section class="tab tab-notes {{tab.cssClass}}" data-group="primary" data-tab="notes">
+    <div class="ds-notes-content">
+        <prose-mirror
+            name="system.notes"
+            value="{{system.notes}}"
+            data-document-uuid="{{document.uuid}}"
+            toggled
+        >{{{notesHTML}}}</prose-mirror>
+    </div>
+</section>

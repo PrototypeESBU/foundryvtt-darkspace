@@ -1,0 +1,21 @@
+{
+  "_id": "cMwUdshFX6Abv7r9",
+  "name": "Cargo Frame",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship can carry 10 m3 detachable units of bulk cargo.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!cMwUdshFX6Abv7r9"
+}

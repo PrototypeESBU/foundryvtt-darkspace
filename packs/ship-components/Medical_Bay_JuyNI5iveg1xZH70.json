@@ -1,0 +1,21 @@
+{
+  "_id": "JuyNI5iveg1xZH70",
+  "name": "Medical Bay",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>A fully stocked medical facility. Using it to perform medical tasks grants advantage. On a successful DC 15 INT check, an ally regains 1d6 hp.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!JuyNI5iveg1xZH70"
+}

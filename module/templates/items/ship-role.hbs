@@ -1,0 +1,10 @@
+<form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
+    {{> items/item-header placeholder="Role Name"}}
+
+    <section class="sheet-body flexcol ds-item-body">
+        <div class="form-group">
+            <label>Description</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
+        </div>
+    </section>
+</form>

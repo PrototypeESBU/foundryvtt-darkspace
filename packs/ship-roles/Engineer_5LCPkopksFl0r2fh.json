@@ -1,0 +1,16 @@
+{
+  "_id": "5LCPkopksFl0r2fh",
+  "name": "Engineer",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You are responsible for the maintenance and repair of the ship.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!5LCPkopksFl0r2fh"
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "4flHzfW1AVHjeO43",
+  "name": "Sensor Array",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship can detect the presence of vessels and objects up to FAR range.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!4flHzfW1AVHjeO43"
+}

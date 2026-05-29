@@ -1,0 +1,21 @@
+{
+  "_id": "w0SvjgWKoi3hiWHM",
+  "name": "Sublight Drive",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship is capable of traveling at sublight speed.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!w0SvjgWKoi3hiWHM"
+}

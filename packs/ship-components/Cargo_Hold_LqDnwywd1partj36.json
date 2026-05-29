@@ -1,0 +1,21 @@
+{
+  "_id": "LqDnwywd1partj36",
+  "name": "Cargo Hold",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship can carry 10 m3 units of cargo.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!LqDnwywd1partj36"
+}

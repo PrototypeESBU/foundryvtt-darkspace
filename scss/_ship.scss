@@ -1,0 +1,347 @@
+@use "mixins" as *;
+
+.darkspace.ship .ds-ship-sidebar {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.darkspace.ship [data-application-part="crew"],
+.darkspace.ship [data-application-part="systems"],
+.darkspace.ship [data-application-part="cargo"],
+.darkspace.ship [data-application-part="notes"] {
+    grid-column: 2;
+    grid-row: 2;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.darkspace {
+    .ds-ac-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .ds-ac-derived {
+        .header label {
+            font-size: 10px;
+        }
+
+        .content {
+            font-size: 14px;
+        }
+    }
+
+    .ds-ship-section {
+        flex: 0 0 auto;
+
+        .header span a {
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+
+    .ds-cargo-section {
+        flex: 1 1 auto;
+        min-height: 80px;
+        @include flex-fill-col;
+
+        .content {
+            flex: 1 1 0;
+            overflow-y: auto;
+            min-height: 0;
+        }
+    }
+
+    .ds-ac-cell {
+        flex: 0 0 36px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .ds-component-status {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        flex: 0 0 auto;
+
+        input[type="checkbox"] {
+            width: 14px;
+            height: 14px;
+            margin: 0;
+        }
+    }
+
+    .ds-ship-top {
+        display: flex;
+        gap: 8px;
+
+        .ds-ship-section {
+            flex: 1 1 0;
+            min-width: 0;
+
+            .content {
+                max-height: 160px;
+                overflow-y: auto;
+            }
+        }
+    }
+
+    .ds-attacks-col, .ds-notes-box {
+        @include flex-fill-col;
+        min-height: 60px;
+
+        .content {
+            @include flex-fill-col;
+
+            .editor {
+                @include flex-fill-col($overflow: auto);
+            }
+        }
+    }
+
+    .ds-crew-tab-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 8px;
+        height: 100%;
+        box-sizing: border-box;
+        align-items: flex-start;
+    }
+
+    .ds-crew-card {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .ds-crew-portrait {
+            flex: 0 0 48px;
+            width: 48px;
+            height: 72px;
+            object-fit: cover;
+            object-position: top;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .ds-crew-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+
+        .ds-crew-name {
+            font-size: 13px;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .ds-crew-stats,
+        .ds-crew-identity {
+            font-size: 11px;
+            color: var(--color-text-secondary, #555);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .ds-crew-remove {
+            flex: 0 0 auto;
+            opacity: 0.4;
+            cursor: pointer;
+            padding-top: 2px;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .ds-crew-roster {
+        flex: 1 1 auto;
+        min-height: 80px;
+        @include flex-fill-col;
+
+        .content {
+            flex: 1 1 0;
+            overflow-y: auto;
+            min-height: 0;
+        }
+    }
+
+    .ds-component-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 2px 0;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .ds-component-name {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .ds-weapon-header {
+        display: grid;
+        grid-template-columns: 1fr 70px 60px 60px 50px;
+        gap: 4px;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 0 0 2px;
+        border-bottom: 1px solid black;
+        color: var(--color-text-secondary, #555);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .ds-weapon-row {
+        display: grid;
+        grid-template-columns: 1fr 70px 60px 60px 50px;
+        gap: 4px;
+        font-size: 12px;
+        padding: 2px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        cursor: default;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .ds-component-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .ds-cargo-row {
+        display: flex;
+        align-items: center;
+        padding: 2px 0;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .ds-component-name {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .ds-attack-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.02);
+
+        .ds-attack-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            min-width: 0;
+        }
+
+        .ds-attack-name {
+            font-weight: bold;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .ds-attack-type-tag {
+            font-size: 9px;
+            padding: 1px 5px;
+            background: #222;
+            color: #fff;
+            flex: 0 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .ds-attack-stats {
+            display: flex;
+            gap: 16px;
+            flex: 0 0 auto;
+        }
+
+        .ds-attack-stat {
+            text-align: center;
+            font-size: 13px;
+            min-width: 40px;
+
+            label {
+                display: block;
+                font-size: 9px;
+                color: var(--color-text-subtle, #777);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                line-height: 1;
+                margin-bottom: 1px;
+            }
+        }
+
+        .ds-roll-btn {
+            flex: 0 0 auto;
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: inherit;
+
+            &:hover {
+                background: #333;
+            }
+        }
+    }
+}

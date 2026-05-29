@@ -1,0 +1,16 @@
+{
+  "_id": "aWjAcavElMaXB1G4",
+  "name": "Astrogator",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You are responsible for making astrogation calculations.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!aWjAcavElMaXB1G4"
+}

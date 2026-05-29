@@ -1,43 +1,44 @@
 <form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-        <div class="header-fields">
-            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Ship Class Name" />
-        </div>
-    </header>
+    {{> items/item-header placeholder="Ship Class Name"}}
 
-    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
-        <div class="form-group">
-            <label>Hull Size</label>
-            <input name="system.hullSize" type="text" value="{{system.hullSize}}" placeholder="Light" />
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-            <div class="form-group">
-                <label>Min Crew</label>
-                <input name="system.crewMin" type="number" value="{{system.crewMin}}" />
-            </div>
-            <div class="form-group">
-                <label>Max Crew</label>
-                <input name="system.crewMax" type="number" value="{{system.crewMax}}" />
-            </div>
+    <section class="sheet-body flexcol ds-item-body">
+        <div class="ds-form-grid-5">
             <div class="form-group">
                 <label>System Slots</label>
-                <input name="system.systemSlots" type="number" value="{{system.systemSlots}}" />
+                <input name="system.systemSlots" type="number" value="{{system.systemSlots}}" min="0" />
             </div>
             <div class="form-group">
                 <label>Feature Slots</label>
-                <input name="system.featureSlots" type="number" value="{{system.featureSlots}}" />
+                <input name="system.featureSlots" type="number" value="{{system.featureSlots}}" min="0" />
             </div>
             <div class="form-group">
                 <label>Cargo Slots</label>
-                <input name="system.cargoSlots" type="number" value="{{system.cargoSlots}}" />
+                <input name="system.cargoSlots" type="number" value="{{system.cargoSlots}}" min="0" />
+            </div>
+            <div class="form-group">
+                <label>HP Die</label>
+                <select name="system.hpDie">
+                    <option value="d4" {{#if (eq system.hpDie "d4")}}selected{{/if}}>d4</option>
+                    <option value="d6" {{#if (eq system.hpDie "d6")}}selected{{/if}}>d6</option>
+                    <option value="d8" {{#if (eq system.hpDie "d8")}}selected{{/if}}>d8</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Free Components</label>
+                <ul class="ds-id-list">
+                    {{#each system.freeComponents}}<li>{{this}}</li>{{/each}}
+                </ul>
             </div>
         </div>
 
         <div class="form-group">
-            <label>Description</label>
-            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+            <label>Class Traits</label>
+            {{editor system.classTraits target="system.classTraits" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
+        </div>
+
+        <div class="form-group">
+            <label>Talent Table</label>
+            {{editor system.talentTable target="system.talentTable" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
         </div>
     </section>
 </form>

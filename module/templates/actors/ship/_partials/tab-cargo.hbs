@@ -1,0 +1,12 @@
+<section class="tab tab-cargo {{tab.cssClass}}" data-group="primary" data-tab="cargo">
+    <div class="ds-tab-content">
+        {{#each cargo as |item|}}
+        <div class="ds-cargo-row item" data-item-id="{{item.id}}">
+            <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
+        </div>
+        {{/each}}
+        {{#unless cargo.length}}
+        <span class="ds-unset">Drop items here to add cargo</span>
+        {{/unless}}
+    </div>
+</section>

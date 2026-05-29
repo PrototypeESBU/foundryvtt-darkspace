@@ -1,0 +1,35 @@
+<section class="tab tab-systems {{tab.cssClass}}" data-group="primary" data-tab="systems">
+    <div class="ds-tab-content">
+
+        <div class="ds-ship-top">
+            {{> ship/component-section label="Systems" items=systems subtype="System" owner=owner}}
+            {{> ship/component-section label="Features" items=features subtype="Feature" owner=owner}}
+        </div>
+
+        <div class="DS-wrapper ds-ship-section">
+            <div class="header">
+                <label>Weapons</label>
+                {{#if owner}}
+                <span><a data-action="item-create" data-item-type="darkspace.ShipWeapon"><i class="fas fa-plus"></i></a></span>
+                {{/if}}
+            </div>
+            <div class="content">
+                {{#if attacks.length}}
+                <div class="ds-weapon-header">
+                    <span>Name</span><span>Type</span><span>Damage</span><span>Range</span><span>Energy</span>
+                </div>
+                {{/if}}
+                {{#each attacks as |item|}}
+                <div class="ds-weapon-row item" data-item-id="{{item.id}}">
+                    <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
+                    <span>{{item.system.damageType}}</span>
+                    <span>{{item.system.damage}}</span>
+                    <span>{{item.system.range}}</span>
+                    <span>{{item.system.energyCost}}</span>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+</section>

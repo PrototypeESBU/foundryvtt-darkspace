@@ -1,0 +1,21 @@
+{
+  "_id": "0k8LKSM6kck1UFra",
+  "name": "Navicomputer",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship is equipped with a navicomputer to make astrogation calculations.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!0k8LKSM6kck1UFra"
+}

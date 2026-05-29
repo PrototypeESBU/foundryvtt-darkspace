@@ -1,0 +1,21 @@
+{
+  "_id": "hsfVbgcbQRBsmVFH",
+  "name": "Smuggling Compartment",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>A small cargo hold that hides one cargo slot. A successful DC 15 WIS check is required to find it.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!hsfVbgcbQRBsmVFH"
+}

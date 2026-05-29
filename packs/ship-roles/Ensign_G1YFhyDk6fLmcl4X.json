@@ -1,0 +1,16 @@
+{
+  "_id": "G1YFhyDk6fLmcl4X",
+  "name": "Ensign",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>A junior officer that might take on different roles as needed.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!G1YFhyDk6fLmcl4X"
+}

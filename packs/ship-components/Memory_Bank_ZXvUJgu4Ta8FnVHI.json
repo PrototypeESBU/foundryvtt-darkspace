@@ -1,0 +1,21 @@
+{
+  "_id": "ZXvUJgu4Ta8FnVHI",
+  "name": "Memory Bank",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship can store data and has a baseline set of star charts.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!ZXvUJgu4Ta8FnVHI"
+}

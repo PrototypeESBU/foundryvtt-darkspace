@@ -1,14 +1,35 @@
 TYPES.Actor.darkspace.Spacer: Spacer
 TYPES.Actor.darkspace.Ship: Ship
 TYPES.Item.darkspace.Archetype: Archetype
-TYPES.Item.darkspace.Component: Component
+TYPES.Item.darkspace.ShipComponent: Ship Component
+TYPES.Item.darkspace.ShipRole: Ship Role
 TYPES.Item.darkspace.ShipArmor: Ship Armor
 TYPES.Item.darkspace.ShipClass: Ship Class
 TYPES.Item.darkspace.ShipWeapon: Ship Weapon
 TYPES.Item.darkspace.Species: Species
 TYPES.Item.darkspace.Weapon: Weapon
 SHADOWDARK.coins.gp: CR
+DARKSPACE.sheet.ship.tab.crew: Crew
+DARKSPACE.sheet.ship.tab.systems: Systems
+DARKSPACE.sheet.ship.tab.cargo: Cargo
+DARKSPACE.sheet.ship.tab.notes: Notes
 DARKSPACE.sheet.spacer.tab.details: Details
 DARKSPACE.motivation.survivor: Survivor (S)
 DARKSPACE.motivation.vile: Vile (VL)
 DARKSPACE.motivation.virtuous: Virtuous (VR)
+DARKSPACE.sheet.spacer.tab.gear: Gear
+DARKSPACE.sheet.spacer.tab.talents: Talents
+DARKSPACE.sheet.spacer.tab.notes: Notes
+DARKSPACE.sheet.addItem: Add Item
+DARKSPACE.sheet.newItem: New Item
+DARKSPACE.currency.cr: "cr"
+DARKSPACE.sheet.spacer.gear.slots: Slots
+DARKSPACE.sheet.spacer.gear.equipped: Equipped
+DARKSPACE.sheet.spacer.gear.carried: Carried
+DARKSPACE.sheet.spacer.gear.stashed: Stashed
+DARKSPACE.sheet.spacer.gear.item: Item
+DARKSPACE.sheet.spacer.gear.slotsShort: Slots
+DARKSPACE.sheet.spacer.gear.tooltip.equip: Equip
+DARKSPACE.sheet.spacer.gear.tooltip.unequip: Unequip
+DARKSPACE.sheet.spacer.gear.tooltip.stash: Stash
+DARKSPACE.sheet.spacer.gear.tooltip.unstash: Unstash

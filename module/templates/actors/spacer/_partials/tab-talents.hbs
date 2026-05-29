@@ -1,0 +1,16 @@
+<section class="tab tab-talents {{tab.cssClass}}" data-group="primary" data-tab="talents">
+    <div class="ds-talents-list">
+        {{#each talents as |item|}}
+        <div class="ds-item-row" data-item-id="{{item.id}}">
+            <span class="ds-item-name">{{item.name}}</span>
+            {{#if ../owner}}
+            <a data-action="item-edit" data-item-id="{{item.id}}" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="item-delete" data-item-id="{{item.id}}" title="Delete"><i class="fas fa-trash"></i></a>
+            {{/if}}
+        </div>
+        {{/each}}
+        {{#unless talents.length}}
+        <span class="ds-unset">No talents</span>
+        {{/unless}}
+    </div>
+</section>

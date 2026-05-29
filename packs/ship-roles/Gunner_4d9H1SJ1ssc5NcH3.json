@@ -1,0 +1,16 @@
+{
+  "_id": "4d9H1SJ1ssc5NcH3",
+  "name": "Gunner",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You are responsible for firing a weapon.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!4d9H1SJ1ssc5NcH3"
+}

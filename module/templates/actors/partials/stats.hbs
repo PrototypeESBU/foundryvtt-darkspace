@@ -1,6 +1,6 @@
 
-    {{#each abilities as |ability id|}}
-        <div class="SD-box">
+    {{#each system.abilities as |ability id|}}
+        <div class="DS-box">
             <div class="header">
                 <label>
                     <a
@@ -35,7 +35,7 @@
                 {{else}}
                     <span>{{ability.value}}</span>
                 {{/if}}
-                <span style="font-family:Rocket-Rinder">/</span>
+                <span class="ds-stat-sep">/</span>
                 <span>{{numberFormat ability.mod decimals=0 sign=true}}</span>
             </div>
         </div>

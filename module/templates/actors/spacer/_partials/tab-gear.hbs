@@ -1,0 +1,127 @@
+<section class="tab tab-gear {{tab.cssClass}}" data-group="primary" data-tab="gear">
+    <div class="ds-gear-sections">
+
+        {{!-- Equipped --}}
+        <div class="DS-box ds-inventory-section">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.gear.equipped"}}</label>
+                <span></span>
+            </div>
+            <div class="content">
+                <ol class="ds-item-list">
+                    <li class="ds-item-header">
+                        <span class="ds-item-name">{{localize "DARKSPACE.sheet.spacer.gear.item"}}</span>
+                        <span class="ds-item-slots">{{localize "DARKSPACE.sheet.spacer.gear.slotsShort"}}</span>
+                        <span class="ds-item-actions"></span>
+                    </li>
+                    {{#each inventory.equipped as |item|}}
+                    <li class="ds-item-row" data-item-id="{{item.id}}">
+                        <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
+                        <span class="ds-item-name">{{item.name}}</span>
+                        <span class="ds-item-slots">{{item.system.slotsUsed}}</span>
+                        <span class="ds-item-actions">
+                            <a data-action="toggle-equipped" data-item-id="{{item.id}}"
+                               data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.unequip'}}">
+                                <i class="fas fa-user-shield" style="color:var(--primary)"></i>
+                            </a>
+                            {{#if ../owner}}
+                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
+                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
+                            {{/if}}
+                        </span>
+                    </li>
+                    {{/each}}
+                    {{#unless inventory.equipped.length}}
+                    <li class="ds-item-empty"><span class="ds-unset">—</span></li>
+                    {{/unless}}
+                </ol>
+            </div>
+        </div>
+
+        {{!-- Carried --}}
+        <div class="DS-box ds-inventory-section">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.gear.carried"}}</label>
+                {{#if owner}}
+                <span><a data-action="item-create" data-item-type="Item"
+                         data-tooltip="{{localize 'DARKSPACE.sheet.addItem'}}">
+                    <i class="fas fa-square-plus"></i>
+                </a></span>
+                {{/if}}
+            </div>
+            <div class="content">
+                <ol class="ds-item-list">
+                    <li class="ds-item-header">
+                        <span class="ds-item-name">{{localize "DARKSPACE.sheet.spacer.gear.item"}}</span>
+                        <span class="ds-item-slots">{{localize "DARKSPACE.sheet.spacer.gear.slotsShort"}}</span>
+                        <span class="ds-item-actions"></span>
+                    </li>
+                    {{#each inventory.carried as |item|}}
+                    <li class="ds-item-row" data-item-id="{{item.id}}">
+                        <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
+                        <span class="ds-item-name">{{item.name}}</span>
+                        <span class="ds-item-slots">{{item.system.slotsUsed}}</span>
+                        <span class="ds-item-actions">
+                            {{#if item.system.canBeEquipped}}
+                            <a data-action="toggle-equipped" data-item-id="{{item.id}}"
+                               data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.equip'}}">
+                                <i class="fas fa-user-shield"></i>
+                            </a>
+                            {{/if}}
+                            <a data-action="toggle-stashed" data-item-id="{{item.id}}"
+                               data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.stash'}}">
+                                <i class="fas fa-box"></i>
+                            </a>
+                            {{#if ../owner}}
+                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
+                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
+                            {{/if}}
+                        </span>
+                    </li>
+                    {{/each}}
+                    {{#unless inventory.carried.length}}
+                    <li class="ds-item-empty"><span class="ds-unset">—</span></li>
+                    {{/unless}}
+                </ol>
+            </div>
+        </div>
+
+        {{!-- Stashed --}}
+        <div class="DS-box ds-inventory-section">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.gear.stashed"}}</label>
+                <span></span>
+            </div>
+            <div class="content">
+                <ol class="ds-item-list">
+                    <li class="ds-item-header">
+                        <span class="ds-item-name">{{localize "DARKSPACE.sheet.spacer.gear.item"}}</span>
+                        <span class="ds-item-slots">{{localize "DARKSPACE.sheet.spacer.gear.slotsShort"}}</span>
+                        <span class="ds-item-actions"></span>
+                    </li>
+                    {{#each inventory.stashed as |item|}}
+                    <li class="ds-item-row" data-item-id="{{item.id}}">
+                        <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
+                        <span class="ds-item-name">{{item.name}}</span>
+                        <span class="ds-item-slots">{{item.system.slotsUsed}}</span>
+                        <span class="ds-item-actions">
+                            <a data-action="toggle-stashed" data-item-id="{{item.id}}"
+                               data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.unstash'}}">
+                                <i class="fas fa-box" style="color:var(--primary)"></i>
+                            </a>
+                            {{#if ../owner}}
+                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
+                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
+                            {{/if}}
+                        </span>
+                    </li>
+                    {{/each}}
+                    {{#unless inventory.stashed.length}}
+                    <li class="ds-item-empty"><span class="ds-unset">—</span></li>
+                    {{/unless}}
+                </ol>
+            </div>
+        </div>
+
+    </div>
+</section>

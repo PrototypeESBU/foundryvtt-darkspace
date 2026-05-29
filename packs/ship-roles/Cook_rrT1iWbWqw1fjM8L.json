@@ -1,0 +1,16 @@
+{
+  "_id": "rrT1iWbWqw1fjM8L",
+  "name": "Cook",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You are responsible for feeding the crew. Having a cook means not living off of rations.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!rrT1iWbWqw1fjM8L"
+}

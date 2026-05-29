@@ -1,15 +1,10 @@
 <form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-        <div class="header-fields">
-            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Archetype Name" />
-        </div>
-    </header>
+    {{> items/item-header placeholder="Archetype Name"}}
 
-    <section class="sheet-body flexcol" style="padding:8px">
+    <section class="sheet-body flexcol ds-item-body">
         <div class="form-group">
             <label>Description</label>
-            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
         </div>
     </section>
 </form>

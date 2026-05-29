@@ -1,0 +1,216 @@
+@use "mixins" as *;
+
+.darkspace.spacer [data-application-part="details"],
+.darkspace.spacer [data-application-part="gear"],
+.darkspace.spacer [data-application-part="talents"],
+.darkspace.spacer [data-application-part="notes"] {
+    grid-column: 2;
+    grid-row: 2;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.darkspace {
+    .spacer-sidebar {
+        display: grid;
+        grid-template-columns: 270px 200px;
+        grid-auto-rows: auto;
+        gap: 8px;
+        align-content: start;
+
+        .ds-sidebar-attacks {
+            display: flex;
+            flex-direction: column;
+
+            > .DS-box {
+                flex: 1;
+                min-height: 0;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    min-height: 0;
+                }
+            }
+        }
+
+        .ds-sidebar-hp-ac,
+        .ds-sidebar-luck-slots {
+            display: flex;
+            gap: 8px;
+
+            > * { flex: 1; }
+        }
+
+        .ds-sidebar-luck-slots {
+            .value-grid {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+
+    .ds-details-grid {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .ds-details-stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .ds-details-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+
+            .ds-details-full-width {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    .ds-name-box {
+        padding: 2px 6px;
+    }
+
+    .ds-name-input {
+        font-family: "Rocket-Rinder";
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+        border: none;
+        padding: 0;
+        resize: none;
+        overflow: hidden;
+        field-sizing: content;
+        align-content: end;
+        max-height: 2lh;
+        background: none;
+        box-shadow: none;
+
+        &:hover {
+                box-shadow: var(--input-box-shadow);
+        }
+        &:focus {
+            box-shadow: 0 0 6px var(--color-shadow-primary);
+        }
+    }
+
+    .ds-spacer-portrait {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid black;
+    }
+
+    .ds-attacks-col {
+        flex: 1 1 0;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .ds-talents-section {
+        @include flex-fill-col;
+
+        .content {
+            flex: 1 1 0;
+            overflow-y: auto;
+            min-height: 0;
+        }
+    }
+
+    .ds-gear-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .ds-inventory-section {
+        flex-shrink: 0;
+
+        .content { padding: 0; }
+    }
+
+    .ds-item-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ds-item-header {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        padding: 2px 5px;
+        font-size: 11px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .ds-item-row {
+        display: grid;
+        grid-template-columns: 22px 1fr auto auto;
+        align-items: center;
+        padding: 2px 5px;
+        font-size: 12px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:hover { background: rgba(0, 0, 0, 0.04); }
+    }
+
+    .ds-item-img {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .ds-item-name   { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .ds-item-slots  { text-align: center; min-width: 28px; }
+
+    .ds-item-actions {
+        display: flex;
+        gap: 4px;
+
+        a {
+            opacity: 0.5;
+
+            &:hover { opacity: 1; }
+        }
+    }
+
+    .ds-item-empty { padding: 4px 5px; }
+
+    .ds-over-capacity { color: red; }
+
+    .ds-talents-list {
+        padding: 8px;
+    }
+
+    .ds-item-add {
+        margin-top: 6px;
+    }
+
+    .ds-unset {
+        color: var(--color-text-subtle, #aaa);
+        font-size: 11px;
+    }
+
+    .ds-role-tag {
+        display: inline-block;
+        background: #111;
+        color: #fff;
+        font-size: 10px;
+        padding: 1px 6px;
+        margin: 1px 2px;
+    }
+}

@@ -1,13 +1,8 @@
 <form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-        <div class="header-fields">
-            <input class="title-input" name="name" type="text" value="{{item.name}}" placeholder="Component Name" />
-        </div>
-    </header>
+    {{> items/item-header placeholder="Component Name"}}
 
-    <section class="sheet-body flexcol" style="padding:8px;gap:8px">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;align-items:end">
+    <section class="sheet-body flexcol ds-item-body">
+        <div class="ds-form-grid-5">
             <div class="form-group">
                 <label>Type</label>
                 <select name="system.type">
@@ -19,19 +14,23 @@
                 <label>Slots</label>
                 <input name="system.slots" type="number" value="{{system.slots}}" min="1" />
             </div>
-            <div class="form-group" style="text-align:center">
+            <div class="form-group ds-form-group-center">
                 <label>Online</label>
                 <input name="system.online" type="checkbox" {{#if system.online}}checked{{/if}} />
             </div>
-            <div class="form-group" style="text-align:center">
+            <div class="form-group ds-form-group-center">
                 <label>Damaged</label>
                 <input name="system.damaged" type="checkbox" {{#if system.damaged}}checked{{/if}} />
+            </div>
+            <div class="form-group ds-form-group-center">
+                <label>Advanced</label>
+                <input name="system.advanced" type="checkbox" {{#if system.advanced}}checked{{/if}} />
             </div>
         </div>
 
         <div class="form-group">
             <label>Description</label>
-            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
         </div>
     </section>
 </form>

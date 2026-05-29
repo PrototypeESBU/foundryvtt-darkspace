@@ -1,0 +1,21 @@
+{
+  "_id": "aO2AgP1t7tCgytSq",
+  "name": "Crew Quarters",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>Bunks required to take a Rest while on the ship.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "Feature",
+    "online": true,
+    "damaged": false,
+    "slots": 1,
+    "advanced": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!aO2AgP1t7tCgytSq"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "OACuwyuq2ZGQ6PzV",
+  "name": "Medic",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>You are responsible for the crew's health.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!OACuwyuq2ZGQ6PzV"
+}

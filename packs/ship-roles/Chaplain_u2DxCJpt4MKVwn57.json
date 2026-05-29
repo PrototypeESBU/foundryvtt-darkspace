@@ -1,0 +1,16 @@
+{
+  "_id": "u2DxCJpt4MKVwn57",
+  "name": "Chaplain",
+  "type": "darkspace.ShipRole",
+  "img": "icons/svg/teleport.svg",
+  "system": {
+    "description": "<p>The spiritual guide of the ship. Can act as a counselor or negotiator.</p>",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!u2DxCJpt4MKVwn57"
+}
