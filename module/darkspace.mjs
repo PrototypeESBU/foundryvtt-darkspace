@@ -17,6 +17,7 @@ Hooks.on("init", () => {
     // Item data models
     Object.assign(CONFIG.Item.dataModels, {
         "darkspace.Archetype":      models.Archetype,
+        "darkspace.Cargo":          models.Cargo,
         "darkspace.ShipArmor":      models.ShipArmor,
         "darkspace.ShipClass":      models.ShipClass,
         "darkspace.ShipComponent":  models.ShipComponent,
@@ -39,6 +40,7 @@ Hooks.on("init", () => {
         options.types ??= [
             "Background",
             "darkspace.Archetype",
+            "darkspace.Cargo",
             "darkspace.ShipArmor",
             "darkspace.ShipClass",
             "darkspace.ShipComponent",
@@ -64,6 +66,11 @@ Hooks.on("init", () => {
     // Item sheets
     Items.registerSheet("darkspace", sheets.ArchetypeSheet, {
         types: ["darkspace.Archetype"],
+        makeDefault: true,
+    });
+
+    Items.registerSheet("darkspace", sheets.CargoSheet, {
+        types: ["darkspace.Cargo"],
         makeDefault: true,
     });
 

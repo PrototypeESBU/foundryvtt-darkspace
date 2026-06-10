@@ -6,6 +6,7 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     static DEFAULT_OPTIONS = {
         classes: ["darkspace", "spacer"],
         position: { width: 1000, height: 700 },
+        window: { resizable: true },
         form: {
             handler: SpacerSheet.#onSubmit,
             submitOnChange: true,
@@ -108,6 +109,12 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     /** @override */
     _onRender(context, options) {
         super._onRender(context, options);
+    }
+
+    /** Lock width — only allow vertical resizing. */
+    setPosition(position = {}) {
+        if (position.width !== undefined) position.width = 1000;
+        return super.setPosition(position);
     }
 
     // -----------------------------------------------

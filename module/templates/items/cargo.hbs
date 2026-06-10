@@ -1,0 +1,17 @@
+<form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
+    {{> items/item-header placeholder="Cargo Name"}}
+
+    <section class="sheet-body flexcol ds-item-body">
+        <div class="ds-form-grid-5">
+            <div class="form-group">
+                <label>Units (m²)</label>
+                <input name="system.units" type="number" value="{{system.units}}" min="1" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
+        </div>
+    </section>
+</form>

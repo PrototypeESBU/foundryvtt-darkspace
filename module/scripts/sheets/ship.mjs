@@ -56,10 +56,11 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     async _prepareContext(options) {
         const context = await super._prepareContext(options);
 
-        context.actor        = this.actor;
-        context.system       = this.actor.system;
+        context.actor = this.actor;
+        const system = this.actor.system;
+        context.system = system;
 
-        const items = actor.items;
+        const items = this.actor.items;
         const shipTypes = new Set([
             "darkspace.ShipArmor",
             "darkspace.ShipClass",
@@ -74,32 +75,33 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
         context.attacks   = items.filter(i => i.type === "darkspace.ShipWeapon");
         context.cargo     = items.filter(i => !shipTypes.has(i.type));
 
-        Object.assign(context, await this.#prepareCrewContext(system, items));
+        Object.assign(context, await this.#prepareCrewContext());
 
-        context.shipClass    = system.shipClass ? actor.items.get(system.shipClass) ?? null : null;
+        context.shipClass    = system.shipClass ? this.actor.items.get(system.shipClass) ?? null : null;
         context.acProjectile = system.attributes?.acProjectile ?? 0;
         context.acEnergy     = system.attributes?.acEnergy     ?? 0;
 
         context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
             system.notes ?? "",
-            { async: true, relativeTo: actor }
+            { async: true, relativeTo: this.actor }
         );
         return context;
     }
 
-    async #prepareCrewContext(system, items) {
-        const shipRoles = items.filter(i => i.type === "darkspace.ShipRole");
+    async #prepareCrewContext() {
+
+        const shipRoles = this.actor.items.filter(i => i.type === "darkspace.ShipRole");
         const roleMap   = Object.fromEntries(shipRoles.map(r => [r.id, r.name]));
 
         const rolesBySpacerUuid = {};
-        for (const r of system.roles ?? []) {
+        for (const r of this.actor.system.roles ?? []) {
             if (!r.spacerUuid) continue;
             (rolesBySpacerUuid[r.spacerUuid] ??= []).push(roleMap[r.roleId] ?? "Unknown Role");
         }
 
-        const crewActors = await system.getCrew();
+        const crewActors = await this.actor.system.getCrew();
         const crew = await Promise.all(crewActors.map(async (a, i) => {
-            const uuid          = system.crew[i];
+            const uuid          = this.actor.system.crew[i];
             const archetypeObj  = a?.system?.class      ? await fromUuid(a.system.class).catch(() => null)      : null;
             const backgroundObj = a?.system?.background ? await fromUuid(a.system.background).catch(() => null) : null;
             return {
@@ -118,7 +120,7 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
         }));
 
         const crewMap = Object.fromEntries(crew.map(c => [c.uuid, c.name]));
-        const roles = (system.roles ?? []).map((r, index) => ({
+        const roles = (this.actor.system.roles ?? []).map((r, index) => ({
             index,
             roleId:     r.roleId,
             spacerUuid: r.spacerUuid,

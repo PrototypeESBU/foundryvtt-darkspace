@@ -27,6 +27,7 @@
         },
         "Item": {
             "Archetype":     {},
+            "Cargo":         {},
             "ShipArmor":     {},
             "ShipClass":     {},
             "ShipComponent": {},

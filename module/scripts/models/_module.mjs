@@ -1,4 +1,5 @@
 export {default as Archetype}     from "./items/Archetype.mjs";
+export {default as Cargo}         from "./items/Cargo.mjs";
 export {default as Ship}          from "./Ship.mjs";
 export {default as ShipArmor}     from "./items/ShipArmor.mjs";
 export {default as ShipClass}     from "./items/ShipClass.mjs";

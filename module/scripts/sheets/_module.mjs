@@ -1,4 +1,5 @@
 export {default as ArchetypeSheet}       from "./items/archetype.mjs";
+export {default as CargoSheet}           from "./items/cargo.mjs";
 export {default as ShipArmorSheet}       from "./items/shipArmor.mjs";
 export {default as ShipClassSheet}       from "./items/shipClass.mjs";
 export {default as ShipComponentSheet}   from "./items/shipComponent.mjs";
