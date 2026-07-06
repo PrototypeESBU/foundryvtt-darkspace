@@ -1,4 +1,3 @@
-export {default as ArchetypeSheet}       from "./items/archetype.mjs";
 export {default as CargoSheet}           from "./items/cargo.mjs";
 export {default as ShipArmorSheet}       from "./items/shipArmor.mjs";
 export {default as ShipClassSheet}       from "./items/shipClass.mjs";
@@ -7,5 +6,4 @@ export {default as ShipRoleSheet}        from "./items/shipRole.mjs";
 export {default as ShipSheet}            from "./shipSheet.mjs";
 export {default as ShipWeaponSheet}      from "./items/shipWeapon.mjs";
 export {default as SpacerSheet}          from "./spacerSheet.mjs";
-export {default as SpeciesSheet}         from "./items/species.mjs";
 export {default as WeaponSheet}          from "./items/weapon.mjs";

@@ -53,6 +53,19 @@ body {
             background: black;
         }
 
+        // Archetype (Class) sheet: hide Shadowdark's spellcasting and alignment
+        // fields and the Spells Known tab. Scoped to forms containing the
+        // talents table select, which only exists on the Class sheet.
+        &.sheet.item form:has(select[name="system.classTalentTable"]) {
+            div:has(> select[name="system.spellcasting.ability"]),
+            div:has(> select[name="system.spellcasting.class"]),
+            div:has(> select[name="system.alignment"]),
+            div:has(> input[name="system.spellcasting.baseDifficulty"]),
+            [data-tab="tab-spells-known"] {
+                display: none;
+            }
+        }
+
         &.sheet {
             .SD-title {
                 font-family: "Rocket-Rinder";

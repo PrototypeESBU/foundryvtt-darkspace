@@ -54,6 +54,14 @@ Hooks.on("init", () => {
         return _origItemCreateDialog.call(this, data, createOptions, options);
     };
 
+    // Localize the item type in Shadowdark sheet titles (Class → Archetype, Ancestry → Species)
+    Object.defineProperty(shadowdark.sheets.ItemSheetSD.prototype, "title", {
+        get() {
+            return `[${game.i18n.localize(`TYPES.Item.${this.item.type}`)}] ${this.item.name}`;
+        },
+        configurable: true,
+    });
+
     // Actor sheets
     Actors.registerSheet("darkspace", sheets.SpacerSheet, {
         types: ["darkspace.Spacer"],
@@ -66,11 +74,6 @@ Hooks.on("init", () => {
     });
 
     // Item sheets
-    Items.registerSheet("darkspace", sheets.ArchetypeSheet, {
-        types: ["Class"],
-        makeDefault: true,
-    });
-
     Items.registerSheet("darkspace", sheets.CargoSheet, {
         types: ["darkspace.Cargo"],
         makeDefault: true,
@@ -98,11 +101,6 @@ Hooks.on("init", () => {
 
     Items.registerSheet("darkspace", sheets.ShipWeaponSheet, {
         types: ["darkspace.ShipWeapon"],
-        makeDefault: true,
-    });
-
-    Items.registerSheet("darkspace", sheets.SpeciesSheet, {
-        types: ["Ancestry"],
         makeDefault: true,
     });
 
