@@ -1,4 +1,4 @@
-import { ActorBaseSD } from "/systems/shadowdark/src/models/_ActorBaseSD.mjs";
+import ActorBaseDS from "./ActorBaseDS.mjs";
 import ShipClass from "./items/ShipClass.mjs";
 
 const fields = foundry.data.fields;
@@ -6,31 +6,34 @@ const fields = foundry.data.fields;
 // coins.gp > credits
 // class > shipClass
 // slots > Cargo
-export default class Ship extends PlayerSD {
+export default class Ship extends ActorBaseDS {
     static defineSchema() {
         return {
             ...super.defineSchema(),
-            roles:     new fields.ArrayField(new fields.SchemaField({
-                roleId:     new fields.StringField({ initial: "" }),
-                spacerUuid: new fields.StringField({ initial: "" }),
-            })),
         };
     }
 
-    async getCrew() {
-        return Promise.all((this.crew ?? []).map(uuid => fromUuid(uuid).catch(() => null)));
+    // Crew is derived: a spacer belongs to this ship when its shipUuid points here.
+    getCrew() {
+        return game.actors.filter(a =>
+            a.type === "darkspace.Spacer" && a.system.shipUuid === this.parent.uuid);
     }
 
-    async getCrewLevel() {
-        const crew = (await this.getCrew()).filter(a => a !== null);
+    getCrewLevel() {
+        const crew = this.getCrew();
         if (!crew.length) return 0;
         const total = crew.reduce((sum, a) => sum + (a.system?.level?.value ?? 0), 0);
         return Math.floor(total / crew.length);
     }
 
     prepareBaseData() {
+        super.prepareBaseData();
+
         //set max cargo
-        this.cargo.max = 0;
+        this.cargo = {
+            max: 0,
+            value: this._getCargoValue()
+        }
     }
 
     prepareDerivedData() {
@@ -48,7 +51,12 @@ export default class Ship extends PlayerSD {
         this.attributes.ac.energy = acEnergy;
     }
 
-    get isPlayer() {
+    get isPC() {
         return false;
+    }
+
+    _getCargoValue() {
+        //TODO 
+        return 0;
     }
 }

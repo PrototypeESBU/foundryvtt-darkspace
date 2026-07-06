@@ -1,87 +1,63 @@
 <div class="ds-ship-sidebar">
-<!-- Col 1: Stats & Attacks (270px fixed) -->
-<div class="ds-sheet-col ds-col-fixed-270">
-    <div class="centered">
-        <h1><i>D</i>ark<i>S</i>pace</h1>
-        <h2>Ship Sheet</h2>
-    </div>
-    <div class="DS-wrapper grid-2-columns">
-        {{> stats }}
-    </div>
-    <div class="DS-wrapper grid-2-columns">
-        <div>{{> actors/player/abilities/hp }}</div>
-        {{#> ui/ds-box header-label="AC"}}
-            Projectile: {{acProjectile}}
-            Energy: {{acEnergy}}
+    <!-- Col 1: Stats & Attacks (270px fixed) -->
+    <div class="ds-sheet-col ds-col-fixed-270">
+        <div class="centered">
+            <h1><i>D</i>ark<i>S</i>pace</h1>
+            <h2>Ship Sheet</h2>
+        </div>
+        <div class="DS-wrapper grid-2-columns">
+            {{> stats }}
+        </div>
+        <div class="DS-wrapper grid-2-columns">
+            <div>{{> hp }}</div>
+            {{#> ui/ds-box header-label="AC"}}
+                Projectile: {{acProjectile}}
+                Energy: {{acEnergy}}
+            {{/ui/ds-box}}
+        </div>
+        {{#> ui/ds-box header-label="Attacks" class="ds-sidebar-attacks"}}
+            <div class="ds-attacks-col">
+                {{> attacks }}
+            </div>
         {{/ui/ds-box}}
     </div>
-    <div class="DS-wrapper ds-attacks-col">
-        <div class="header"><label>Attacks</label></div>
-        <div class="content">
-            {{#each attacks as |item|}}
-            <div class="ds-attack-card item" data-item-id="{{item.id}}">
-                <div class="ds-attack-info">
-                    <span class="ds-attack-name">{{item.name}}</span>
-                    <span class="ds-attack-type-tag">{{item.system.damageType}}</span>
-                </div>
-                <div class="ds-attack-stats">
-                    {{#if item.system.damage}}
-                    <span class="ds-attack-stat"><label>Damage</label>{{item.system.damage}}</span>
-                    {{/if}}
-                    {{#if item.system.range}}
-                    <span class="ds-attack-stat"><label>Range</label>{{item.system.range}}</span>
-                    {{/if}}
-                    {{#if item.system.energyCost}}
-                    <span class="ds-attack-stat"><label>Energy</label>{{item.system.energyCost}}</span>
-                    {{/if}}
-                </div>
-                {{#if owner}}
-                <button type="button" class="ds-roll-btn" data-action="ship-attack" data-item-id="{{item.id}}">
-                    <i class="fas fa-dice-d20"></i> Fire
-                </button>
-                {{/if}}
-            </div>
-            {{/each}}
-            {{#unless attacks.length}}
-            <span class="ds-unset">No weapons equipped</span>
-            {{/unless}}
-        </div>
-    </div>
-</div>
 
-<!-- Col 2: Ship Identity (200px fixed) -->
-<div class="ds-sheet-col ds-col-fixed-200">
-    {{#> ui/ds-box header-label="Name"}}
-        <input name="name" type="text" value="{{ actor.name }}" placeholder="Ship Name" />
-    {{/ui/ds-box}}
+    <!-- Col 2: Ship Identity (200px fixed) -->
+    <div class="ds-sheet-col ds-col-fixed-200">
+        {{#> ui/ds-box header-label="Name"}}
+            <input name="name" type="text" value="{{ actor.name }}" placeholder="Ship Name" />
+        {{/ui/ds-box}}
 
-    {{#> ui/ds-box header-label="Class"}}
-        {{#if shipClass}}
-            <div class="ds-flex-row">
+        <img
+            class="ds-portrait"
+            src="{{ actor.img }}"
+            data-action="editImage"
+            data-edit="img"
+            data-tooltip="{{ actor.name }}"
+        />
+
+        {{#> ui/ds-box header-label="Class"}}
+            {{#if shipClass}}
                 <a class="content-link" data-action="item-edit" data-item-id="{{shipClass.id}}">{{shipClass.name}}</a>
-                {{#if owner}}
-                <a class="ds-ml-auto" data-action="ship-class-remove" title="Remove class"><i class="fas fa-times"></i></a>
-                {{/if}}
+            {{else}}
+                <span class="ds-unset">Drop Ship Class here</span>
+            {{/if}}
+        {{/ui/ds-box}}
+
+        {{#> ui/ds-box header-label="Ship Level"}}
+            <input name="system.level.value" type="number" value="{{system.level.value}}" min="1" />
+        {{/ui/ds-box}}
+
+        {{#> ui/ds-box header-label="Cargo"}}
+            <div class="ds-flex-row">
+                <input class="ds-flex-1" name="system.cargo.value" type="number" value="{{system.cargo.value}}" min="0" />
+                <span>/</span>
+                <input class="ds-flex-1" name="system.cargo.max" type="number" value="{{system.cargo.max}}" min="0" />
             </div>
-        {{else}}
-            <span class="ds-unset">Drop Ship Class here</span>
-        {{/if}}
-    {{/ui/ds-box}}
+        {{/ui/ds-box}}
 
-    {{#> ui/ds-box header-label="Ship Level"}}
-        <input name="system.level.value" type="number" value="{{system.level.value}}" min="1" />
-    {{/ui/ds-box}}
-
-    {{#> ui/ds-box header-label="Cargo"}}
-        <div class="ds-flex-row">
-            <input class="ds-flex-1" name="system.cargo.value" type="number" value="{{system.cargo.value}}" min="0" />
-            <span>/</span>
-            <input class="ds-flex-1" name="system.cargo.max" type="number" value="{{system.cargo.max}}" min="0" />
-        </div>
-    {{/ui/ds-box}}
-
-    {{#> ui/ds-box header-label="Credits"}}
-        <input name="system.credits" type="number" value="{{system.credits}}" min="0" />
-    {{/ui/ds-box}}
-</div>
+        {{#> ui/ds-box header-label="Credits"}}
+            <input class="ds-credits-input" type="text" data-value="{{system.coins.gp}}" value="{{system.coins.gp}}" />
+        {{/ui/ds-box}}
+    </div>
 </div>

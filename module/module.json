@@ -26,14 +26,12 @@
             "Ship": {}
         },
         "Item": {
-            "Archetype":     {},
             "Cargo":         {},
             "ShipArmor":     {},
             "ShipClass":     {},
             "ShipComponent": {},
             "ShipRole":      {},
             "ShipWeapon":    {},
-            "Species":       {},
             "Weapon":        {}
         }
     },

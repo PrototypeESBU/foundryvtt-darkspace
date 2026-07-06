@@ -3,7 +3,7 @@
 .darkspace.ship .ds-ship-sidebar {
     display: flex;
     gap: 8px;
-    align-items: flex-start;
+    height: 100%;
 }
 
 .darkspace.ship [data-application-part="crew"],
@@ -88,7 +88,7 @@
         }
     }
 
-    .ds-attacks-col, .ds-notes-box {
+    .ds-sidebar-attacks, .ds-notes-box {
         @include flex-fill-col;
         min-height: 60px;
 
@@ -129,6 +129,7 @@
             object-fit: cover;
             object-position: top;
             border: 1px solid rgba(0, 0, 0, 0.3);
+            cursor: pointer;
         }
 
         .ds-crew-info {
@@ -159,17 +160,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-        }
-
-        .ds-crew-remove {
-            flex: 0 0 auto;
-            opacity: 0.4;
-            cursor: pointer;
-            padding-top: 2px;
-
-            &:hover {
-                opacity: 1;
-            }
         }
     }
 
@@ -269,78 +259,6 @@
 
             &:hover {
                 text-decoration: underline;
-            }
-        }
-    }
-
-    .ds-attack-card {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        background: rgba(0, 0, 0, 0.02);
-
-        .ds-attack-info {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            min-width: 0;
-        }
-
-        .ds-attack-name {
-            font-weight: bold;
-            font-size: 13px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .ds-attack-type-tag {
-            font-size: 9px;
-            padding: 1px 5px;
-            background: #222;
-            color: #fff;
-            flex: 0 0 auto;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .ds-attack-stats {
-            display: flex;
-            gap: 16px;
-            flex: 0 0 auto;
-        }
-
-        .ds-attack-stat {
-            text-align: center;
-            font-size: 13px;
-            min-width: 40px;
-
-            label {
-                display: block;
-                font-size: 9px;
-                color: var(--color-text-subtle, #777);
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                line-height: 1;
-                margin-bottom: 1px;
-            }
-        }
-
-        .ds-roll-btn {
-            flex: 0 0 auto;
-            background: #111;
-            color: #fff;
-            border: none;
-            padding: 4px 10px;
-            cursor: pointer;
-            font-size: 12px;
-            font-family: inherit;
-
-            &:hover {
-                background: #333;
             }
         }
     }

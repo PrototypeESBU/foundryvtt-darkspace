@@ -1,4 +1,4 @@
-//import registerSettings from "./scripts/settings.mjs";
+import registerSettings from "./scripts/settings.mjs";
 import * as sheets from "./scripts/sheets/_module.mjs";
 import * as models from "./scripts/models/_module.mjs";
 import { DEFAULT_ICONS } from "./scripts/config.mjs";
@@ -8,6 +8,9 @@ import { DEFAULT_ICONS } from "./scripts/config.mjs";
 // -----------------------------------------------
 Hooks.on("init", () => {
 
+    // Module settings
+    registerSettings();
+
     // Actor data models
     Object.assign(CONFIG.Actor.dataModels, {
         "darkspace.Spacer": models.Spacer,
@@ -16,14 +19,12 @@ Hooks.on("init", () => {
 
     // Item data models
     Object.assign(CONFIG.Item.dataModels, {
-        "darkspace.Archetype":      models.Archetype,
         "darkspace.Cargo":          models.Cargo,
         "darkspace.ShipArmor":      models.ShipArmor,
         "darkspace.ShipClass":      models.ShipClass,
         "darkspace.ShipComponent":  models.ShipComponent,
         "darkspace.ShipRole":       models.ShipRole,
         "darkspace.ShipWeapon":     models.ShipWeapon,
-        "darkspace.Species":        models.Species,
         "darkspace.Weapon":         models.Weapon,
     });
 
@@ -38,15 +39,16 @@ Hooks.on("init", () => {
     const _origItemCreateDialog = Item.createDialog;
     Item.createDialog = function(data={}, createOptions={}, options={}) {
         options.types ??= [
+            "Ancestry",
             "Background",
-            "darkspace.Archetype",
+            "Class",
+            "Talent",
             "darkspace.Cargo",
             "darkspace.ShipArmor",
             "darkspace.ShipClass",
             "darkspace.ShipComponent",
             "darkspace.ShipRole",
             "darkspace.ShipWeapon",
-            "darkspace.Species",
             "darkspace.Weapon",
         ];
         return _origItemCreateDialog.call(this, data, createOptions, options);
@@ -65,7 +67,7 @@ Hooks.on("init", () => {
 
     // Item sheets
     Items.registerSheet("darkspace", sheets.ArchetypeSheet, {
-        types: ["darkspace.Archetype"],
+        types: ["Class"],
         makeDefault: true,
     });
 
@@ -100,7 +102,7 @@ Hooks.on("init", () => {
     });
 
     Items.registerSheet("darkspace", sheets.SpeciesSheet, {
-        types: ["darkspace.Species"],
+        types: ["Ancestry"],
         makeDefault: true,
     });
 
@@ -126,6 +128,7 @@ Hooks.on("init", () => {
         // Shared actor partials
         stats:   "modules/darkspace/templates/actors/partials/stats.hbs",
         attacks: "modules/darkspace/templates/actors/partials/attacks.hbs",
+        hp:      "modules/darkspace/templates/actors/partials/hp.hbs",
         // UI primitives
         "ui/ds-box":             "modules/darkspace/templates/ui/ds-box.hbs",
         "items/item-header":     "modules/darkspace/templates/items/_partials/item-header.hbs",

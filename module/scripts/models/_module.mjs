@@ -1,4 +1,4 @@
-export {default as Archetype}     from "./items/Archetype.mjs";
+export {default as ActorBaseDS}   from "./ActorBaseDS.mjs";
 export {default as Cargo}         from "./items/Cargo.mjs";
 export {default as Ship}          from "./Ship.mjs";
 export {default as ShipArmor}     from "./items/ShipArmor.mjs";
@@ -7,5 +7,4 @@ export {default as ShipComponent} from "./items/ShipComponent.mjs";
 export {default as ShipRole}      from "./items/ShipRole.mjs";
 export {default as ShipWeapon}    from "./items/ShipWeapon.mjs";
 export {default as Spacer}        from "./Spacer.mjs";
-export {default as Species}       from "./items/Species.mjs";
 export {default as Weapon}        from "./items/Weapon.mjs";

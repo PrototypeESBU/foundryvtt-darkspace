@@ -1,62 +1,76 @@
-<div class="spacer-sidebar">
-
-    <div class="ds-sidebar-title ds-col-1 centered">
-        <h1><i>D</i>ark<i>S</i>pace</h1>
-        <h2>Spacer</h2>
-    </div>
-
-    <div class="ds-name-box ds-col-2">
-        <textarea
-            class="ds-name-input"
-            name="name"
-            placeholder="Name"
-            rows="1"
-        >{{actor.name}}</textarea>
-    </div>
-
-    <div class="DS-wrapper ds-col-1 grid-2-columns">
-        {{> stats }}
-    </div>
-
-    <img
-        class="ds-spacer-portrait ds-col-2"
-        src="{{ actor.img }}"
-        data-edit="img"
-        data-tooltip="{{ actor.name }}"
-    />
-
-    <div class="ds-sidebar-attacks ds-col-1 ds-span-3">
-        {{#> ui/ds-box header-label="Attacks"}}
+<div class="ds-spacer-sidebar">
+    <!-- Col 1: Stats & Attacks (270px fixed) -->
+    <div class="ds-sheet-col ds-col-fixed-270">
+        <div class="centered">
+            <h1><i>D</i>ark<i>S</i>pace</h1>
+            <h2>Spacer Sheet</h2>
+        </div>
+        <div class="DS-wrapper grid-2-columns">
+            {{> stats }}
+        </div>
+        {{#> ui/ds-box header-label="Attacks" class="ds-sidebar-attacks"}}
             <div class="ds-attacks-col">
                 {{> attacks }}
             </div>
         {{/ui/ds-box}}
     </div>
 
-    <div class="ds-sidebar-hp-ac ds-col-2">
-        {{> actors/player/abilities/hp }}
-        {{> actors/player/abilities/ac }}
-    </div>
+    <!-- Col 2: Spacer Identity (200px fixed) -->
+    <div class="ds-sheet-col ds-col-fixed-200">
+        <div class="ds-name-box">
+            <textarea
+                class="ds-name-input"
+                name="name"
+                placeholder="Name"
+                rows="1"
+            >{{actor.name}}</textarea>
+        </div>
 
-    <div class="ds-sidebar-luck-slots ds-col-2">
-        {{> actors/player/abilities/luck }}
-        <div class="DS-box">
-            <div class="header">
-                <label>{{localize "DARKSPACE.sheet.spacer.gear.slots"}}</label>
-                <span></span>
-            </div>
-            <div class="content">
-                <div class="value-grid{{#if slotsOverCapacity}} ds-over-capacity{{/if}}">
-                    <div>{{slots.total}}</div>
-                    <div>/</div>
-                    <div>{{gearSlots}}</div>
+        <img
+            class="ds-portrait"
+            src="{{ actor.img }}"
+            data-action="editImage"
+            data-edit="img"
+            data-tooltip="{{ actor.name }}"
+        />
+
+        <div class="ds-sidebar-hp-ac">
+            {{> hp }}
+            {{> actors/player/abilities/ac }}
+        </div>
+
+        <div class="ds-sidebar-luck-slots">
+            {{> actors/player/abilities/luck }}
+            <div class="DS-box">
+                <div class="header">
+                    <label>{{localize "DARKSPACE.sheet.spacer.gear.slots"}}</label>
+                    <span></span>
+                </div>
+                <div class="content">
+                    <div class="value-grid{{#if slotsOverCapacity}} ds-over-capacity{{/if}}">
+                        <div>{{slots.total}}</div>
+                        <div>/</div>
+                        <div>{{gearSlots}}</div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        {{#> ui/ds-box header-label="Ship" class="ds-sidebar-shipname"}}
+            {{#if shipName}}
+                <a class="content-link" data-uuid="{{shipId}}">{{shipName}}</a>
+                {{#if shipRoles.length}}
+                <div class="ds-spacer-roles">
+                    {{#each shipRoles}}<span class="ds-role-tag">{{this}}</span>{{/each}}
+                </div>
+                {{/if}}
+            {{else}}
+                <span class="ds-unset">Unassigned</span>
+            {{/if}}
+        {{/ui/ds-box}}
+
+        {{#> ui/ds-box header-label="Credits"}}
+            <input class="ds-credits-input" type="text" data-value="{{system.coins.gp}}" value="{{system.coins.gp}}" />
+        {{/ui/ds-box}}
     </div>
-
-    {{#> ui/ds-box header-label="Ship Name" class="ds-sidebar-shipname ds-col-2"}}
-        Ship Name
-    {{/ui/ds-box}}
-
 </div>

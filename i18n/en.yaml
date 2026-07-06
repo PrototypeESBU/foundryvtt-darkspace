@@ -1,12 +1,13 @@
 TYPES.Actor.darkspace.Spacer: Spacer
 TYPES.Actor.darkspace.Ship: Ship
-TYPES.Item.darkspace.Archetype: Archetype
+TYPES.Item.Ancestry: Species
+TYPES.Item.Class: Archetype
+TYPES.Item.darkspace.Cargo: Cargo
 TYPES.Item.darkspace.ShipComponent: Ship Component
 TYPES.Item.darkspace.ShipRole: Ship Role
 TYPES.Item.darkspace.ShipArmor: Ship Armor
 TYPES.Item.darkspace.ShipClass: Ship Class
 TYPES.Item.darkspace.ShipWeapon: Ship Weapon
-TYPES.Item.darkspace.Species: Species
 TYPES.Item.darkspace.Weapon: Weapon
 SHADOWDARK.coins.gp: CR
 DARKSPACE.sheet.ship.tab.crew: Crew
@@ -22,6 +23,7 @@ DARKSPACE.sheet.spacer.tab.talents: Talents
 DARKSPACE.sheet.spacer.tab.notes: Notes
 DARKSPACE.sheet.addItem: Add Item
 DARKSPACE.sheet.newItem: New Item
+DARKSPACE.sheet.editSheet: Edit Sheet
 DARKSPACE.currency.cr: "cr"
 DARKSPACE.sheet.spacer.gear.slots: Slots
 DARKSPACE.sheet.spacer.gear.equipped: Equipped
@@ -33,3 +35,9 @@ DARKSPACE.sheet.spacer.gear.tooltip.equip: Equip
 DARKSPACE.sheet.spacer.gear.tooltip.unequip: Unequip
 DARKSPACE.sheet.spacer.gear.tooltip.stash: Stash
 DARKSPACE.sheet.spacer.gear.tooltip.unstash: Unstash
+DARKSPACE.sheet.ship.class.replaceTitle: Replace Ship Class
+DARKSPACE.sheet.ship.class.replaceContent: "This ship is already a {current}. Replace it with {new}?"
+DARKSPACE.sheet.spacer.talents.species: Species
+DARKSPACE.sheet.spacer.talents.archetype: Archetype
+DARKSPACE.sheet.spacer.talents.level: Level
+DARKSPACE.sheet.spacer.talents.empty: No talents

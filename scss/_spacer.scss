@@ -1,5 +1,11 @@
 @use "mixins" as *;
 
+.darkspace.spacer .ds-spacer-sidebar {
+    display: flex;
+    gap: 8px;
+    height: 100%;
+}
+
 .darkspace.spacer [data-application-part="details"],
 .darkspace.spacer [data-application-part="gear"],
 .darkspace.spacer [data-application-part="talents"],
@@ -11,44 +17,19 @@
 }
 
 .darkspace {
-    .spacer-sidebar {
-        display: grid;
-        grid-template-columns: 270px 200px;
-        grid-auto-rows: auto;
+    .ds-sidebar-hp-ac,
+    .ds-sidebar-luck-slots {
+        display: flex;
         gap: 8px;
-        align-content: start;
 
-        .ds-sidebar-attacks {
-            display: flex;
-            flex-direction: column;
+        > * { flex: 1; }
+    }
 
-            > .DS-box {
-                flex: 1;
-                min-height: 0;
-
-                .content {
-                    display: flex;
-                    flex-direction: column;
-                    overflow: hidden;
-                    min-height: 0;
-                }
-            }
-        }
-
-        .ds-sidebar-hp-ac,
-        .ds-sidebar-luck-slots {
-            display: flex;
-            gap: 8px;
-
-            > * { flex: 1; }
-        }
-
-        .ds-sidebar-luck-slots {
-            .value-grid {
-                font-size: 18px;
-                font-weight: bold;
-                text-align: center;
-            }
+    .ds-sidebar-luck-slots {
+        .value-grid {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
         }
     }
 
@@ -102,27 +83,22 @@
         }
     }
 
-    .ds-spacer-portrait {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        cursor: pointer;
-        border: 2px solid black;
-    }
-
     .ds-attacks-col {
         flex: 1 1 0;
         min-height: 0;
         overflow-y: auto;
-    }
 
-    .ds-talents-section {
-        @include flex-fill-col;
+        .attack {
+            .item-subtext {
+                display: block;
+                font-size: 0.85em;
+                font-style: italic;
+                color: #707070;
 
-        .content {
-            flex: 1 1 0;
-            overflow-y: auto;
-            min-height: 0;
+                > b {
+                    font-style: initial;
+                }
+            }
         }
     }
 
@@ -192,8 +168,22 @@
 
     .ds-over-capacity { color: red; }
 
-    .ds-talents-list {
+    .ds-talent-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         padding: 8px;
+    }
+
+    .ds-talent-section {
+        flex-shrink: 0;
+
+        .content { padding: 0; }
+    }
+
+    .ds-talent-level {
+        text-align: center;
+        min-width: 28px;
     }
 
     .ds-item-add {

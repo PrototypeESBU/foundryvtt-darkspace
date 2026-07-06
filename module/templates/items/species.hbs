@@ -3,22 +3,13 @@
 
     <section class="sheet-body flexcol ds-item-body">
         <fieldset>
-            <legend>Ability Bonuses</legend>
-            <div class="ds-form-grid-6 ds-text-center">
-                {{#each (array "str" "int" "dex" "wis" "con" "cha") as |ability|}}
-                <div>
-                    <label class="ds-label-small ds-text-upper">{{ability}}</label>
-                    <input name="system.abilityBonuses.{{ability}}" type="number"
-                        value="{{lookup ../system.abilityBonuses ability}}" class="ds-text-center" />
-                </div>
-                {{/each}}
+            <legend>Talents</legend>
+            {{> items/_partials/choice-selector config=talentsConfig editable=editable}}
+            <div class="form-group">
+                <label>Talent Choices</label>
+                {{numberInput item.system.talentChoiceCount name="system.talentChoiceCount" placeholder="0"}}
             </div>
         </fieldset>
-
-        <div class="form-group">
-            <label>Traits</label>
-            {{editor system.traits target="system.traits" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
-        </div>
 
         <div class="form-group">
             <label>Description</label>

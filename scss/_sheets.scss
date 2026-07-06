@@ -43,6 +43,14 @@
     .ds-span-3 { grid-row: span 3; }
     .ds-span-4 { grid-row: span 4; }
 
+    .ds-portrait {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid black;
+    }
+
     .ds-flex-row {
         display: flex;
         align-items: center;

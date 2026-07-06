@@ -1,0 +1,27 @@
+<div class="DS-box">
+    <div class="header">
+        <label>{{localize 'SHADOWDARK.sheet.actor.hp'}}</label>
+        <span></span>
+    </div>
+    <div class="content larger">
+        <div class="value-grid">
+            {{numberInput
+                actor.system.attributes.hp.value
+                name="system.attributes.hp.value"
+                placeholder="0"
+            }}
+            <div>/</div>
+            <div>
+                {{#if editingHp}}
+                    {{numberInput
+                        maxHp
+                        name="system.attributes.hp.max"
+                        placeholder="0"
+                    }}
+                {{else}}
+                    {{maxHp}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

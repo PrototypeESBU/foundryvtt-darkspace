@@ -14,12 +14,12 @@
                 {{/if}}
             </div>
             <div class="content">
-                {{#if attacks.length}}
+                {{#if weapons.length}}
                 <div class="ds-weapon-header">
                     <span>Name</span><span>Type</span><span>Damage</span><span>Range</span><span>Energy</span>
                 </div>
                 {{/if}}
-                {{#each attacks as |item|}}
+                {{#each weapons as |item|}}
                 <div class="ds-weapon-row item" data-item-id="{{item.id}}">
                     <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">{{item.name}}</a>
                     <span>{{item.system.damageType}}</span>

@@ -1,16 +1,92 @@
 <section class="tab tab-talents {{tab.cssClass}}" data-group="primary" data-tab="talents">
-    <div class="ds-talents-list">
-        {{#each talents as |item|}}
-        <div class="ds-item-row" data-item-id="{{item.id}}">
-            <span class="ds-item-name">{{item.name}}</span>
-            {{#if ../owner}}
-            <a data-action="item-edit" data-item-id="{{item.id}}" title="Edit"><i class="fas fa-edit"></i></a>
-            <a data-action="item-delete" data-item-id="{{item.id}}" title="Delete"><i class="fas fa-trash"></i></a>
-            {{/if}}
+    <div class="ds-talent-sections">
+
+        {{!-- Species --}}
+        <div class="DS-box ds-talent-section">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.talents.species"}}</label>
+                <span></span>
+            </div>
+            <div class="content">
+                <ol class="ds-item-list">
+                    {{#each talents.species as |item|}}
+                    <li class="ds-item-row" data-item-id="{{item.id}}">
+                        <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
+                        <span class="ds-item-name">{{item.name}}</span>
+                        <span class="ds-item-actions">
+                            {{#if ../owner}}
+                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
+                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
+                            {{/if}}
+                        </span>
+                    </li>
+                    {{/each}}
+                    {{#unless talents.species.length}}
+                    <li class="ds-item-empty"><span class="ds-unset">{{localize "DARKSPACE.sheet.spacer.talents.empty"}}</span></li>
+                    {{/unless}}
+                </ol>
+            </div>
         </div>
-        {{/each}}
-        {{#unless talents.length}}
-        <span class="ds-unset">No talents</span>
-        {{/unless}}
+
+        {{!-- Archetype --}}
+        <div class="DS-box ds-talent-section">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.talents.archetype"}}</label>
+                <span></span>
+            </div>
+            <div class="content">
+                <ol class="ds-item-list">
+                    {{#each talents.archetype as |item|}}
+                    <li class="ds-item-row" data-item-id="{{item.id}}">
+                        <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
+                        <span class="ds-item-name">{{item.name}}</span>
+                        <span class="ds-item-actions">
+                            {{#if ../owner}}
+                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
+                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
+                            {{/if}}
+                        </span>
+                    </li>
+                    {{/each}}
+                    {{#unless talents.archetype.length}}
+                    <li class="ds-item-empty"><span class="ds-unset">{{localize "DARKSPACE.sheet.spacer.talents.empty"}}</span></li>
+                    {{/unless}}
+                </ol>
+            </div>
+        </div>
+
+        {{!-- Level --}}
+        <div class="DS-box ds-talent-section">
+            <div class="header">
+                <label>{{localize "DARKSPACE.sheet.spacer.talents.level"}}</label>
+                {{#if owner}}
+                <span><a data-action="item-create" data-item-type="Talent" data-item-types="Talent"
+                         data-tooltip="{{localize 'DARKSPACE.sheet.addItem'}}">
+                    <i class="fas fa-square-plus"></i>
+                </a></span>
+                {{/if}}
+            </div>
+            <div class="content">
+                <ol class="ds-item-list">
+                    {{#each talents.level as |item|}}
+                    <li class="ds-item-row" data-item-id="{{item.id}}">
+                        <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
+                        <span class="ds-item-name">{{item.name}}</span>
+                        <span class="ds-talent-level">{{item.system.level}}</span>
+                        <span class="ds-item-actions">
+                            {{#if ../owner}}
+                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
+                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
+                            {{/if}}
+                        </span>
+                    </li>
+                    {{/each}}
+                    {{#unless talents.level.length}}
+                    <li class="ds-item-empty"><span class="ds-unset">{{localize "DARKSPACE.sheet.spacer.talents.empty"}}</span></li>
+                    {{/unless}}
+                </ol>
+            </div>
+        </div>
+
     </div>
 </section>

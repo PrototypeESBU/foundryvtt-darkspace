@@ -14,22 +14,27 @@
         </div>
         <div class="ds-details-fields">
             {{#> ui/ds-box header-label="Archetype"}}
-                {{#if archetypeName}}
-                    <a class="content-link" data-link data-uuid="{{archetypeUuid}}">{{archetypeName}}</a>
+                {{#if archetype}}
+                    <a data-action="item-edit" data-item-id="{{archetype.id}}">{{archetype.name}}</a>
                 {{else}}
                     <span class="ds-unset">—</span>
                 {{/if}}
             {{/ui/ds-box}}
 
-            {{> actors/player/details/background }}
+            {{#> ui/ds-box header-label="Background"}}
+                {{#if background}}
+                    <a data-action="item-edit" data-item-id="{{background.id}}">{{background.name}}</a>
+                {{else}}
+                    <span class="ds-unset">—</span>
+                {{/if}}
+            {{/ui/ds-box}}
 
             {{#> ui/ds-box header-label="Species"}}
-                <input
-                    name="system.species"
-                    type="text"
-                    value="{{ system.species }}"
-                    placeholder="Species Name"
-                />
+                {{#if species}}
+                    <a data-action="item-edit" data-item-id="{{species.id}}">{{species.name}}</a>
+                {{else}}
+                    <span class="ds-unset">—</span>
+                {{/if}}
             {{/ui/ds-box}}
 
             {{#> ui/ds-box header-label="Motivation"}}

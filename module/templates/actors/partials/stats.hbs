@@ -10,19 +10,7 @@
                         {{localize (concat "SHADOWDARK.ability_" id)}}
                     </a>
                 </label>
-                <span>
-                    {{#if ../owner}}
-                        <a
-                            {{#if ../editingStats}}
-                                class="item-selector fas fa-square-xmark edit-button"
-                            {{else}}
-                                class="item-selector fas fa-pen-to-square edit-button"
-                            {{/if}}
-                            data-action="toggle-edit-stats"
-                            data-tooltip="{{localize 'SHADOWDARK.sheet.player.toggle_edit_stats'}}"
-                        ></a>
-                    {{/if}}
-                </span>
+                <span></span>
             </div>
             <div class="content centered larger grid-3-columns">
                 {{#if ../editingStats}}

@@ -1,0 +1,28 @@
+import { default as PlayerSD } from "/systems/shadowdark/src/models/PlayerSD.mjs";
+
+// Shared base for all Darkspace actors (Spacer, Ship).
+export default class ActorBaseDS extends PlayerSD {
+
+    /**
+     * Set or adjust credits from user input. A "+" or "-" prefix adjusts
+     * relative to the current total; a plain number sets it outright.
+     * Credits never go below zero. Invalid input is ignored.
+     * @param {string|number} input
+     */
+    async adjustCredits(input) {
+        const currentCredits = this.coins.gp;
+        const inputValue = String(input).trim();
+
+        let newCredits;
+        if (inputValue.startsWith("+")) {
+            newCredits = currentCredits + parseInt(inputValue.slice(1), 10);
+        } else if (inputValue.startsWith("-")) {
+            newCredits = currentCredits - parseInt(inputValue.slice(1), 10);
+        } else {
+            newCredits = parseInt(inputValue, 10);
+        }
+
+        if (isNaN(newCredits)) return;
+        return this.parent.update({ "system.coins.gp": Math.max(0, newCredits) });
+    }
+}

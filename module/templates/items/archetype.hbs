@@ -2,6 +2,11 @@
     {{> items/item-header placeholder="Archetype Name"}}
 
     <section class="sheet-body flexcol ds-item-body">
+        <fieldset>
+            <legend>Talents</legend>
+            {{> items/_partials/choice-selector config=talentsConfig editable=editable}}
+        </fieldset>
+
         <div class="form-group">
             <label>Description</label>
             {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}

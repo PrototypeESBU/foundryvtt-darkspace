@@ -6,16 +6,13 @@
             {{#> ui/ds-box header-label="Crew Roster"}}
                 {{#each crew as |member|}}
                 <div class="ds-crew-card" data-uuid="{{member.uuid}}">
-                    <img class="ds-crew-portrait" src="{{member.img}}" alt="{{member.name}}" />
+                    <img class="ds-crew-portrait" src="{{member.img}}" alt="{{member.name}}" data-action="crew-open" title="Open sheet" />
                     <div class="ds-crew-info">
                         <a class="ds-crew-name content-link" data-uuid="{{member.uuid}}">{{member.name}}</a>
                         <span class="ds-crew-stats">Lvl {{member.level}} · {{member.hp.value}}/{{member.hp.max}} HP</span>
                         {{#if member.archetype}}<span class="ds-crew-identity">{{member.archetype}}</span>{{/if}}
                         {{#if member.background}}<span class="ds-crew-identity">{{member.background}}</span>{{/if}}
                     </div>
-                    {{#if ../owner}}
-                    <a class="ds-crew-remove" data-action="crew-remove" title="Remove"><i class="fas fa-times"></i></a>
-                    {{/if}}
                 </div>
                 {{/each}}
                 {{#unless crew.length}}
@@ -33,16 +30,16 @@
                 </div>
                 {{/if}}
                 {{#each roles as |assignment|}}
-                <div class="ds-role-row" data-index="{{assignment.index}}">
+                <div class="ds-role-row" data-role-uuid="{{assignment.roleUuid}}">
                     <a class="ds-role-name" data-action="item-edit" data-item-id="{{assignment.roleId}}">{{assignment.roleName}}</a>
                     {{#if ../owner}}
-                    <select class="ds-role-spacer-select" data-action="role-spacer-change" data-index="{{assignment.index}}">
+                    <select class="ds-role-spacer-select" data-action="role-spacer-change" data-role-uuid="{{assignment.roleUuid}}">
                         <option value="">—</option>
                         {{#each ../crew as |member|}}
-                        <option value="{{member.uuid}}" {{#if (eq member.uuid ../assignment.spacerUuid)}}selected{{/if}}>{{member.name}}</option>
+                        <option value="{{member.uuid}}" {{#if (eq member.uuid assignment.spacerUuid)}}selected{{/if}}>{{member.name}}</option>
                         {{/each}}
                     </select>
-                    <a class="ds-role-remove" data-action="role-remove" data-index="{{assignment.index}}" title="Remove"><i class="fas fa-times"></i></a>
+                    <a class="ds-role-remove" data-action="item-delete" data-item-id="{{assignment.roleId}}" title="Remove"><i class="fas fa-times"></i></a>
                     {{else}}
                     <span class="ds-role-assignee">{{assignment.spacerName}}</span>
                     {{/if}}
