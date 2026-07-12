@@ -1,0 +1,18 @@
+{
+  "_id": "kHRHsoYayhMJzAWR",
+  "name": "Physical Armor",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>Ph. Weapons with the Armor Piercing (AP) property ignore this armor.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!kHRHsoYayhMJzAWR"
+}

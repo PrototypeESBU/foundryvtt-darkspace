@@ -1,0 +1,18 @@
+{
+  "_id": "SFVSxglbBnqroH2T",
+  "name": "Armor Piercing",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>AP. Target&rsquo;s AC is as if they are unarmored. Ignores ship scale.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!SFVSxglbBnqroH2T"
+}

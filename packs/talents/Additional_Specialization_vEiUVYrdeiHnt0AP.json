@@ -1,0 +1,17 @@
+{
+  "_id": "vEiUVYrdeiHnt0AP",
+  "name": "Additional Specialization",
+  "type": "Talent",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "system": {
+    "description": "<p>Learn one additional Specialization.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!vEiUVYrdeiHnt0AP"
+}

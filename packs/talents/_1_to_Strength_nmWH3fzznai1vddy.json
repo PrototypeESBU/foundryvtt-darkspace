@@ -1,0 +1,50 @@
+{
+  "_id": "nmWH3fzznai1vddy",
+  "name": "+1 to Strength",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "TKu6vq8kOHmMatil",
+      "name": "Ability Score Improvement (Str)",
+      "type": "base",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.str.value",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!nmWH3fzznai1vddy.TKu6vq8kOHmMatil"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!nmWH3fzznai1vddy"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "xAWOLgFSlEcUm8EV",
+  "name": "Energy Cell",
+  "type": "Basic",
+  "img": "icons/commodities/tech/cylinder-blue.webp",
+  "system": {
+    "description": "<p>Plasma-based energy storage used to power gear, weapons and armor. Two per gear slot.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [],
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 5,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": true,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 2,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "treasure": false,
+    "scroll": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!xAWOLgFSlEcUm8EV"
+}

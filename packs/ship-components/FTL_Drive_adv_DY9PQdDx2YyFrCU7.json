@@ -1,0 +1,20 @@
+{
+  "_id": "DY9PQdDx2YyFrCU7",
+  "name": "FTL Drive (adv)",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship is capable of traveling at FTL speed.</p><p>This advanced drive grants advantage on checks made to use it, cuts travel time in half, and takes up an additional slot.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 2
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!DY9PQdDx2YyFrCU7"
+}

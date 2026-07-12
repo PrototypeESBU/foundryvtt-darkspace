@@ -1,0 +1,44 @@
+{
+  "_id": "X57HclKrohpMhwhL",
+  "name": "Grenade Launcher",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/gun-blunderbuss-steel.webp",
+  "system": {
+    "description": "<p>Launches grenades out to far range. Damage and properties vary by the grenade used.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 100,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "far",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!X57HclKrohpMhwhL"
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "A3vxe37ZTINFf67K",
+  "name": "+1 to Melee Attacks",
+  "type": "Talent",
+  "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "O0I3PojNSwEuiiMX",
+      "name": "Melee Attack Roll Bonus",
+      "type": "base",
+      "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "changes": [
+        {
+          "key": "system.roll.melee.bonus.all",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!A3vxe37ZTINFf67K.O0I3PojNSwEuiiMX"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!A3vxe37ZTINFf67K"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "96O6jdow8iWXWrES",
+  "name": "Friends Everywhere",
+  "type": "Talent",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": "<p>You always seem to have a contact that can get you access to resources, information, or services. This might be a formalized black market or just a ledger of favors. When in a populated area, make a CHA check DC 12 to locate a contact. Payment may still be required, but everything is off the record.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!96O6jdow8iWXWrES"
+}

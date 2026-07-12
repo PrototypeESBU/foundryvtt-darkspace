@@ -1,0 +1,35 @@
+{
+  "_id": "RzeMpX7pbsRa0lAs",
+  "name": "Clever",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Scientists, hackers, strategists, and inventors. Clever characters use their intellect to see a variety of possibilities and think outside the box.</p><p><b>Weapons:</b> Light Ranged Weapons<br><b>Armor:</b> None<br><b>Hit Points:</b> 1d4 per level</p><p><b>Languages.</b> You know two additional common languages and two rare languages.</p>",
+    "hitPoints": "d4",
+    "allArmor": false,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 2,
+      "rare": 2,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.RLRaBqCy605IBtYG",
+      "Compendium.darkspace.talents.Item.An9lo0O29FGccCs5"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.HQI2nEBBttLTy4o9",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!RzeMpX7pbsRa0lAs"
+}

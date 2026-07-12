@@ -1,0 +1,46 @@
+{
+  "_id": "DaG7gLeW3OT7MgPx",
+  "name": "Pistol, Medium",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/gun-pistol-brown.webp",
+  "system": {
+    "description": "<p>Fires a physical projectile propelled by some physical force to damage a target at a distance.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.Tg2j6CxrmNwtvdWI"
+    ],
+    "ammoClass": "ammo-magazine",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 10,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d6",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": "Medium"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!DaG7gLeW3OT7MgPx"
+}

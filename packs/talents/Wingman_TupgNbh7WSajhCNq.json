@@ -1,0 +1,17 @@
+{
+  "_id": "TupgNbh7WSajhCNq",
+  "name": "Wingman",
+  "type": "Talent",
+  "img": "icons/skills/trades/gaming-gambling-dice-gray.webp",
+  "system": {
+    "description": "<p>Groups carousing with 1 or more Charming characters add 1d6 to their rolls.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!TupgNbh7WSajhCNq"
+}

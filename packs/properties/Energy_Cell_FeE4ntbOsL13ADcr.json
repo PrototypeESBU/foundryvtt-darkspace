@@ -1,0 +1,18 @@
+{
+  "_id": "FeE4ntbOsL13ADcr",
+  "name": "Energy Cell",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>EC. This armor requires an energy cell to use. On a Critical Hit (20 on a 1d20 attack roll) against this armor, the energy cell is exhausted and will need to be swapped out as an action.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!FeE4ntbOsL13ADcr"
+}

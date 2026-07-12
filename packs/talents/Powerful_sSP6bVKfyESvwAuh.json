@@ -1,0 +1,82 @@
+{
+  "_id": "sSP6bVKfyESvwAuh",
+  "name": "Powerful",
+  "type": "Talent",
+  "img": "icons/skills/melee/strike-axe-blood-red.webp",
+  "system": {
+    "description": "<p>You have a +1 bonus to melee attack and damage rolls.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "Obq411J5NYdEcHb2",
+      "name": "Melee Attack Roll Bonus",
+      "type": "base",
+      "img": "icons/skills/melee/strike-axe-blood-red.webp",
+      "changes": [
+        {
+          "key": "system.roll.melee.bonus.all",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!sSP6bVKfyESvwAuh.Obq411J5NYdEcHb2"
+    },
+    {
+      "_id": "Oau6nkSYiig5upYX",
+      "name": "Melee Damage Roll Bonus",
+      "type": "base",
+      "img": "icons/skills/melee/strike-axe-blood-red.webp",
+      "changes": [
+        {
+          "key": "system.roll.melee.damage.all",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!sSP6bVKfyESvwAuh.Oau6nkSYiig5upYX"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!sSP6bVKfyESvwAuh"
+}

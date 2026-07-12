@@ -1,0 +1,82 @@
+{
+  "_id": "io8OTuM4dBrFWXkN",
+  "name": "Longsight",
+  "type": "Talent",
+  "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+  "system": {
+    "description": "<p>You get a +1 bonus to ranged attack and damage rolls.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "wi6NbQEzDjA1RK9z",
+      "name": "Ranged Attack Roll Bonus",
+      "type": "base",
+      "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+      "changes": [
+        {
+          "key": "system.roll.ranged.bonus.all",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!io8OTuM4dBrFWXkN.wi6NbQEzDjA1RK9z"
+    },
+    {
+      "_id": "Owv99lI7GMNLZ0xG",
+      "name": "Ranged Damage Roll Bonus",
+      "type": "base",
+      "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+      "changes": [
+        {
+          "key": "system.roll.ranged.damage.all",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!io8OTuM4dBrFWXkN.Owv99lI7GMNLZ0xG"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!io8OTuM4dBrFWXkN"
+}

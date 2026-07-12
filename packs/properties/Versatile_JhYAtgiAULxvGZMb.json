@@ -1,0 +1,18 @@
+{
+  "_id": "JhYAtgiAULxvGZMb",
+  "name": "Versatile",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>V. This weapon can be used either one-handed or two. If two, use the larger die for damage.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!JhYAtgiAULxvGZMb"
+}

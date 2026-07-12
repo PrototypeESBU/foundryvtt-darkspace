@@ -1,0 +1,17 @@
+{
+  "_id": "dKmmHgmMZpZJPUDv",
+  "name": "Reduced Sway DC",
+  "type": "Talent",
+  "img": "icons/skills/social/intimidation-impressing.webp",
+  "system": {
+    "description": "<p>Reduce the DC of one of your Sway effects by 3.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dKmmHgmMZpZJPUDv"
+}

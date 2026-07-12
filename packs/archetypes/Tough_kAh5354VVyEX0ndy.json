@@ -1,0 +1,36 @@
+{
+  "_id": "kAh5354VVyEX0ndy",
+  "name": "Tough",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Soldiers, bounty hunters, scrappers, and bruisers. Tough characters are resilient and can survive a long haul.</p><p><b>Weapons:</b> Melee and Ranged Weapons (excluding Light Weapons in both)<br><b>Armor:</b> All Armor<br><b>Hit Points:</b> 1d8 per level</p>",
+    "hitPoints": "d8",
+    "allArmor": true,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.EDSfuouOiZ03Emos",
+      "Compendium.darkspace.talents.Item.viZJjqaEvpaH0K8s",
+      "Compendium.darkspace.talents.Item.nBDGPK7atRkJwLIF"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.xnFc8CUJH0rkGyCL",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!kAh5354VVyEX0ndy"
+}

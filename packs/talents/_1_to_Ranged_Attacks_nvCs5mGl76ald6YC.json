@@ -1,0 +1,50 @@
+{
+  "_id": "nvCs5mGl76ald6YC",
+  "name": "+1 to Ranged Attacks",
+  "type": "Talent",
+  "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "tLUD29Zm4cOVdpqy",
+      "name": "Ranged Attack Roll Bonus",
+      "type": "base",
+      "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+      "changes": [
+        {
+          "key": "system.roll.ranged.bonus.all",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!nvCs5mGl76ald6YC.tLUD29Zm4cOVdpqy"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!nvCs5mGl76ald6YC"
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "jbWMPIBSK9Wg5JNA",
+  "name": "Shield",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>A shield is held in one hand and its AC bonus stacks with worn armor.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!jbWMPIBSK9Wg5JNA"
+}

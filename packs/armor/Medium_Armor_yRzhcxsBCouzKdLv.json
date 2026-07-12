@@ -1,0 +1,43 @@
+{
+  "_id": "yRzhcxsBCouzKdLv",
+  "name": "Medium Armor",
+  "type": "Armor",
+  "img": "icons/equipment/chest/breastplate-layered-grey.webp",
+  "system": {
+    "description": "<p>Reinforced protective gear. Disadvantage on stealth and swim checks.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.kHRHsoYayhMJzAWR",
+      "Compendium.darkspace.properties.Item.1iFHgYWrEFFCUqJw",
+      "Compendium.darkspace.properties.Item.bJ9Qgt4V0D1ntUHN"
+    ],
+    "ac": {
+      "attribute": "dex",
+      "base": 13,
+      "modifier": 0
+    },
+    "baseArmor": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 50,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!yRzhcxsBCouzKdLv"
+}

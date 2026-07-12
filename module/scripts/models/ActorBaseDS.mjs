@@ -6,7 +6,8 @@ export default class ActorBaseDS extends PlayerSD {
     /**
      * Set or adjust credits from user input. A "+" or "-" prefix adjusts
      * relative to the current total; a plain number sets it outright.
-     * Credits never go below zero. Invalid input is ignored.
+     * Credits never go below the schema minimum (zero for spacers, but
+     * ships may go into debt). Invalid input is ignored.
      * @param {string|number} input
      */
     async adjustCredits(input) {
@@ -23,6 +24,7 @@ export default class ActorBaseDS extends PlayerSD {
         }
 
         if (isNaN(newCredits)) return;
-        return this.parent.update({ "system.coins.gp": Math.max(0, newCredits) });
+        const min = this.schema.getField("coins.gp")?.min ?? -Infinity;
+        return this.parent.update({ "system.coins.gp": Math.max(min, newCredits) });
     }
 }

@@ -1,0 +1,17 @@
+{
+  "_id": "An9lo0O29FGccCs5",
+  "name": "Keen Support",
+  "type": "Talent",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": "<p>3/episode, when an ally is about to make a non-combat roll, make a DC 9 Intelligence check. If you succeed, they can add +1d4 to their roll.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!An9lo0O29FGccCs5"
+}

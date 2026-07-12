@@ -1,0 +1,17 @@
+{
+  "_id": "dLXzR6tmN67v1zxX",
+  "name": "Reduced Enlightenment DC",
+  "type": "Talent",
+  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "system": {
+    "description": "<p>Reduce your Enlightenment DC by 2.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dLXzR6tmN67v1zxX"
+}

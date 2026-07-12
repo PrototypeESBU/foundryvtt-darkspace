@@ -1,0 +1,17 @@
+{
+  "_id": "cPqaYq8vGy58KsrX",
+  "name": "Might",
+  "type": "Talent",
+  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "system": {
+    "description": "<p>You have advantage on checks to overcome a great feat of strength, such as kicking open a stuck cargo hatch or pulling a robot's arm off.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!cPqaYq8vGy58KsrX"
+}

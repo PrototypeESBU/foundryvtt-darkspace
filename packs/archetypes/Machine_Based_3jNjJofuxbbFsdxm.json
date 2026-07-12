@@ -1,0 +1,35 @@
+{
+  "_id": "3jNjJofuxbbFsdxm",
+  "name": "Machine-Based",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Combat cyborgs, repair 'bots, or power armor jockeys, these machine-based spacers come with an assortment of tools and capabilities built-in.</p><p><b>Weapons:</b> Built-In Weapons<br><b>Armor:</b> Built-In Armor<br><b>Hit Points:</b> 1d6 per level</p>",
+    "hitPoints": "d6",
+    "allArmor": false,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.XvOQmhu2m4WY1f1b",
+      "Compendium.darkspace.talents.Item.psdgjFJJpuYVxoYU"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.EPPPJZszDri5prXi",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!3jNjJofuxbbFsdxm"
+}

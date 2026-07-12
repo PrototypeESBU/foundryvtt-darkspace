@@ -1,0 +1,17 @@
+{
+  "_id": "ycXSon0ygQ8e38el",
+  "name": "Shake it Off",
+  "type": "Talent",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": "<p>1/episode, ignore all damage and effects from one attack. If you already have Shake it Off, you gain an additional use per episode.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!ycXSon0ygQ8e38el"
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "nLsubK2Gv9nGUu28",
+  "name": "+2 to Intelligence",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "poxNlXlTHVASQxRA",
+      "name": "Ability Score Improvement (Int)",
+      "type": "base",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.int.value",
+          "mode": 2,
+          "priority": null,
+          "value": "2"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!nLsubK2Gv9nGUu28.poxNlXlTHVASQxRA"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!nLsubK2Gv9nGUu28"
+}

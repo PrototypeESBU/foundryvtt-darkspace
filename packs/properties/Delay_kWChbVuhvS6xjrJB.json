@@ -1,0 +1,18 @@
+{
+  "_id": "kWChbVuhvS6xjrJB",
+  "name": "Delay",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>Dl. This explosive can be given a delay. See description for details.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!kWChbVuhvS6xjrJB"
+}

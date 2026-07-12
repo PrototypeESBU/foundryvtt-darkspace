@@ -1,0 +1,20 @@
+{
+  "_id": "5luw2SmTRko7hhqY",
+  "name": "Communications Array (adv)",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship can communicate over long distances.</p><p>This advanced system grants advantage on checks made to use it and takes up an additional slot.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 2
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!5luw2SmTRko7hhqY"
+}

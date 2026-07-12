@@ -31,15 +31,42 @@
             "ShipClass":     {},
             "ShipComponent": {},
             "ShipRole":      {},
-            "ShipWeapon":    {},
             "Weapon":        {}
         }
     },
     "packs": [
         {
+            "name": "archetypes",
+            "label": "DarkSpace Archetypes",
+            "path": "packs/archetypes",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
+            "name": "armor",
+            "label": "DarkSpace Armor",
+            "path": "packs/armor",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
             "name": "backgrounds",
             "label": "DarkSpace Backgrounds",
             "path": "packs/backgrounds",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
+            "name": "gear",
+            "label": "DarkSpace Gear",
+            "path": "packs/gear",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
+            "name": "properties",
+            "label": "DarkSpace Properties",
+            "path": "packs/properties",
             "type": "Item",
             "system": "shadowdark"
         },
@@ -56,6 +83,27 @@
             "path": "packs/ship-components",
             "type": "Item",
             "system": "shadowdark"
+        },
+        {
+            "name": "talents",
+            "label": "DarkSpace Talents",
+            "path": "packs/talents",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
+            "name": "weapons",
+            "label": "DarkSpace Weapons",
+            "path": "packs/weapons",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
+            "name": "rollable-tables",
+            "label": "DarkSpace Roll Tables",
+            "path": "packs/rollable-tables",
+            "type": "RollTable",
+            "system": "shadowdark"
         }
     ],
     "packFolders": [
@@ -63,9 +111,16 @@
             "name": "DarkSpace",
             "sorting": "a",
             "packs": [
+                "archetypes",
+                "armor",
                 "backgrounds",
+                "gear",
+                "properties",
+                "rollable-tables",
                 "ship-components",
-                "ship-roles"
+                "ship-roles",
+                "talents",
+                "weapons"
             ]
         }
     ],

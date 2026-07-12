@@ -1,0 +1,50 @@
+{
+  "_id": "TuaK9LFqcakmj3Lc",
+  "name": "+1 to Dexterity",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "wI2mXKRobWioWZF2",
+      "name": "Ability Score Improvement (Dex)",
+      "type": "base",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.dex.value",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!TuaK9LFqcakmj3Lc.wI2mXKRobWioWZF2"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!TuaK9LFqcakmj3Lc"
+}

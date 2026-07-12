@@ -1,0 +1,46 @@
+{
+  "_id": "YBeuoAjBrAo5L0zF",
+  "name": "Energy Pistol, Light",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/gun-green.webp",
+  "system": {
+    "description": "<p>Fires an energy-based projectile or beam to deliver its damage. Requires an energy cell to function.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.2dmknn37HabiQoZ8"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 10,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d6",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Energy",
+    "size": "Light"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!YBeuoAjBrAo5L0zF"
+}

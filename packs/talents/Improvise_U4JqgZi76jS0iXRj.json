@@ -1,0 +1,17 @@
+{
+  "_id": "U4JqgZi76jS0iXRj",
+  "name": "Improvise",
+  "type": "Talent",
+  "img": "icons/commodities/tech/blueprint.webp",
+  "system": {
+    "description": "<p>1/episode, make an INT check to overcome a non-combat obstacle or problem instead of the expected stat check. If you already have Improvise, you gain an additional use per episode.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!U4JqgZi76jS0iXRj"
+}

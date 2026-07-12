@@ -1,0 +1,48 @@
+{
+  "_id": "hCRo5pfnnfdWewxr",
+  "name": "Rocket Launcher",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/gun-blunderbuss-bronze.webp",
+  "system": {
+    "description": "<p>Fires rockets and is useless without one loaded. Damage and properties are those of the loaded rocket (4d6, Armor Piercing, Blast).</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.A7YEmThjuZzB9vRJ",
+      "Compendium.darkspace.properties.Item.SFVSxglbBnqroH2T",
+      "Compendium.darkspace.properties.Item.fiQC0kqb2aG9liEK"
+    ],
+    "ammoClass": "rocket",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 200,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": "4d6"
+    },
+    "handedness": "",
+    "range": "far",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!hCRo5pfnnfdWewxr"
+}

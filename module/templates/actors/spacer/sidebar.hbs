@@ -18,21 +18,23 @@
     <!-- Col 2: Spacer Identity (200px fixed) -->
     <div class="ds-sheet-col ds-col-fixed-200">
         <div class="ds-name-box">
-            <textarea
-                class="ds-name-input"
-                name="name"
-                placeholder="Name"
-                rows="1"
-            >{{actor.name}}</textarea>
-        </div>
+                <textarea
+                    class="ds-name-input"
+                    name="name"
+                    placeholder="Name"
+                    rows="1"
+                >{{actor.name}}</textarea>
+           
 
-        <img
-            class="ds-portrait"
-            src="{{ actor.img }}"
-            data-action="editImage"
-            data-edit="img"
-            data-tooltip="{{ actor.name }}"
-        />
+            <img
+                class="ds-portrait"
+                src="{{ actor.img }}"
+                data-action="editImage"
+                data-edit="img"
+                data-tooltip="{{ actor.name }}"
+            />
+            <div>Level {{actor.level.value}}</div>
+        </div>
 
         <div class="ds-sidebar-hp-ac">
             {{> hp }}
@@ -58,7 +60,7 @@
 
         {{#> ui/ds-box header-label="Ship" class="ds-sidebar-shipname"}}
             {{#if shipName}}
-                <a class="content-link" data-uuid="{{shipId}}">{{shipName}}</a>
+                <a data-action="ship-open" data-uuid="{{shipId}}">{{shipName}}</a>
                 {{#if shipRoles.length}}
                 <div class="ds-spacer-roles">
                     {{#each shipRoles}}<span class="ds-role-tag">{{this}}</span>{{/each}}
@@ -70,7 +72,12 @@
         {{/ui/ds-box}}
 
         {{#> ui/ds-box header-label="Credits"}}
-            <input class="ds-credits-input" type="text" data-value="{{system.coins.gp}}" value="{{system.coins.gp}}" />
+            <div class="ds-credits-row">
+                <input class="ds-credits-input" type="text" data-value="{{system.coins.gp}}" value="{{system.coins.gp}}" />
+                <a data-action="credits-to-ship"
+                    data-tooltip="DARKSPACE.sheet.spacer.credits.sendTooltip"
+                ><i class="fa-solid fa-arrow-right"></i><i class="fa-solid fa-shuttle-space"></i></a>
+            </div>
         {{/ui/ds-box}}
     </div>
 </div>

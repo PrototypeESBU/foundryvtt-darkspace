@@ -1,0 +1,17 @@
+{
+  "_id": "apmzpS7nIcls8FOH",
+  "name": "Software Upgrade",
+  "type": "Talent",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "system": {
+    "description": "<p>Roll one additional Background.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!apmzpS7nIcls8FOH"
+}

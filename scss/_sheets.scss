@@ -31,6 +31,9 @@
         width: 100%;
         font-family: inherit;
         font-size: inherit;
+        // Chrome ignores line-height on an unfocused select but honors it while
+        // focused, so Foundry's 2rem line-height makes the row grow on focus
+        line-height: normal;
         cursor: pointer;
         padding: 0;
     }
@@ -61,11 +64,6 @@
 
     .ds-flex-1  { flex: 1; }
     .ds-ml-auto { margin-left: auto; }
-
-    .ds-actions-header {
-        text-align: right;
-        margin-bottom: 4px;
-    }
 
     .ds-tab-content {
         padding: 8px;
@@ -98,6 +96,7 @@
     // ── Item sheet form grids ────────────────────────────────────────────────────
 
     .ds-form-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .ds-form-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; align-items: end; }
     .ds-form-grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: end; }
     .ds-form-grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
 
@@ -159,6 +158,21 @@
             background: black;
             color: white;
             font-weight: normal;
+        }
+    }
+
+    .ds-credits-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .ds-credits-input { flex: 1; min-width: 0; }
+
+        a {
+            flex: none;
+            opacity: 0.5;
+
+            &:hover { opacity: 1; }
         }
     }
 

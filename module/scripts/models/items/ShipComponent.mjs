@@ -10,7 +10,6 @@ export default class ShipComponent extends BaseItemSD {
             online:   new fields.BooleanField({ initial: true }),
             damaged:  new fields.BooleanField({ initial: false }),
             slots:    new fields.NumberField({ integer: true, initial: 1, min: 1 }),
-            advanced: new fields.BooleanField({ initial: false }),
         };
     }
 

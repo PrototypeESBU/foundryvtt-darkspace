@@ -1,0 +1,17 @@
+{
+  "_id": "RLRaBqCy605IBtYG",
+  "name": "Specialization",
+  "type": "Talent",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "system": {
+    "description": "<p>Choose one specific non-combat specialization that is tied to your background (ex. for the Medic background, you might choose battlefield triage). Add +1 to any rolls associated with that specialization. In addition, add half your level to these rolls (round down).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!RLRaBqCy605IBtYG"
+}

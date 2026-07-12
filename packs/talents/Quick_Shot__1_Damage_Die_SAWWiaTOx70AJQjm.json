@@ -1,0 +1,17 @@
+{
+  "_id": "SAWWiaTOx70AJQjm",
+  "name": "Quick Shot +1 Damage Die",
+  "type": "Talent",
+  "img": "icons/skills/ranged/arrows-flying-salvo-blue-light.webp",
+  "system": {
+    "description": "<p>Your Quick Shot deals +1 dice of damage (can be taken multiple times).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!SAWWiaTOx70AJQjm"
+}

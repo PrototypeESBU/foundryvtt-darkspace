@@ -1,0 +1,18 @@
+{
+  "_id": "yj3hWUNSjjDZOt7G",
+  "name": "Energy Armor",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>En. Weapons with the Disabling (D) property affect this armor.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!yj3hWUNSjjDZOt7G"
+}

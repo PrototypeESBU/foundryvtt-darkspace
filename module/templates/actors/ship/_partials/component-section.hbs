@@ -1,24 +1,20 @@
-<div class="DS-wrapper ds-ship-section">
-    <div class="header">
-        <label>{{label}}</label>
+{{#> ui/ds-box header-label=label class="ds-ship-section"}}
+    {{#*inline "ds-box-header-span"}}
         {{#if owner}}
-        <span><a data-action="item-create" data-item-type="darkspace.ShipComponent" data-component-subtype="{{subtype}}"><i class="fas fa-plus"></i></a></span>
+        <a data-action="item-create" data-item-type="darkspace.ShipComponent" data-component-subtype="{{subtype}}"><i class="fas fa-plus"></i></a>
         {{/if}}
-    </div>
-    <div class="content">
-        {{#each items as |item|}}
-        <div class="ds-component-row item" data-item-id="{{item.id}}">
-            <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">
-                {{item.name}}
-                {{#if item.system.advanced}}<span class="ds-advanced-tag">Adv</span>{{/if}}
-            </a>
-            <div class="ds-component-status">
-                <input type="checkbox" {{#if item.system.online}}checked{{/if}} data-action="toggle-online" data-item-id="{{item.id}}" />
-                <span>On</span>
-                <input type="checkbox" {{#if item.system.damaged}}checked{{/if}} data-action="toggle-damaged" data-item-id="{{item.id}}" />
-                <span>Dmg</span>
-            </div>
+    {{/inline}}
+    {{#each items as |item|}}
+    <div class="ds-component-row item" data-item-id="{{item.id}}">
+        <a class="ds-component-name" data-action="item-edit" data-item-id="{{item.id}}">
+            {{item.name}}
+        </a>
+        <div class="ds-component-status">
+            <input type="checkbox" {{#if item.system.online}}checked{{/if}} data-action="toggle-online" data-item-id="{{item.id}}" />
+            <span>On</span>
+            <input type="checkbox" {{#if item.system.damaged}}checked{{/if}} data-action="toggle-damaged" data-item-id="{{item.id}}" />
+            <span>Dmg</span>
         </div>
-        {{/each}}
     </div>
-</div>
+    {{/each}}
+{{/ui/ds-box}}

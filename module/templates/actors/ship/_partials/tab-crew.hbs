@@ -8,7 +8,7 @@
                 <div class="ds-crew-card" data-uuid="{{member.uuid}}">
                     <img class="ds-crew-portrait" src="{{member.img}}" alt="{{member.name}}" data-action="crew-open" title="Open sheet" />
                     <div class="ds-crew-info">
-                        <a class="ds-crew-name content-link" data-uuid="{{member.uuid}}">{{member.name}}</a>
+                        <a class="ds-crew-name" data-action="crew-open">{{member.name}}</a>
                         <span class="ds-crew-stats">Lvl {{member.level}} · {{member.hp.value}}/{{member.hp.max}} HP</span>
                         {{#if member.archetype}}<span class="ds-crew-identity">{{member.archetype}}</span>{{/if}}
                         {{#if member.background}}<span class="ds-crew-identity">{{member.background}}</span>{{/if}}
@@ -23,15 +23,15 @@
 
         <!-- Right: Ship Roles -->
         <div class="ds-roles-pane">
-            {{#> ui/ds-box header-label="Roles"}}
-                {{#if owner}}
-                <div class="ds-actions-header">
+            {{#> ui/ds-box header-label="Ship Roles"}}
+                {{#*inline "ds-box-header-span"}}
+                    {{#if owner}}
                     <a data-action="item-create" data-item-type="darkspace.ShipRole" title="Add custom role"><i class="fas fa-plus"></i></a>
-                </div>
-                {{/if}}
+                    {{/if}}
+                {{/inline}}
                 {{#each roles as |assignment|}}
-                <div class="ds-role-row" data-role-uuid="{{assignment.roleUuid}}">
-                    <a class="ds-role-name" data-action="item-edit" data-item-id="{{assignment.roleId}}">{{assignment.roleName}}</a>
+                <fieldset class="ds-role-row draggable" data-role-uuid="{{assignment.roleUuid}}" data-item-id="{{assignment.roleId}}">
+                    <legend><a class="ds-role-name" data-action="item-edit" data-item-id="{{assignment.roleId}}">{{assignment.roleName}}</a></legend>
                     {{#if ../owner}}
                     <select class="ds-role-spacer-select" data-action="role-spacer-change" data-role-uuid="{{assignment.roleUuid}}">
                         <option value="">—</option>
@@ -39,15 +39,32 @@
                         <option value="{{member.uuid}}" {{#if (eq member.uuid assignment.spacerUuid)}}selected{{/if}}>{{member.name}}</option>
                         {{/each}}
                     </select>
-                    <a class="ds-role-remove" data-action="item-delete" data-item-id="{{assignment.roleId}}" title="Remove"><i class="fas fa-times"></i></a>
                     {{else}}
                     <span class="ds-role-assignee">{{assignment.spacerName}}</span>
                     {{/if}}
-                </div>
+                </fieldset>
                 {{/each}}
                 {{#unless roles.length}}
                 <span class="ds-unset">Drop a Ship Role here</span>
                 {{/unless}}
+                {{#if gunnerRoles.length}}
+                <hr class="ds-role-divider" />
+                {{#each gunnerRoles as |assignment|}}
+                <fieldset class="ds-role-row ds-gunner-role" data-role-uuid="{{assignment.roleUuid}}">
+                    <legend><span class="ds-role-name">{{assignment.roleName}}</span></legend>
+                    {{#if ../owner}}
+                    <select class="ds-role-spacer-select" data-action="role-spacer-change" data-role-uuid="{{assignment.roleUuid}}">
+                        <option value="">—</option>
+                        {{#each ../crew as |member|}}
+                        <option value="{{member.uuid}}" {{#if (eq member.uuid assignment.spacerUuid)}}selected{{/if}}>{{member.name}}</option>
+                        {{/each}}
+                    </select>
+                    {{else}}
+                    <span class="ds-role-assignee">{{assignment.spacerName}}</span>
+                    {{/if}}
+                </fieldset>
+                {{/each}}
+                {{/if}}
             {{/ui/ds-box}}
         </div>
 

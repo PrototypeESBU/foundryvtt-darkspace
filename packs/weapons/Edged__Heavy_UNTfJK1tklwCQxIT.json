@@ -1,0 +1,46 @@
+{
+  "_id": "UNTfJK1tklwCQxIT",
+  "name": "Edged, Heavy",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/swords/greatsword-blue.webp",
+  "system": {
+    "description": "<p>Sharpened blades capable of slicing and piercing flesh. Examples include longswords, knives, rapiers, and claws.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.A7YEmThjuZzB9vRJ"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 5,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": "1d10"
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": "Heavy"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!UNTfJK1tklwCQxIT"
+}

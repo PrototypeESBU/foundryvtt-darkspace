@@ -1,0 +1,18 @@
+{
+  "_id": "VZ2T2iUDphpIVI2i",
+  "name": "Thrown",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>Th. This weapon can be thrown.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!VZ2T2iUDphpIVI2i"
+}

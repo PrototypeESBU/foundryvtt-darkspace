@@ -1,0 +1,18 @@
+{
+  "_id": "LJJ5XsxC03Fu4XuW",
+  "name": "One-Handed",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>1H. This armor occupies one hand.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!LJJ5XsxC03Fu4XuW"
+}

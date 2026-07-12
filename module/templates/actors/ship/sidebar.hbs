@@ -1,5 +1,5 @@
 <div class="ds-ship-sidebar">
-    <!-- Col 1: Stats & Attacks (270px fixed) -->
+    <!-- Col 1: Stats & Weapons (270px fixed) -->
     <div class="ds-sheet-col ds-col-fixed-270">
         <div class="centered">
             <h1><i>D</i>ark<i>S</i>pace</h1>
@@ -15,10 +15,18 @@
                 Energy: {{acEnergy}}
             {{/ui/ds-box}}
         </div>
-        {{#> ui/ds-box header-label="Attacks" class="ds-sidebar-attacks"}}
-            <div class="ds-attacks-col">
-                {{> attacks }}
+        {{#> ui/ds-box header-label="Weapons" class="ds-sidebar-weapons"}}
+            {{#*inline "ds-box-header-span"}}
+                {{#if owner}}
+                <a data-action="item-create" data-item-type="darkspace.Weapon"><i class="fas fa-plus"></i></a>
+                {{/if}}
+            {{/inline}}
+            {{#each weapons as |item|}}
+            <div class="ds-weapon-row item" data-item-id="{{item.id}}">
+                <a data-action="item-edit" data-item-id="{{item.id}}"><b class="item-name">{{item.name}}</b></a>
+                <span class="item-subtext">{{formatSubtext item.system.subtext}}</span>
             </div>
+            {{/each}}
         {{/ui/ds-box}}
     </div>
 
@@ -38,7 +46,7 @@
 
         {{#> ui/ds-box header-label="Class"}}
             {{#if shipClass}}
-                <a class="content-link" data-action="item-edit" data-item-id="{{shipClass.id}}">{{shipClass.name}}</a>
+                <a data-action="item-edit" data-item-id="{{shipClass.id}}">{{shipClass.name}}</a>
             {{else}}
                 <span class="ds-unset">Drop Ship Class here</span>
             {{/if}}
@@ -57,7 +65,12 @@
         {{/ui/ds-box}}
 
         {{#> ui/ds-box header-label="Credits"}}
-            <input class="ds-credits-input" type="text" data-value="{{system.coins.gp}}" value="{{system.coins.gp}}" />
+            <div class="ds-credits-row">
+                <input class="ds-credits-input" type="text" data-value="{{system.coins.gp}}" value="{{system.coins.gp}}" />
+                <a data-action="credits-to-crew"
+                    data-tooltip="DARKSPACE.sheet.ship.credits.sendTooltip"
+                ><i class="fa-solid fa-arrow-right"></i><i class="fa-solid fa-people-group"></i></a>
+            </div>
         {{/ui/ds-box}}
     </div>
 </div>

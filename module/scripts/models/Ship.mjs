@@ -10,6 +10,13 @@ export default class Ship extends ActorBaseDS {
     static defineSchema() {
         return {
             ...super.defineSchema(),
+            // Ships can run a negative credit balance to represent debt,
+            // so gp has no minimum unlike the Shadowdark base schema.
+            coins: new fields.SchemaField({
+                gp: new fields.NumberField({ integer: true, initial: 0 }),
+                sp: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+                cp: new fields.NumberField({ integer: true, initial: 0, min: 0 }),
+            }),
         };
     }
 
@@ -17,6 +24,30 @@ export default class Ship extends ActorBaseDS {
     getCrew() {
         return game.actors.filter(a =>
             a.type === "darkspace.Spacer" && a.system.shipUuid === this.parent.uuid);
+    }
+
+    /**
+     * Transfers credits from this ship, split evenly among its crew.
+     * Each crew member receives an equal share; any remainder stays
+     * aboard. The ship can go into debt to cover the transfer.
+     * @param {number} credits - amount to transfer
+     */
+    async creditsToCrew(credits) {
+        const amount = Math.floor(credits);
+        if (!(amount > 0)) return;
+
+        const crew = this.getCrew();
+        if (!crew.length) {
+            return ui.notifications.warn(game.i18n.localize("DARKSPACE.sheet.ship.credits.noCrew"));
+        }
+
+        const share = Math.floor(amount / crew.length);
+        if (!share) return;
+
+        for (const spacer of crew) {
+            await spacer.update({ "system.coins.gp": spacer.system.coins.gp + share });
+        }
+        return this.parent.update({ "system.coins.gp": this.coins.gp - share * crew.length });
     }
 
     getCrewLevel() {

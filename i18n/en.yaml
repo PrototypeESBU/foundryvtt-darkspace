@@ -7,7 +7,6 @@ TYPES.Item.darkspace.ShipComponent: Ship Component
 TYPES.Item.darkspace.ShipRole: Ship Role
 TYPES.Item.darkspace.ShipArmor: Ship Armor
 TYPES.Item.darkspace.ShipClass: Ship Class
-TYPES.Item.darkspace.ShipWeapon: Ship Weapon
 TYPES.Item.darkspace.Weapon: Weapon
 SHADOWDARK.coins.gp: CR
 DARKSPACE.sheet.ship.tab.crew: Crew
@@ -41,3 +40,14 @@ DARKSPACE.sheet.spacer.talents.species: Species
 DARKSPACE.sheet.spacer.talents.archetype: Archetype
 DARKSPACE.sheet.spacer.talents.level: Level
 DARKSPACE.sheet.spacer.talents.empty: No talents
+DARKSPACE.sheet.spacer.credits.sendTitle: Send Credits to Ship
+DARKSPACE.sheet.spacer.credits.sendLabel: Credits
+DARKSPACE.sheet.spacer.credits.sendButton: Send
+DARKSPACE.sheet.spacer.credits.sendTooltip: Send credits to ship
+DARKSPACE.sheet.spacer.credits.noShip: This spacer is not assigned to a ship.
+DARKSPACE.sheet.ship.credits.sendTitle: Send Credits to Crew
+DARKSPACE.sheet.ship.credits.sendLabel: Credits (split evenly between crew)
+DARKSPACE.sheet.ship.credits.sendButton: Send
+DARKSPACE.sheet.ship.credits.sendTooltip: Send credits to crew
+DARKSPACE.sheet.ship.credits.noCrew: This ship has no crew.
+DARKSPACE.sheet.ship.roles.gunner: "Gunner ({weapon})"

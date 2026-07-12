@@ -1,0 +1,17 @@
+{
+  "_id": "5sdtbq19OpHmJcoA",
+  "name": "Armored Skin",
+  "type": "Talent",
+  "img": "icons/magic/defensive/armor-stone-skin.webp",
+  "system": {
+    "description": "<p>Gain +1 to your AC when not wearing armor (can be taken multiple times).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!5sdtbq19OpHmJcoA"
+}

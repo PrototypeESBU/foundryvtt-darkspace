@@ -1,0 +1,17 @@
+{
+  "_id": "psdgjFJJpuYVxoYU",
+  "name": "Built-In Armor and Weapons",
+  "type": "Talent",
+  "img": "icons/commodities/tech/metal-panel.webp",
+  "system": {
+    "description": "<p>If you gain either the Armored Skin or Natural Weapon trait, you are automatically proficient with it. You are not proficient with any external weapons or armor to start but may learn to use them (see Downtime in the Gameplay chapter).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!psdgjFJJpuYVxoYU"
+}

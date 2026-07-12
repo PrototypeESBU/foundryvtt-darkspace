@@ -11,8 +11,7 @@
     "type": "System",
     "online": true,
     "damaged": false,
-    "slots": 1,
-    "advanced": false
+    "slots": 1
   },
   "effects": [],
   "folder": null,

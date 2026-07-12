@@ -1,0 +1,18 @@
+{
+  "_id": "5qesNnhYCzBf6hK9",
+  "name": "Disabling",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>D. This weapon is designed to disable a character rather than damage it. On a successful hit, the target makes a CON check against the listed DC. On a failure, the character is stunned for 1d10 minutes. Automata have DISADV on this check.</p><p>Any Energy Armor (En) worn by the character is disrupted and does not count towards AC on the next single attack.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!5qesNnhYCzBf6hK9"
+}

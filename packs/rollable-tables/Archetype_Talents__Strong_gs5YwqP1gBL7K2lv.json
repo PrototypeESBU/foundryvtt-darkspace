@@ -1,0 +1,204 @@
+{
+  "_id": "gs5YwqP1gBL7K2lv",
+  "name": "Archetype Talents: Strong",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "description": "",
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "FOH3KOrJRjhBb2Jm",
+      "name": "Cleave",
+      "type": "document",
+      "img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ETCjSW8Ji3jEzSGR",
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.FOH3KOrJRjhBb2Jm"
+    },
+    {
+      "_id": "loMnufX9GdCJCHzi",
+      "name": "+1 to Melee Attacks",
+      "type": "document",
+      "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.A3vxe37ZTINFf67K",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.loMnufX9GdCJCHzi"
+    },
+    {
+      "_id": "W4mTAyqj9s0KAHHx",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.W4mTAyqj9s0KAHHx"
+    },
+    {
+      "_id": "MElciBCUiGEJW0Vs",
+      "name": "+2 to Strength",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.e5WuMwKZqQ7xJbQk",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.MElciBCUiGEJW0Vs"
+    },
+    {
+      "_id": "Fvavbnw5GL0K88Ze",
+      "name": "+2 to Dexterity",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.llp8weqh0aZU9YGu",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.Fvavbnw5GL0K88Ze"
+    },
+    {
+      "_id": "TRHW6JzQ5deJPtmX",
+      "name": "+2 to Constitution",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.YVgMcHwA7bRqjmDE",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.TRHW6JzQ5deJPtmX"
+    },
+    {
+      "_id": "QMszf2TQcmQNTr7L",
+      "name": "Armor Mastery",
+      "type": "document",
+      "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ogA4KNDCHKe1IMHt",
+      "drawn": false,
+      "range": [
+        10,
+        11
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.QMszf2TQcmQNTr7L"
+    },
+    {
+      "_id": "1Xwc2ynrhyx8r0MS",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.1Xwc2ynrhyx8r0MS"
+    },
+    {
+      "_id": "YlOzzygqFSQh831Y",
+      "name": "Cleave",
+      "type": "document",
+      "img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ETCjSW8Ji3jEzSGR",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.YlOzzygqFSQh831Y"
+    },
+    {
+      "_id": "4xyxA42IhbhzLwvh",
+      "name": "+1 to Melee Attacks",
+      "type": "document",
+      "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.A3vxe37ZTINFf67K",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.4xyxA42IhbhzLwvh"
+    },
+    {
+      "_id": "Qz3RhQqH08lov7Uu",
+      "name": "Armor Mastery",
+      "type": "document",
+      "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ogA4KNDCHKe1IMHt",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.Qz3RhQqH08lov7Uu"
+    },
+    {
+      "_id": "wzICxpV29JzXs0Iu",
+      "name": "Distribute to Stats",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.rollable-tables.RollTable.82cnS0CVDgIW0l6w",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!gs5YwqP1gBL7K2lv.wzICxpV29JzXs0Iu"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!tables!gs5YwqP1gBL7K2lv"
+}

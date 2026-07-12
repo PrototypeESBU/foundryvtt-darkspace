@@ -1,0 +1,17 @@
+{
+  "_id": "XvOQmhu2m4WY1f1b",
+  "name": "Functions",
+  "type": "Talent",
+  "img": "icons/commodities/tech/metal-panel.webp",
+  "system": {
+    "description": "<p>Choose or roll 3 traits from the Species Traits table. You cannot take the Triad Power trait as a function. Re-roll or choose a different trait if you receive this result.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!XvOQmhu2m4WY1f1b"
+}

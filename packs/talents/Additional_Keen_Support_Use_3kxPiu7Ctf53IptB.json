@@ -1,0 +1,17 @@
+{
+  "_id": "3kxPiu7Ctf53IptB",
+  "name": "Additional Keen Support Use",
+  "type": "Talent",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": "<p>Gain one additional use of Keen Support.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!3kxPiu7Ctf53IptB"
+}

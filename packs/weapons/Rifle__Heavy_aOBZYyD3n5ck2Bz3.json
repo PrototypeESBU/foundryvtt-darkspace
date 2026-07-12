@@ -1,0 +1,48 @@
+{
+  "_id": "aOBZYyD3n5ck2Bz3",
+  "name": "Rifle, Heavy",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/rifle-bayonet.webp",
+  "system": {
+    "description": "<p>Fires a physical projectile propelled by some physical force to damage a target at a distance.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.Tg2j6CxrmNwtvdWI",
+      "Compendium.darkspace.properties.Item.A7YEmThjuZzB9vRJ",
+      "Compendium.darkspace.properties.Item.EVXAWpR9w7DpeZep"
+    ],
+    "ammoClass": "ammo-magazine",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 30,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": "1d8"
+    },
+    "handedness": "",
+    "range": "far",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": "Heavy"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!aOBZYyD3n5ck2Bz3"
+}

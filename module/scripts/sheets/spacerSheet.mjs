@@ -27,6 +27,8 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
             "edit-sheet":      SpacerSheet.#onEditSheet,
             "toggle-equipped": SpacerSheet.#onToggleEquipped,
             "toggle-stashed":  SpacerSheet.#onToggleStashed,
+            "credits-to-ship": SpacerSheet.#onCreditsToShip,
+            "ship-open":       SpacerSheet.#onShipOpen,
         },
     };
 
@@ -112,8 +114,11 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
             const roleUuids  = system.shipRoleUuids ?? [];
             if (ship) {
                 context.shipRoles = ship.items
-                    .filter(i => i.type === "darkspace.ShipRole" && roleUuids.includes(i.uuid))
-                    .map(i => i.name);
+                    .filter(i => ["darkspace.ShipRole", "darkspace.Weapon"].includes(i.type)
+                        && roleUuids.includes(i.uuid))
+                    .map(i => i.type === "darkspace.Weapon"
+                        ? game.i18n.format("DARKSPACE.sheet.ship.roles.gunner", { weapon: i.name })
+                        : i.name);
             }
         }
 
@@ -136,6 +141,21 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
         super._onRender(context, options);
 
         if (!this.isEditable) return;
+
+        // Name input — single line only; Enter commits instead of inserting a newline
+        const nameInput = this.element.querySelector(".ds-name-input");
+        if (nameInput) {
+            nameInput.addEventListener("keydown", (e) => {
+                if (e.key !== "Enter") return;
+                e.preventDefault();
+                e.currentTarget.blur();
+            });
+            // Strip line breaks from pasted text
+            nameInput.addEventListener("input", (e) => {
+                const el = e.currentTarget;
+                if (/[\r\n]/.test(el.value)) el.value = el.value.replace(/[\r\n]+/g, " ");
+            });
+        }
 
         // Credits input — plain number sets, +/- prefix adjusts
         const creditsInput = this.element.querySelector(".ds-credits-input");
@@ -213,6 +233,11 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
         this.actor.items.get(target.dataset.itemId)?.sheet.render(true);
     }
 
+    static async #onShipOpen(event, target) {
+        const ship = await fromUuid(target.dataset.uuid).catch(() => null);
+        ship?.sheet.render(true);
+    }
+
     static async #onItemDelete(event, target) {
         this.actor.items.get(target.dataset.itemId)?.delete();
     }
@@ -225,6 +250,23 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     static async #onToggleStashed(event, target) {
         const item = this.actor.items.get(target.dataset.itemId);
         await item?.update({ "system.stashed": !item.system.stashed, "system.equipped": false });
+    }
+
+    static async #onCreditsToShip(event, target) {
+        const credits = await foundry.applications.api.DialogV2.prompt({
+            window: { title: "DARKSPACE.sheet.spacer.credits.sendTitle" },
+            content: `
+                <div class="form-group">
+                    <label>${game.i18n.localize("DARKSPACE.sheet.spacer.credits.sendLabel")}</label>
+                    <input type="number" name="credits" min="1" step="1" autofocus />
+                </div>`,
+            ok: {
+                label: "DARKSPACE.sheet.spacer.credits.sendButton",
+                icon: "fa-solid fa-shuttle-space",
+                callback: (event, button) => button.form.elements.credits.valueAsNumber,
+            },
+        });
+        if (credits) await this.actor.system.creditsToShip(credits);
     }
 
     // -----------------------------------------------

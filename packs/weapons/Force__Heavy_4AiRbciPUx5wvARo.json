@@ -1,0 +1,47 @@
+{
+  "_id": "4AiRbciPUx5wvARo",
+  "name": "Force, Heavy",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+  "system": {
+    "description": "<p>Powered blunt weapons that use forcefield technology to deliver greater impact. Requires an energy cell, otherwise it counts as its non-powered counterpart.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.2dmknn37HabiQoZ8",
+      "Compendium.darkspace.properties.Item.A7YEmThjuZzB9vRJ"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 15,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": "1d12"
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": "Heavy"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!4AiRbciPUx5wvARo"
+}

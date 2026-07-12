@@ -1,0 +1,17 @@
+{
+  "_id": "nBDGPK7atRkJwLIF",
+  "name": "Unyielding",
+  "type": "Talent",
+  "img": "icons/skills/wounds/injury-body-pain-gray.webp",
+  "system": {
+    "description": "<p>3/episode, you can choose to make a DC 18 CON check (the Resilient talent applies) instead of a death roll. If you fail, the Death Timer still applies. If you succeed, you get back up at 1 HP.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!nBDGPK7atRkJwLIF"
+}

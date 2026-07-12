@@ -42,18 +42,35 @@
             </div>
             <div class="form-group">
                 <label>Damage (1H)</label>
-                <select name="system.damage.oneHanded">
-                    <option value="">&mdash;</option>
-                    {{selectOptions config.WEAPON_BASE_DAMAGE selected=system.damage.oneHanded localize=false}}
-                </select>
+                <input name="system.damage.oneHanded" type="text" value="{{system.damage.oneHanded}}" placeholder="1d8" />
             </div>
             <div class="form-group">
                 <label>Damage (2H)</label>
-                <select name="system.damage.twoHanded">
+                <input name="system.damage.twoHanded" type="text" value="{{system.damage.twoHanded}}" placeholder="1d10" />
+            </div>
+            <div class="form-group">
+                <label>Ammo Class</label>
+                <select name="system.ammoClass">
                     <option value="">&mdash;</option>
-                    {{selectOptions config.WEAPON_BASE_DAMAGE selected=system.damage.twoHanded localize=false}}
+                    {{selectOptions ammunition selected=system.ammoClass localize=false}}
                 </select>
             </div>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Properties
+                <a class="item-selector"
+                    data-item-type="weapon"
+                    data-select-type="itemProperty"
+                    for="system.properties"
+                ><i class="fas fa-pen-to-square"></i></a>
+            </label>
+            <ul class="tags">
+                {{#each propertyItems}}
+                <li class="tag tag_primary" data-tooltip="{{this.system.description}}">{{this.name}}</li>
+                {{/each}}
+            </ul>
         </div>
 
         <div class="form-group">

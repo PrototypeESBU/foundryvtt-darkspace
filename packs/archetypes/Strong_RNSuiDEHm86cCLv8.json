@@ -1,0 +1,36 @@
+{
+  "_id": "RNSuiDEHm86cCLv8",
+  "name": "Strong",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Grunts, teamsters, gladiators, and bodyguards. Strong characters are the muscle that carry the galaxy on their shoulders.</p><p><b>Weapons:</b> All Melee Weapons<br><b>Armor:</b> All Armor<br><b>Hit Points:</b> 1d8 per level</p>",
+    "hitPoints": "d8",
+    "allArmor": true,
+    "allMeleeWeapons": true,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.BvCEjnmsGw0NUqOb",
+      "Compendium.darkspace.talents.Item.HxdsWSzisOlcFRIM",
+      "Compendium.darkspace.talents.Item.cPqaYq8vGy58KsrX"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.gs5YwqP1gBL7K2lv",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!RNSuiDEHm86cCLv8"
+}

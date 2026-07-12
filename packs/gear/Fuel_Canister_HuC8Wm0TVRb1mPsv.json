@@ -1,0 +1,35 @@
+{
+  "_id": "HuC8Wm0TVRb1mPsv",
+  "name": "Fuel Canister",
+  "type": "Basic",
+  "img": "icons/commodities/tech/metal-barrel.webp",
+  "system": {
+    "description": "<p>Pressurized fuel for flamethrowers. See the Ammo (Am) weapon property for details.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [],
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 3,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": true,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "treasure": false,
+    "scroll": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HuC8Wm0TVRb1mPsv"
+}

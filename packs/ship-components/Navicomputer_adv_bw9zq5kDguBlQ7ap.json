@@ -1,0 +1,20 @@
+{
+  "_id": "bw9zq5kDguBlQ7ap",
+  "name": "Navicomputer (adv)",
+  "type": "darkspace.ShipComponent",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": "<p>This ship is equipped with a navicomputer to make astrogation calculations.</p><p>This advanced system grants advantage on checks made to use it and takes up an additional slot.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "type": "System",
+    "online": true,
+    "damaged": false,
+    "slots": 2
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!bw9zq5kDguBlQ7ap"
+}

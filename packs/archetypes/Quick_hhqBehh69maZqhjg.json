@@ -1,0 +1,36 @@
+{
+  "_id": "hhqBehh69maZqhjg",
+  "name": "Quick",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Pilots, thieves, gunslingers, and assassins. Quick characters move fast and strike with precision.</p><p><b>Weapons:</b> Melee and Ranged Weapons (excluding all Heavy Weapons)<br><b>Armor:</b> Light Armor<br><b>Hit Points:</b> 1d6 per level</p>",
+    "hitPoints": "d6",
+    "allArmor": false,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.OTEcYzlk3HnGZcKZ",
+      "Compendium.darkspace.talents.Item.THsgC4EcVMU0TYIU",
+      "Compendium.darkspace.talents.Item.UFjOfaqICJP3ROhq"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.GsSxTBV1M9bcWiZK",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!hhqBehh69maZqhjg"
+}

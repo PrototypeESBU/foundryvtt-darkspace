@@ -1,0 +1,204 @@
+{
+  "_id": "d9vhfhux9OL6uoUi",
+  "name": "Archetype Talents: Wise",
+  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "description": "",
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "VZSb2U4ufsYhVlk6",
+      "name": "Riposte",
+      "type": "document",
+      "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.hFUhmzOVKDhOw8g4",
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.VZSb2U4ufsYhVlk6"
+    },
+    {
+      "_id": "mEEUbPT9QBmlRo7D",
+      "name": "Reduced Enlightenment DC",
+      "type": "document",
+      "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.dLXzR6tmN67v1zxX",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.mEEUbPT9QBmlRo7D"
+    },
+    {
+      "_id": "CaPtlKZy2dm3mVyd",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.CaPtlKZy2dm3mVyd"
+    },
+    {
+      "_id": "sKTvTInnF4tl9W4l",
+      "name": "+2 to Intelligence",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.nLsubK2Gv9nGUu28",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.sKTvTInnF4tl9W4l"
+    },
+    {
+      "_id": "0WgBxqHjWBZrIovw",
+      "name": "+2 to Wisdom",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.KLf9V21KyLQgPR2q",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.0WgBxqHjWBZrIovw"
+    },
+    {
+      "_id": "aG9PM3MkgXs9eMJV",
+      "name": "+2 to Constitution",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.YVgMcHwA7bRqjmDE",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.aG9PM3MkgXs9eMJV"
+    },
+    {
+      "_id": "nrhFTVjeMPtJXVKg",
+      "name": "Improved Optimization",
+      "type": "document",
+      "img": "icons/magic/control/buff-luck-fortune-clover-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.49BOmmmcuPz0nzLr",
+      "drawn": false,
+      "range": [
+        10,
+        11
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.nrhFTVjeMPtJXVKg"
+    },
+    {
+      "_id": "OF8mlcC2beDTurWq",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.OF8mlcC2beDTurWq"
+    },
+    {
+      "_id": "vQrSLva8aAlcFVcB",
+      "name": "Riposte",
+      "type": "document",
+      "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.hFUhmzOVKDhOw8g4",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.vQrSLva8aAlcFVcB"
+    },
+    {
+      "_id": "yUu8opBVYLPtlbq0",
+      "name": "Reduced Enlightenment DC",
+      "type": "document",
+      "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.dLXzR6tmN67v1zxX",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.yUu8opBVYLPtlbq0"
+    },
+    {
+      "_id": "9cHvrzsg6b5Z5YcA",
+      "name": "Improved Optimization",
+      "type": "document",
+      "img": "icons/magic/control/buff-luck-fortune-clover-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.49BOmmmcuPz0nzLr",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.9cHvrzsg6b5Z5YcA"
+    },
+    {
+      "_id": "UbpoapMedKYdHqqT",
+      "name": "Distribute to Stats",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.rollable-tables.RollTable.82cnS0CVDgIW0l6w",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!d9vhfhux9OL6uoUi.UbpoapMedKYdHqqT"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!tables!d9vhfhux9OL6uoUi"
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "P8pZuNKPVqzeZ7yO",
+  "name": "Pistol, Heavy",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/gun-topbarrel.webp",
+  "system": {
+    "description": "<p>Fires a physical projectile propelled by some physical force to damage a target at a distance.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.Tg2j6CxrmNwtvdWI"
+    ],
+    "ammoClass": "ammo-magazine",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 15,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d8",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": "Heavy"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!P8pZuNKPVqzeZ7yO"
+}

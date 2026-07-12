@@ -1,0 +1,17 @@
+{
+  "_id": "OTEcYzlk3HnGZcKZ",
+  "name": "Quick Shot",
+  "type": "Talent",
+  "img": "icons/skills/ranged/arrow-flying-white-blue.webp",
+  "system": {
+    "description": "<p>If a creature doesn't notice your attack, you roll extra weapon dice for damage equal to half your level (rounded up).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!OTEcYzlk3HnGZcKZ"
+}

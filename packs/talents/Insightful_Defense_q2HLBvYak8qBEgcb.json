@@ -1,0 +1,50 @@
+{
+  "_id": "q2HLBvYak8qBEgcb",
+  "name": "Insightful Defense",
+  "type": "Talent",
+  "img": "icons/skills/melee/shield-block-gray-orange.webp",
+  "system": {
+    "description": "<p>Add half your level (round down, minimum 1) to your AC.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "CPi8NZxHQPGyhBEo",
+      "name": "Insightful Defense",
+      "type": "base",
+      "img": "icons/skills/melee/shield-block-gray-orange.webp",
+      "changes": [
+        {
+          "key": "system.attributes.ac.value",
+          "mode": 2,
+          "priority": null,
+          "value": "max(floor(@level.value/2), 1)"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!q2HLBvYak8qBEgcb.CPi8NZxHQPGyhBEo"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!q2HLBvYak8qBEgcb"
+}

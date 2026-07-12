@@ -1,0 +1,50 @@
+{
+  "_id": "iXcz15Voztb2VF8u",
+  "name": "+2 to Charisma",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "o8552Rc9tSP6lIO8",
+      "name": "Ability Score Improvement (Cha)",
+      "type": "base",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.cha.value",
+          "mode": 2,
+          "priority": null,
+          "value": "2"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!iXcz15Voztb2VF8u.o8552Rc9tSP6lIO8"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!iXcz15Voztb2VF8u"
+}

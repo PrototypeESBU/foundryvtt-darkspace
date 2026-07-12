@@ -1,0 +1,17 @@
+{
+  "_id": "94N47xGWnTOg3D4z",
+  "name": "Enlightenment",
+  "type": "Talent",
+  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "system": {
+    "description": "<p>3/episode, you can make a DC 12 WIS check. On a success, gain a luck token (you can't have more than one luck token at a time).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!94N47xGWnTOg3D4z"
+}

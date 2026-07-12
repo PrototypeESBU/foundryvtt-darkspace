@@ -1,0 +1,47 @@
+{
+  "_id": "3sMEZdcH6aT52oaN",
+  "name": "Rifle, Light",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/rifle-brown.webp",
+  "system": {
+    "description": "<p>Fires a physical projectile propelled by some physical force to damage a target at a distance.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.Tg2j6CxrmNwtvdWI",
+      "Compendium.darkspace.properties.Item.A7YEmThjuZzB9vRJ"
+    ],
+    "ammoClass": "ammo-magazine",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 20,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": "1d4"
+    },
+    "handedness": "",
+    "range": "far",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": "Light"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!3sMEZdcH6aT52oaN"
+}

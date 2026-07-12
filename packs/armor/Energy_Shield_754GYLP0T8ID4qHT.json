@@ -1,0 +1,44 @@
+{
+  "_id": "754GYLP0T8ID4qHT",
+  "name": "Energy Shield",
+  "type": "Armor",
+  "img": "icons/equipment/shield/heater-crystal-blue.webp",
+  "system": {
+    "description": "<p>A forcefield emitter worn on one arm. Occupies a hand but no gear slots. Requires an energy cell.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.jbWMPIBSK9Wg5JNA",
+      "Compendium.darkspace.properties.Item.LJJ5XsxC03Fu4XuW",
+      "Compendium.darkspace.properties.Item.FeE4ntbOsL13ADcr",
+      "Compendium.darkspace.properties.Item.yj3hWUNSjjDZOt7G"
+    ],
+    "ac": {
+      "attribute": "",
+      "base": 0,
+      "modifier": 2
+    },
+    "baseArmor": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 30,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 0
+    },
+    "stashed": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!754GYLP0T8ID4qHT"
+}

@@ -1,0 +1,251 @@
+{
+  "_id": "xnFc8CUJH0rkGyCL",
+  "name": "Archetype Talents: Tough",
+  "img": "icons/magic/defensive/armor-stone-skin.webp",
+  "description": "",
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "d9jS0PhdSTBc02aP",
+      "name": "Shake it Off",
+      "type": "document",
+      "img": "icons/skills/social/wave-halt-stop.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ycXSon0ygQ8e38el",
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.d9jS0PhdSTBc02aP"
+    },
+    {
+      "_id": "NHFp6fuP7yesbVRf",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        3,
+        5
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.NHFp6fuP7yesbVRf"
+    },
+    {
+      "_id": "CN2Frdh6MHWQPrXe",
+      "name": "+1 to Melee Attacks",
+      "type": "document",
+      "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.A3vxe37ZTINFf67K",
+      "drawn": false,
+      "range": [
+        3,
+        5
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.CN2Frdh6MHWQPrXe"
+    },
+    {
+      "_id": "SsXNp58ND1ZQCBzP",
+      "name": "+1 to Ranged Attacks",
+      "type": "document",
+      "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.nvCs5mGl76ald6YC",
+      "drawn": false,
+      "range": [
+        3,
+        5
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.SsXNp58ND1ZQCBzP"
+    },
+    {
+      "_id": "YnjNSvmB7rfQKNx2",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        6,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.YnjNSvmB7rfQKNx2"
+    },
+    {
+      "_id": "DL1zfdoJe1eN5Wc9",
+      "name": "+2 to Strength",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.e5WuMwKZqQ7xJbQk",
+      "drawn": false,
+      "range": [
+        6,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.DL1zfdoJe1eN5Wc9"
+    },
+    {
+      "_id": "NVhY7Grc1bgL8E8y",
+      "name": "+2 to Dexterity",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.llp8weqh0aZU9YGu",
+      "drawn": false,
+      "range": [
+        6,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.NVhY7Grc1bgL8E8y"
+    },
+    {
+      "_id": "nhOfBxjEyKkWien4",
+      "name": "+2 to Constitution",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.YVgMcHwA7bRqjmDE",
+      "drawn": false,
+      "range": [
+        6,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.nhOfBxjEyKkWien4"
+    },
+    {
+      "_id": "M9V4bHRAItJvBMy6",
+      "name": "Armor Mastery",
+      "type": "document",
+      "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ogA4KNDCHKe1IMHt",
+      "drawn": false,
+      "range": [
+        10,
+        11
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.M9V4bHRAItJvBMy6"
+    },
+    {
+      "_id": "OGvhqUv6yInVrszp",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.OGvhqUv6yInVrszp"
+    },
+    {
+      "_id": "Cj47ZosGsGuw8eXp",
+      "name": "Shake it Off",
+      "type": "document",
+      "img": "icons/skills/social/wave-halt-stop.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ycXSon0ygQ8e38el",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.Cj47ZosGsGuw8eXp"
+    },
+    {
+      "_id": "JNfGQrL5n9nyT2K2",
+      "name": "+1 to Melee Attacks",
+      "type": "document",
+      "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.A3vxe37ZTINFf67K",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.JNfGQrL5n9nyT2K2"
+    },
+    {
+      "_id": "tRsgJtEnujXnBMaG",
+      "name": "+1 to Ranged Attacks",
+      "type": "document",
+      "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.nvCs5mGl76ald6YC",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.tRsgJtEnujXnBMaG"
+    },
+    {
+      "_id": "MWnOKIsWtIQ5eeIU",
+      "name": "Armor Mastery",
+      "type": "document",
+      "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.ogA4KNDCHKe1IMHt",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.MWnOKIsWtIQ5eeIU"
+    },
+    {
+      "_id": "fIlQleekZFkK5IGF",
+      "name": "Distribute to Stats",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.rollable-tables.RollTable.82cnS0CVDgIW0l6w",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!xnFc8CUJH0rkGyCL.fIlQleekZFkK5IGF"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!tables!xnFc8CUJH0rkGyCL"
+}

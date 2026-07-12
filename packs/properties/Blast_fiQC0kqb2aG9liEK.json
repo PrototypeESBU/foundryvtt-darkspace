@@ -1,0 +1,18 @@
+{
+  "_id": "fiQC0kqb2aG9liEK",
+  "name": "Blast",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>Bl. This weapon does blast damage. Roll 1d6 to determine the number of targets affected besides the intended target.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!fiQC0kqb2aG9liEK"
+}

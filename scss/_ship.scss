@@ -88,7 +88,7 @@
         }
     }
 
-    .ds-sidebar-attacks, .ds-notes-box {
+    .ds-sidebar-attacks, .ds-sidebar-weapons, .ds-notes-box {
         @include flex-fill-col;
         min-height: 60px;
 
@@ -98,6 +98,17 @@
             .editor {
                 @include flex-fill-col($overflow: auto);
             }
+        }
+    }
+
+    .ds-sidebar-weapons {
+        .header span a {
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .content {
+            overflow-y: auto;
         }
     }
 
@@ -155,7 +166,7 @@
 
         .ds-crew-stats,
         .ds-crew-identity {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--color-text-secondary, #555);
             overflow: hidden;
             text-overflow: ellipsis;
@@ -175,12 +186,54 @@
         }
     }
 
+    .ds-role-row {
+        border: 1px solid black;
+        padding: 0 6px 6px;
+        margin-bottom: 6px;
+
+        legend {
+            padding: 0 4px;
+
+            .ds-role-name {
+                font-weight: bold;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        select {
+            width: 100%;
+        }
+
+        .ds-role-assignee {
+            display: block;
+            padding: 2px 0;
+        }
+
+        // Gunner roles are derived from weapons: no drag, edit or delete
+        &.ds-gunner-role legend .ds-role-name {
+            cursor: default;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .ds-role-divider {
+        border: none;
+        border-top: 1px solid black;
+        margin: 8px 0;
+    }
+
     .ds-component-row {
         display: flex;
         align-items: center;
         gap: 4px;
         padding: 2px 0;
-        font-size: 12px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
         &:last-child {
@@ -200,42 +253,27 @@
         }
     }
 
-    .ds-weapon-header {
-        display: grid;
-        grid-template-columns: 1fr 70px 60px 60px 50px;
-        gap: 4px;
-        font-size: 10px;
-        font-weight: bold;
-        padding: 0 0 2px;
-        border-bottom: 1px solid black;
-        color: var(--color-text-secondary, #555);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
     .ds-weapon-row {
-        display: grid;
-        grid-template-columns: 1fr 70px 60px 60px 50px;
-        gap: 4px;
-        font-size: 12px;
         padding: 2px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        align-items: center;
-        cursor: default;
 
         &:last-child {
             border-bottom: none;
         }
 
-        .ds-component-name {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+        .item-name {
             cursor: pointer;
 
             &:hover {
                 text-decoration: underline;
             }
+        }
+
+        .item-subtext {
+            display: block;
+            font-size: 0.85em;
+            font-style: italic;
+            color: #707070;
         }
     }
 
@@ -243,7 +281,6 @@
         display: flex;
         align-items: center;
         padding: 2px 0;
-        font-size: 12px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
         &:last-child {

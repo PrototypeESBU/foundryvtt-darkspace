@@ -1,0 +1,18 @@
+{
+  "_id": "EVXAWpR9w7DpeZep",
+  "name": "Repeating",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>R. This weapon has an alternate repeating mode which will allow for a second shot at disadvantage.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!EVXAWpR9w7DpeZep"
+}

@@ -5,6 +5,5 @@ export {default as ShipArmor}     from "./items/ShipArmor.mjs";
 export {default as ShipClass}     from "./items/ShipClass.mjs";
 export {default as ShipComponent} from "./items/ShipComponent.mjs";
 export {default as ShipRole}      from "./items/ShipRole.mjs";
-export {default as ShipWeapon}    from "./items/ShipWeapon.mjs";
 export {default as Spacer}        from "./Spacer.mjs";
 export {default as Weapon}        from "./items/Weapon.mjs";

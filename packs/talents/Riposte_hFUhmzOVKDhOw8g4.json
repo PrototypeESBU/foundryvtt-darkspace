@@ -1,0 +1,17 @@
+{
+  "_id": "hFUhmzOVKDhOw8g4",
+  "name": "Riposte",
+  "type": "Talent",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "system": {
+    "description": "<p>1/episode, deflect a successful attack. Damage the attacker or another target instead. If you already have Riposte, you gain an additional use per episode.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!hFUhmzOVKDhOw8g4"
+}

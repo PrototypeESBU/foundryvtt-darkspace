@@ -1,0 +1,17 @@
+{
+  "_id": "vLQU61SUHR4KnivE",
+  "name": "+1 to Specialization Checks",
+  "type": "Talent",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "system": {
+    "description": "<p>+1 to your Specialization checks.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!vLQU61SUHR4KnivE"
+}

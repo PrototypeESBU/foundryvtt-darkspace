@@ -1,0 +1,46 @@
+{
+  "_id": "9HbtTotQr85BmMQ7",
+  "name": "Edged, Medium",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/swords/scimitar-broad.webp",
+  "system": {
+    "description": "<p>Sharpened blades capable of slicing and piercing flesh. Examples include longswords, knives, rapiers, and claws.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.JhYAtgiAULxvGZMb"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 3,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d6",
+      "twoHanded": "1d8"
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": "Medium"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!9HbtTotQr85BmMQ7"
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "shyeDh7JN37RSnLF",
+  "name": "Single Use",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>1U. This explosive has a single use and is then consumed.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!shyeDh7JN37RSnLF"
+}

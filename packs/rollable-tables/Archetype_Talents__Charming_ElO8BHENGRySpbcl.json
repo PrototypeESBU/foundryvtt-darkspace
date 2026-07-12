@@ -1,0 +1,251 @@
+{
+  "_id": "ElO8BHENGRySpbcl",
+  "name": "Archetype Talents: Charming",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "description": "",
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "ceYkVEOarItQrjxX",
+      "name": "Scoundrel's Luck",
+      "type": "document",
+      "img": "icons/magic/control/buff-luck-fortune-clover-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.Q13UdH2daIEtaWmo",
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.ceYkVEOarItQrjxX"
+    },
+    {
+      "_id": "bjOe6mDjrnYevCc0",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.bjOe6mDjrnYevCc0"
+    },
+    {
+      "_id": "a2jNijQNXp1FdanL",
+      "name": "+1 to Melee and Ranged Attacks",
+      "type": "document",
+      "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.YWwCoaod0ZN7JEwX",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.a2jNijQNXp1FdanL"
+    },
+    {
+      "_id": "QJouXYdb8mzVWkPe",
+      "name": "+1 to Carousing Rolls",
+      "type": "document",
+      "img": "icons/skills/trades/gaming-gambling-dice-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.34O00rdN6lX8go0b",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.QJouXYdb8mzVWkPe"
+    },
+    {
+      "_id": "5hLJ5qsuX6OyjkJo",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.5hLJ5qsuX6OyjkJo"
+    },
+    {
+      "_id": "fJD1dvoMGYSc13sg",
+      "name": "+2 to Dexterity",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.llp8weqh0aZU9YGu",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.fJD1dvoMGYSc13sg"
+    },
+    {
+      "_id": "iNWxjUzlea42oFdA",
+      "name": "+2 to Intelligence",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.nLsubK2Gv9nGUu28",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.iNWxjUzlea42oFdA"
+    },
+    {
+      "_id": "00piBWaBBOzOKuxR",
+      "name": "+2 to Charisma",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.iXcz15Voztb2VF8u",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.00piBWaBBOzOKuxR"
+    },
+    {
+      "_id": "oDNXuJ8oU8LZ80QR",
+      "name": "Reduced Sway DC",
+      "type": "document",
+      "img": "icons/skills/social/intimidation-impressing.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.dKmmHgmMZpZJPUDv",
+      "drawn": false,
+      "range": [
+        10,
+        11
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.oDNXuJ8oU8LZ80QR"
+    },
+    {
+      "_id": "f19ojWj7kvJDhN4k",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.f19ojWj7kvJDhN4k"
+    },
+    {
+      "_id": "mF3mR6V9W07xhNJg",
+      "name": "Scoundrel's Luck",
+      "type": "document",
+      "img": "icons/magic/control/buff-luck-fortune-clover-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.Q13UdH2daIEtaWmo",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.mF3mR6V9W07xhNJg"
+    },
+    {
+      "_id": "Ibz5n9wvBXUlpCYW",
+      "name": "+1 to Melee and Ranged Attacks",
+      "type": "document",
+      "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.YWwCoaod0ZN7JEwX",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.Ibz5n9wvBXUlpCYW"
+    },
+    {
+      "_id": "4ccEksz2FcS93y0v",
+      "name": "+1 to Carousing Rolls",
+      "type": "document",
+      "img": "icons/skills/trades/gaming-gambling-dice-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.34O00rdN6lX8go0b",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.4ccEksz2FcS93y0v"
+    },
+    {
+      "_id": "2sE9UhHlL68ktpcD",
+      "name": "Reduced Sway DC",
+      "type": "document",
+      "img": "icons/skills/social/intimidation-impressing.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.dKmmHgmMZpZJPUDv",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.2sE9UhHlL68ktpcD"
+    },
+    {
+      "_id": "KYbic5zJNPj1LDKs",
+      "name": "Distribute to Stats",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.rollable-tables.RollTable.82cnS0CVDgIW0l6w",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!ElO8BHENGRySpbcl.KYbic5zJNPj1LDKs"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!tables!ElO8BHENGRySpbcl"
+}

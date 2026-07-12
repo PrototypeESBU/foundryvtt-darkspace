@@ -1,0 +1,49 @@
+{
+  "_id": "QGTjconrg9E8yPw2",
+  "name": "Land Mine",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/thrown/bomb-detonator.webp",
+  "system": {
+    "description": "<p>A placed explosive triggered by pressure. Can be given a delay (Dl).</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.SFVSxglbBnqroH2T",
+      "Compendium.darkspace.properties.Item.fiQC0kqb2aG9liEK",
+      "Compendium.darkspace.properties.Item.shyeDh7JN37RSnLF",
+      "Compendium.darkspace.properties.Item.kWChbVuhvS6xjrJB"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 75,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "2d8",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!QGTjconrg9E8yPw2"
+}

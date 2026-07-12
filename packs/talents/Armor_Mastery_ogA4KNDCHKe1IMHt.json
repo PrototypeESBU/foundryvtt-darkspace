@@ -1,0 +1,50 @@
+{
+  "_id": "ogA4KNDCHKe1IMHt",
+  "name": "Armor Mastery",
+  "type": "Talent",
+  "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+  "system": {
+    "description": "<p>Choose one category of armor. You get +1 AC from that armor (can be taken multiple times).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "bjQMtITpNlH0ByDC",
+      "name": "Armor Mastery",
+      "type": "base",
+      "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+      "changes": [
+        {
+          "key": "system.attributes.ac.REPLACEME",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!ogA4KNDCHKe1IMHt.bjQMtITpNlH0ByDC"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!ogA4KNDCHKe1IMHt"
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "Tg2j6CxrmNwtvdWI",
+  "name": "Ammo",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>Am. This weapon requires an ammo magazine to use. On a critical failure (natural one on a 1d20 attack roll), the ammo magazine runs out and will need to be swapped out as an action.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!Tg2j6CxrmNwtvdWI"
+}

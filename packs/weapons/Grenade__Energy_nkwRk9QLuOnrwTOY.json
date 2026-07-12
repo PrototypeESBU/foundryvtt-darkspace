@@ -1,0 +1,49 @@
+{
+  "_id": "nkwRk9QLuOnrwTOY",
+  "name": "Grenade, Energy",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/thrown/bomb-fuse-red-black.webp",
+  "system": {
+    "description": "<p>A thrown device designed to damage everything in a blast zone.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.SFVSxglbBnqroH2T",
+      "Compendium.darkspace.properties.Item.fiQC0kqb2aG9liEK",
+      "Compendium.darkspace.properties.Item.VZ2T2iUDphpIVI2i",
+      "Compendium.darkspace.properties.Item.shyeDh7JN37RSnLF"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 100,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d12",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Energy",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!nkwRk9QLuOnrwTOY"
+}

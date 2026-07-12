@@ -1,0 +1,17 @@
+{
+  "_id": "viZJjqaEvpaH0K8s",
+  "name": "Resilient",
+  "type": "Talent",
+  "img": "icons/magic/defensive/armor-stone-skin.webp",
+  "system": {
+    "description": "<p>You have advantage on CON checks to resist permanent injury, disease, toxins, or extreme environmental conditions.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!viZJjqaEvpaH0K8s"
+}

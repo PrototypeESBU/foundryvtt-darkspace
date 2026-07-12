@@ -1,0 +1,221 @@
+{
+  "_id": "82cnS0CVDgIW0l6w",
+  "name": "Distribute to Stats",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "description": "<p>+2 points to distribute to stats. Take +2 to one stat, or +1 to two different stats.</p>",
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "K34L0aMKVL2di2Z1",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.K34L0aMKVL2di2Z1"
+    },
+    {
+      "_id": "cJIUDJWWa6QvFOL0",
+      "name": "+1 to Strength",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.nmWH3fzznai1vddy",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.cJIUDJWWa6QvFOL0"
+    },
+    {
+      "_id": "ff7qVGuBGeVGdB7J",
+      "name": "+1 to Dexterity",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.TuaK9LFqcakmj3Lc",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.ff7qVGuBGeVGdB7J"
+    },
+    {
+      "_id": "ILquA2lMYxnwBe5F",
+      "name": "+1 to Constitution",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.vShsyBM8fhgHqm2Y",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.ILquA2lMYxnwBe5F"
+    },
+    {
+      "_id": "E2ExmGblGylsto0J",
+      "name": "+1 to Intelligence",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.jB0DkghIOLjd3UY5",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.E2ExmGblGylsto0J"
+    },
+    {
+      "_id": "8E89J5r5syh2bjNq",
+      "name": "+1 to Wisdom",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.zlO0Tdrtmxdco4I6",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.8E89J5r5syh2bjNq"
+    },
+    {
+      "_id": "4P5B2iL88GLyVjHF",
+      "name": "+1 to Charisma",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.bXaaJhgsPll4o5p7",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.4P5B2iL88GLyVjHF"
+    },
+    {
+      "_id": "JRL9mCiKeXhJWe4u",
+      "name": "+2 to Strength",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.e5WuMwKZqQ7xJbQk",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.JRL9mCiKeXhJWe4u"
+    },
+    {
+      "_id": "TtZvftO1YBEJyiLM",
+      "name": "+2 to Dexterity",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.llp8weqh0aZU9YGu",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.TtZvftO1YBEJyiLM"
+    },
+    {
+      "_id": "3G0EQVHTPtIKNgpT",
+      "name": "+2 to Constitution",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.YVgMcHwA7bRqjmDE",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.3G0EQVHTPtIKNgpT"
+    },
+    {
+      "_id": "ZOdY1M7sz8GepxOP",
+      "name": "+2 to Intelligence",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.nLsubK2Gv9nGUu28",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.ZOdY1M7sz8GepxOP"
+    },
+    {
+      "_id": "e1hcveXtr5vNirnk",
+      "name": "+2 to Wisdom",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.KLf9V21KyLQgPR2q",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.e1hcveXtr5vNirnk"
+    },
+    {
+      "_id": "jjTMqgzeCMEOsdHO",
+      "name": "+2 to Charisma",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.iXcz15Voztb2VF8u",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!82cnS0CVDgIW0l6w.jjTMqgzeCMEOsdHO"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!tables!82cnS0CVDgIW0l6w"
+}

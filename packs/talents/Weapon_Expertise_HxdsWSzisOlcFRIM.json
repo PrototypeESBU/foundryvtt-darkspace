@@ -1,0 +1,56 @@
+{
+  "_id": "HxdsWSzisOlcFRIM",
+  "name": "Weapon Expertise",
+  "type": "Talent",
+  "img": "icons/skills/melee/strike-axe-energy-pink.webp",
+  "system": {
+    "description": "<p>Pick a category of melee weapon, like Blunt Weapons. You get +1 to attack and damage with that type of weapon. In addition, add half your level to those rolls (rounded down).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "KAIMBRTQQq0ocuUr",
+      "name": "Weapon Expertise",
+      "type": "base",
+      "img": "icons/skills/melee/strike-axe-energy-pink.webp",
+      "changes": [
+        {
+          "key": "system.roll.melee.bonus.REPLACEME",
+          "mode": 2,
+          "priority": null,
+          "value": "1+floor(@level.value/2)"
+        },
+        {
+          "key": "system.roll.melee.damage.REPLACEME",
+          "mode": 2,
+          "priority": null,
+          "value": "1+floor(@level.value/2)"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!HxdsWSzisOlcFRIM.KAIMBRTQQq0ocuUr"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HxdsWSzisOlcFRIM"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "aAiPG0Q76B559AJo",
+  "name": "Hardware Upgrade",
+  "type": "Talent",
+  "img": "icons/commodities/tech/blueprint.webp",
+  "system": {
+    "description": "<p>Roll one additional Species Trait.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!aAiPG0Q76B559AJo"
+}

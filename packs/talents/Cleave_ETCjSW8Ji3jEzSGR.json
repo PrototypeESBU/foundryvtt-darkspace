@@ -1,0 +1,17 @@
+{
+  "_id": "ETCjSW8Ji3jEzSGR",
+  "name": "Cleave",
+  "type": "Talent",
+  "img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+  "system": {
+    "description": "<p>Deal an additional +1d4 damage when scoring a critical hit (can be taken multiple times).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!ETCjSW8Ji3jEzSGR"
+}

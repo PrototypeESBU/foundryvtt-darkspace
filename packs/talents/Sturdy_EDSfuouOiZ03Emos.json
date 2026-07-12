@@ -1,0 +1,82 @@
+{
+  "_id": "EDSfuouOiZ03Emos",
+  "name": "Sturdy",
+  "type": "Talent",
+  "img": "icons/magic/life/cross-area-circle-green-white.webp",
+  "system": {
+    "description": "<p>You gain +2 HP when making a Tough character. Roll additional hit points gained with advantage.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "vDCWoFizQJeb1Zyq",
+      "name": "Extra HP Max",
+      "type": "base",
+      "img": "icons/magic/life/cross-area-circle-green-white.webp",
+      "changes": [
+        {
+          "key": "system.attributes.hp.max",
+          "mode": 2,
+          "priority": null,
+          "value": "2"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!EDSfuouOiZ03Emos.vDCWoFizQJeb1Zyq"
+    },
+    {
+      "_id": "Bk2f4QcM4fYRKAVZ",
+      "name": "HP Roll Advantage",
+      "type": "base",
+      "img": "icons/magic/life/cross-area-circle-green-white.webp",
+      "changes": [
+        {
+          "key": "system.roll.hp.advantage",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!EDSfuouOiZ03Emos.Bk2f4QcM4fYRKAVZ"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!EDSfuouOiZ03Emos"
+}

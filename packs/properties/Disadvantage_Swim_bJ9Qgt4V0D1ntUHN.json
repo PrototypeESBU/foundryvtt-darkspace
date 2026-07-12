@@ -1,0 +1,18 @@
+{
+  "_id": "bJ9Qgt4V0D1ntUHN",
+  "name": "Disadvantage/Swim",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>You have disadvantage on swim checks while wearing this armor.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!bJ9Qgt4V0D1ntUHN"
+}

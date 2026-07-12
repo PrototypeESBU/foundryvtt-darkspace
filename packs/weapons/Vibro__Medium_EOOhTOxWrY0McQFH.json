@@ -1,0 +1,47 @@
+{
+  "_id": "EOOhTOxWrY0McQFH",
+  "name": "Vibro, Medium",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/swords/sword-runed-glowing.webp",
+  "system": {
+    "description": "<p>Powered edged weapons that use microvibrations to cut quicker and deeper.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.2dmknn37HabiQoZ8",
+      "Compendium.darkspace.properties.Item.JhYAtgiAULxvGZMb"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 10,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d8",
+      "twoHanded": "1d10"
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": "Medium"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!EOOhTOxWrY0McQFH"
+}

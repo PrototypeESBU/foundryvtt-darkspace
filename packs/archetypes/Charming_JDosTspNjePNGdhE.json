@@ -1,0 +1,36 @@
+{
+  "_id": "JDosTspNjePNGdhE",
+  "name": "Charming",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Scoundrels, performers, politicians, and captains. Charming characters are the leaders, smooth talkers, and deal-makers who keep things moving and the credits flowing.</p><p><b>Weapons:</b> Projectile and Energy Pistols<br><b>Armor:</b> Light Armor<br><b>Hit Points:</b> 1d6 per level</p><p><b>Languages.</b> You know three additional common languages and one rare language.</p>",
+    "hitPoints": "d6",
+    "allArmor": false,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 3,
+      "rare": 1,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.96O6jdow8iWXWrES",
+      "Compendium.darkspace.talents.Item.tSiLjCDD9kO6YdgT",
+      "Compendium.darkspace.talents.Item.TupgNbh7WSajhCNq"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.ElO8BHENGRySpbcl",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!JDosTspNjePNGdhE"
+}

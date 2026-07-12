@@ -1,0 +1,35 @@
+{
+  "_id": "6IqV5mCdBwrT1kp4",
+  "name": "Rocket",
+  "type": "Basic",
+  "img": "icons/weapons/thrown/rocket.webp",
+  "system": {
+    "description": "<p>A single-use, high-explosive rocket (4d6, Armor Piercing, Blast, Single Use). Requires a rocket launcher to fire.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [],
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 100,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": true,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "treasure": false,
+    "scroll": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!6IqV5mCdBwrT1kp4"
+}

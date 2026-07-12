@@ -13,6 +13,24 @@ export default class Spacer extends ActorBaseDS {
         return Object.assign(super.defineSchema(), schema);
     }
 
+    /**
+     * Transfers credits from this spacer to their assigned ship.
+     * The transfer is capped at the spacer's current credits.
+     * @param {number} credits - amount to transfer
+     */
+    async creditsToShip(credits) {
+        const amount = Math.min(Math.floor(credits), this.coins.gp);
+        if (!(amount > 0)) return;
+
+        const ship = await fromUuid(this.shipUuid).catch(() => null);
+        if (!ship) {
+            return ui.notifications.warn(game.i18n.localize("DARKSPACE.sheet.spacer.credits.noShip"));
+        }
+
+        await ship.update({ "system.coins.gp": ship.system.coins.gp + amount });
+        return this.parent.update({ "system.coins.gp": this.coins.gp - amount });
+    }
+
     // -----------------------------------------------
     // Species, Archetype and Background are embedded
     // items, unlike Shadowdark's uuid links. Override

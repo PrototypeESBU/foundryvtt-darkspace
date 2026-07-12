@@ -24,7 +24,6 @@ Hooks.on("init", () => {
         "darkspace.ShipClass":      models.ShipClass,
         "darkspace.ShipComponent":  models.ShipComponent,
         "darkspace.ShipRole":       models.ShipRole,
-        "darkspace.ShipWeapon":     models.ShipWeapon,
         "darkspace.Weapon":         models.Weapon,
     });
 
@@ -40,15 +39,17 @@ Hooks.on("init", () => {
     Item.createDialog = function(data={}, createOptions={}, options={}) {
         options.types ??= [
             "Ancestry",
+            "Armor",
             "Background",
+            "Basic",
             "Class",
+            "Property",
             "Talent",
             "darkspace.Cargo",
             "darkspace.ShipArmor",
             "darkspace.ShipClass",
             "darkspace.ShipComponent",
             "darkspace.ShipRole",
-            "darkspace.ShipWeapon",
             "darkspace.Weapon",
         ];
         return _origItemCreateDialog.call(this, data, createOptions, options);
@@ -96,11 +97,6 @@ Hooks.on("init", () => {
 
     Items.registerSheet("darkspace", sheets.ShipRoleSheet, {
         types: ["darkspace.ShipRole"],
-        makeDefault: true,
-    });
-
-    Items.registerSheet("darkspace", sheets.ShipWeaponSheet, {
-        types: ["darkspace.ShipWeapon"],
         makeDefault: true,
     });
 

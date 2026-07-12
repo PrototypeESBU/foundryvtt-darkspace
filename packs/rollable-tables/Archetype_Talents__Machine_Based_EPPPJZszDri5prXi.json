@@ -1,0 +1,125 @@
+{
+  "_id": "EPPPJZszDri5prXi",
+  "name": "Archetype Talents: Machine-Based",
+  "img": "icons/commodities/tech/metal-panel.webp",
+  "description": "",
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "rFG4yXEw8JxDJscE",
+      "name": "Hardware Upgrade",
+      "type": "document",
+      "img": "icons/commodities/tech/blueprint.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.aAiPG0Q76B559AJo",
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.rFG4yXEw8JxDJscE"
+    },
+    {
+      "_id": "ClrfI603l2Y9hrcU",
+      "name": "",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "description": "Choose 1",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.ClrfI603l2Y9hrcU"
+    },
+    {
+      "_id": "N53sNR76tOODmYw6",
+      "name": "Powerful",
+      "type": "document",
+      "img": "icons/skills/melee/strike-axe-blood-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.sSP6bVKfyESvwAuh",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.N53sNR76tOODmYw6"
+    },
+    {
+      "_id": "qiQSVH4Oo82w64jt",
+      "name": "Longsight",
+      "type": "document",
+      "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.io8OTuM4dBrFWXkN",
+      "drawn": false,
+      "range": [
+        3,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.qiQSVH4Oo82w64jt"
+    },
+    {
+      "_id": "zh5b58S06KMQvun9",
+      "name": "Distribute to Stats",
+      "type": "document",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.rollable-tables.RollTable.82cnS0CVDgIW0l6w",
+      "drawn": false,
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.zh5b58S06KMQvun9"
+    },
+    {
+      "_id": "WJtvKKNUyzFDdCo1",
+      "name": "Armored Skin",
+      "type": "document",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.5sdtbq19OpHmJcoA",
+      "drawn": false,
+      "range": [
+        10,
+        11
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.WJtvKKNUyzFDdCo1"
+    },
+    {
+      "_id": "RNituBydZ4rXvlAU",
+      "name": "Software Upgrade",
+      "type": "document",
+      "img": "icons/tools/scribal/magnifying-glass.webp",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.talents.Item.apmzpS7nIcls8FOH",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!EPPPJZszDri5prXi.RNituBydZ4rXvlAU"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!tables!EPPPJZszDri5prXi"
+}

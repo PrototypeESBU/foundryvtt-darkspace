@@ -1,0 +1,42 @@
+{
+  "_id": "3yUrAxnnLzkMEHGw",
+  "name": "Energy Armor",
+  "type": "Armor",
+  "img": "icons/equipment/chest/breastplate-cuirass-steel-blue.webp",
+  "system": {
+    "description": "<p>A personal forcefield generator worn on the body. Requires an energy cell.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.FeE4ntbOsL13ADcr",
+      "Compendium.darkspace.properties.Item.yj3hWUNSjjDZOt7G"
+    ],
+    "ac": {
+      "attribute": "",
+      "base": 15,
+      "modifier": 0
+    },
+    "baseArmor": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 100,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!3yUrAxnnLzkMEHGw"
+}

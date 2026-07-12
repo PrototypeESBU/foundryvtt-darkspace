@@ -1,0 +1,43 @@
+{
+  "_id": "HFaU4PszbsMXu45D",
+  "name": "Heavy Armor",
+  "type": "Armor",
+  "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+  "system": {
+    "description": "<p>Full-coverage protective plating. Disadvantage on stealth checks; no swimming.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.kHRHsoYayhMJzAWR",
+      "Compendium.darkspace.properties.Item.1iFHgYWrEFFCUqJw",
+      "Compendium.darkspace.properties.Item.Z0u4Vhi84ngceoTg"
+    ],
+    "ac": {
+      "attribute": "",
+      "base": 15,
+      "modifier": 0
+    },
+    "baseArmor": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 75,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 3
+    },
+    "stashed": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HFaU4PszbsMXu45D"
+}

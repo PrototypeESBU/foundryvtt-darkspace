@@ -1,0 +1,46 @@
+{
+  "_id": "HiYJasrH8xu5Ne5Q",
+  "name": "Blunt, Medium",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/maces/mace-flanged-steel.webp",
+  "system": {
+    "description": "<p>Dull weapons capable of breaking bones on impact. Examples include clubs, hammers, maces, and staves.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.JhYAtgiAULxvGZMb"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 3,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d6",
+      "twoHanded": "1d8"
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": "Medium"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!HiYJasrH8xu5Ne5Q"
+}

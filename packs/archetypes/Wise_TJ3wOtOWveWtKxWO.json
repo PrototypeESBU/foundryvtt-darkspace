@@ -1,0 +1,36 @@
+{
+  "_id": "TJ3wOtOWveWtKxWO",
+  "name": "Wise",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Mystics, sages, counselors, and monks. Wise characters divine the true nature of the galaxy and its inhabitants, whether through supernatural means or their own focused insight.</p><p><b>Weapons:</b> Light Melee Weapons<br><b>Armor:</b> None<br><b>Hit Points:</b> 1d4 per level</p><p><b>Optional Trait - The Triad.</b> You may swap out Enlightenment for a Triad Power if your GM allows. You may gain an additional Triad Power if your species trait is already The Triad. Replace the second talent on the Wise Talents table with \"Gain one additional Triad Power.\"</p>",
+    "hitPoints": "d4",
+    "allArmor": false,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": false,
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.TePc4iPqmKZuFqxS",
+      "Compendium.darkspace.talents.Item.94N47xGWnTOg3D4z",
+      "Compendium.darkspace.talents.Item.q2HLBvYak8qBEgcb"
+    ],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": "Compendium.darkspace.rollable-tables.RollTable.d9vhfhux9OL6uoUi",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!TJ3wOtOWveWtKxWO"
+}

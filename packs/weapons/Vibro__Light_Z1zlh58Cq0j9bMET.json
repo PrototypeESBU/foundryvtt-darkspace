@@ -1,0 +1,47 @@
+{
+  "_id": "Z1zlh58Cq0j9bMET",
+  "name": "Vibro, Light",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/swords/sword-runed-glowing.webp",
+  "system": {
+    "description": "<p>Powered edged weapons that use microvibrations to cut quicker and deeper.</p><p>Can usually be wielded with one hand and is easily concealable. Light melee weapons can be thrown to near distance.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.2dmknn37HabiQoZ8",
+      "Compendium.darkspace.properties.Item.VZ2T2iUDphpIVI2i"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 5,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d6",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": "Light"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!Z1zlh58Cq0j9bMET"
+}

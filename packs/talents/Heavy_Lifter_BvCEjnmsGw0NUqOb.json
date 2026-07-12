@@ -1,0 +1,50 @@
+{
+  "_id": "BvCEjnmsGw0NUqOb",
+  "name": "Heavy Lifter",
+  "type": "Talent",
+  "img": "icons/magic/control/buff-strength-muscle-damage.webp",
+  "system": {
+    "description": "<p>Your number of gear slots is equal to your STR score (or 10) + STR mod (if positive).</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "1MkGl0zkv24H3Jw9",
+      "name": "Heavy Lifter",
+      "type": "base",
+      "img": "icons/magic/control/buff-strength-muscle-damage.webp",
+      "changes": [
+        {
+          "key": "system.slots",
+          "mode": 2,
+          "priority": null,
+          "value": "max(@abilities.str.mod, 0)"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!BvCEjnmsGw0NUqOb.1MkGl0zkv24H3Jw9"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!BvCEjnmsGw0NUqOb"
+}

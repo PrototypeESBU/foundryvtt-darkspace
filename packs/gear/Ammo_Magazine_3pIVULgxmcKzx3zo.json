@@ -1,0 +1,35 @@
+{
+  "_id": "3pIVULgxmcKzx3zo",
+  "name": "Ammo Magazine",
+  "type": "Basic",
+  "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+  "system": {
+    "description": "<p>Ammo for projectile weapons. Holds enough ammo until it doesn&rsquo;t. See the Ammo (Am) weapon property for details.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [],
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 3,
+      "sp": 0
+    },
+    "equipped": false,
+    "isAmmunition": true,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 2,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "treasure": false,
+    "scroll": false
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!3pIVULgxmcKzx3zo"
+}

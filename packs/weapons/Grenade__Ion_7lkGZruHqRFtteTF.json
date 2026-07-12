@@ -1,0 +1,49 @@
+{
+  "_id": "7lkGZruHqRFtteTF",
+  "name": "Grenade, Ion",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/thrown/bomb-fuse-blue.webp",
+  "system": {
+    "description": "<p>On a successful hit, targets in the blast zone make a DC 15 CON check or are stunned for 1d10 minutes. See the Disabling (D) property.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.fiQC0kqb2aG9liEK",
+      "Compendium.darkspace.properties.Item.5qesNnhYCzBf6hK9",
+      "Compendium.darkspace.properties.Item.VZ2T2iUDphpIVI2i",
+      "Compendium.darkspace.properties.Item.shyeDh7JN37RSnLF"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 75,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Energy",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!7lkGZruHqRFtteTF"
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "vShsyBM8fhgHqm2Y",
+  "name": "+1 to Constitution",
+  "type": "Talent",
+  "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "system": {
+    "description": "",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [
+    {
+      "_id": "gLzkUHlngEaLCegK",
+      "name": "Ability Score Improvement (Con)",
+      "type": "base",
+      "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+      "changes": [
+        {
+          "key": "system.abilities.con.value",
+          "mode": 2,
+          "priority": null,
+          "value": "1"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "origin": null,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!vShsyBM8fhgHqm2Y.gLzkUHlngEaLCegK"
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!vShsyBM8fhgHqm2Y"
+}

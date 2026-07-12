@@ -1,0 +1,47 @@
+{
+  "_id": "zR1HcUKjwQIPcAgt",
+  "name": "Stun Baton",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/clubs/club-baton-blue.webp",
+  "system": {
+    "description": "<p>Designed to disable rather than damage. On a successful hit, the target makes a DC 9 CON check or is stunned for 1d10 minutes. See the Disabling (D) property.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.2dmknn37HabiQoZ8",
+      "Compendium.darkspace.properties.Item.5qesNnhYCzBf6hK9"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 15,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "close",
+    "type": "melee",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Melee",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!zR1HcUKjwQIPcAgt"
+}

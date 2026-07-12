@@ -1,0 +1,18 @@
+{
+  "_id": "A7YEmThjuZzB9vRJ",
+  "name": "Two-Handed",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>2H. This weapon requires two hands to use and takes up two gear slots.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!A7YEmThjuZzB9vRJ"
+}

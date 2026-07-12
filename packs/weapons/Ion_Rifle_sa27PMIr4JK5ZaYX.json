@@ -1,0 +1,48 @@
+{
+  "_id": "sa27PMIr4JK5ZaYX",
+  "name": "Ion Rifle",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/guns/gun-double-barrel.webp",
+  "system": {
+    "description": "<p>Designed to disable rather than damage. On a successful hit, the target makes a DC 15 CON check or is stunned for 1d10 minutes. See the Disabling (D) property.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.2dmknn37HabiQoZ8",
+      "Compendium.darkspace.properties.Item.5qesNnhYCzBf6hK9",
+      "Compendium.darkspace.properties.Item.A7YEmThjuZzB9vRJ"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 50,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "far",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 2
+    },
+    "stashed": false,
+    "damageType": "Energy",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!sa27PMIr4JK5ZaYX"
+}

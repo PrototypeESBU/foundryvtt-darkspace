@@ -1,36 +1,45 @@
 <form class="{{cssClass}} shadowdark flexcol" autocomplete="off">
     {{> items/item-header placeholder="Component Name"}}
 
-    <section class="sheet-body flexcol ds-item-body">
-        <div class="ds-form-grid-5">
-            <div class="form-group">
-                <label>Type</label>
-                <select name="system.type">
-                    <option value="System"  {{#if (eq system.type "System")}}selected{{/if}}>System</option>
-                    <option value="Feature" {{#if (eq system.type "Feature")}}selected{{/if}}>Feature</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Slots</label>
-                <input name="system.slots" type="number" value="{{system.slots}}" min="1" />
-            </div>
-            <div class="form-group ds-form-group-center">
-                <label>Online</label>
-                <input name="system.online" type="checkbox" {{#if system.online}}checked{{/if}} />
-            </div>
-            <div class="form-group ds-form-group-center">
-                <label>Damaged</label>
-                <input name="system.damaged" type="checkbox" {{#if system.damaged}}checked{{/if}} />
-            </div>
-            <div class="form-group ds-form-group-center">
-                <label>Advanced</label>
-                <input name="system.advanced" type="checkbox" {{#if system.advanced}}checked{{/if}} />
-            </div>
-        </div>
+    <nav class="SD-nav flex0" data-group="primary">
+        <a class="navigation-tab" data-tab="tab-details">
+            {{localize "SHADOWDARK.sheet.item.tab.details"}}
+        </a>
+        <a class="navigation-tab" data-tab="tab-effects">
+            {{localize "SHADOWDARK.sheet.item.tab.effects"}}
+        </a>
+    </nav>
 
-        <div class="form-group">
-            <label>Description</label>
-            {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
-        </div>
+    <section class="SD-content-body sheet-body flexcol ds-item-body">
+        <section class="tab tab-details" data-group="primary" data-tab="tab-details">
+            <div class="ds-form-grid-4">
+                <div class="form-group">
+                    <label>Type</label>
+                    <select name="system.type">
+                        <option value="System"  {{#if (eq system.type "System")}}selected{{/if}}>System</option>
+                        <option value="Feature" {{#if (eq system.type "Feature")}}selected{{/if}}>Feature</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Slots</label>
+                    <input name="system.slots" type="number" value="{{system.slots}}" min="1" />
+                </div>
+                <div class="form-group ds-form-group-center">
+                    <label>Online</label>
+                    <input name="system.online" type="checkbox" {{#if system.online}}checked{{/if}} />
+                </div>
+                <div class="form-group ds-form-group-center">
+                    <label>Damaged</label>
+                    <input name="system.damaged" type="checkbox" {{#if system.damaged}}checked{{/if}} />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror" collaborate=false}}
+            </div>
+        </section>
+
+        {{> items/_partials/effects-tab }}
     </section>
 </form>

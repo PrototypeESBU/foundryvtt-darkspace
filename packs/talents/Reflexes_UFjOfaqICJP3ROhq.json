@@ -1,0 +1,17 @@
+{
+  "_id": "UFjOfaqICJP3ROhq",
+  "name": "Reflexes",
+  "type": "Talent",
+  "img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
+  "system": {
+    "description": "<p>You have advantage on DEX checks to avoid a dangerous situation, such as avoiding a laser mine or flying through an asteroid field.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!UFjOfaqICJP3ROhq"
+}

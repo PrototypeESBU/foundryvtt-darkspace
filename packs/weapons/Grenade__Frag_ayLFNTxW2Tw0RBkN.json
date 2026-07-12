@@ -1,0 +1,48 @@
+{
+  "_id": "ayLFNTxW2Tw0RBkN",
+  "name": "Grenade, Frag",
+  "type": "darkspace.Weapon",
+  "img": "icons/weapons/thrown/bomb-fuse-black.webp",
+  "system": {
+    "description": "<p>A thrown device designed to damage everything in a blast zone.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "properties": [
+      "Compendium.darkspace.properties.Item.fiQC0kqb2aG9liEK",
+      "Compendium.darkspace.properties.Item.VZ2T2iUDphpIVI2i",
+      "Compendium.darkspace.properties.Item.shyeDh7JN37RSnLF"
+    ],
+    "ammoClass": "",
+    "baseWeapon": "",
+    "broken": false,
+    "cost": {
+      "cp": 0,
+      "gp": 50,
+      "sp": 0
+    },
+    "damage": {
+      "oneHanded": "1d10",
+      "twoHanded": ""
+    },
+    "handedness": "",
+    "range": "near",
+    "type": "ranged",
+    "equipped": false,
+    "isAmmunition": false,
+    "magicItem": false,
+    "quantity": 1,
+    "slots": {
+      "free_carry": 0,
+      "per_slot": 1,
+      "slots_used": 1
+    },
+    "stashed": false,
+    "damageType": "Projectile",
+    "size": ""
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!ayLFNTxW2Tw0RBkN"
+}

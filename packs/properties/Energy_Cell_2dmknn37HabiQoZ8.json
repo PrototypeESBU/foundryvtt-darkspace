@@ -1,0 +1,18 @@
+{
+  "_id": "2dmknn37HabiQoZ8",
+  "name": "Energy Cell",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>EC. This weapon requires an energy cell to use. On a critical failure (natural one on a 1d20 attack roll), the energy cell is exhausted and will need to be swapped out as an action.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "weapon",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!2dmknn37HabiQoZ8"
+}

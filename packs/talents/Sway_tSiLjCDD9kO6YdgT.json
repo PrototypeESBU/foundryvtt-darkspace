@@ -1,0 +1,17 @@
+{
+  "_id": "tSiLjCDD9kO6YdgT",
+  "name": "Sway",
+  "type": "Talent",
+  "img": "icons/skills/social/intimidation-impressing.webp",
+  "system": {
+    "description": "<p>Make a Charisma check to sway your audience with one of the following effects. If you fail, you can't use that effect again until you successfully rest.</p><ul><li><b>Motivate.</b> DC 12. One target in NEAR gains a luck token if they do not have one.</li><li><b>Beguile.</b> DC 15. You transfix targets whose total levels are equal up to your level plus CHA modifier within NEAR for 1d4 rounds.</li></ul>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!tSiLjCDD9kO6YdgT"
+}

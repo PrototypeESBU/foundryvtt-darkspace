@@ -1,0 +1,17 @@
+{
+  "_id": "Bke49mnfAHzHGtqc",
+  "name": "Trick Shot",
+  "type": "Talent",
+  "img": "icons/skills/ranged/arrow-strike-glowing-teal.webp",
+  "system": {
+    "description": "<p>1/episode, re-roll a missed ranged attack. If successful, the shot ricochets and hits its target as a Quick Shot. If you already have Trick Shot, you gain an additional use per episode.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!Bke49mnfAHzHGtqc"
+}

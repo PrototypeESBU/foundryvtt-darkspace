@@ -1,0 +1,17 @@
+{
+  "_id": "34O00rdN6lX8go0b",
+  "name": "+1 to Carousing Rolls",
+  "type": "Talent",
+  "img": "icons/skills/trades/gaming-gambling-dice-gray.webp",
+  "system": {
+    "description": "<p>+1 to your carousing rolls.</p>",
+    "talentClass": "level",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!34O00rdN6lX8go0b"
+}

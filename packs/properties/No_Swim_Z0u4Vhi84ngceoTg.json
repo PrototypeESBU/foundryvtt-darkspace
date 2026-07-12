@@ -1,0 +1,18 @@
+{
+  "_id": "Z0u4Vhi84ngceoTg",
+  "name": "No Swim",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>You cannot swim while wearing this armor.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!Z0u4Vhi84ngceoTg"
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "IZKPjQVV07d5LnQJ",
+  "name": "Disadvantage/Perception",
+  "type": "Property",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": "<p>You have disadvantage on perception checks while wearing this armor.</p>",
+    "source": {
+      "title": "darkspace"
+    },
+    "itemType": "armor",
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!IZKPjQVV07d5LnQJ"
+}
