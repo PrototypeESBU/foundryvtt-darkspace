@@ -9,6 +9,9 @@ TYPES.Item.darkspace.ShipArmor: Ship Armor
 TYPES.Item.darkspace.ShipClass: Ship Class
 TYPES.Item.darkspace.Weapon: Weapon
 SHADOWDARK.coins.gp: CR
+SHADOWDARK.sheet.player.ancestry.label: Species
+SHADOWDARK.sheet.player.class.label: Archetype
+SHADOWDARK.apps.character-generator.gold: Credits
 DARKSPACE.sheet.ship.tab.crew: Crew
 DARKSPACE.sheet.ship.tab.systems: Systems
 DARKSPACE.sheet.ship.tab.cargo: Cargo
@@ -51,3 +54,6 @@ DARKSPACE.sheet.ship.credits.sendButton: Send
 DARKSPACE.sheet.ship.credits.sendTooltip: Send credits to crew
 DARKSPACE.sheet.ship.credits.noCrew: This ship has no crew.
 DARKSPACE.sheet.ship.roles.gunner: "Gunner ({weapon})"
+DARKSPACE.apps.character-generator.title: Spacer Generator
+DARKSPACE.apps.character-generator.motivation: Motivation
+DARKSPACE.apps.character-generator.sidebar_create: Create Spacer

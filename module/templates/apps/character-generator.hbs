@@ -1,0 +1,44 @@
+<form class="character-generator" autocomplete="off">
+	<div class="cg-grid">
+
+		<h1 class="title grid-colspan-2">
+			{{localize "DARKSPACE.apps.character-generator.title"}}
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action="cg-click"
+					name="randomize-all"
+					title="{{localize 'SHADOWDARK.apps.character-generator.tooltip'}}"
+				></a>
+			{{/unless}}
+		</h1>
+
+		{{> apps/character-generator/details}}
+		{{> apps/character-generator/type}}
+		{{> apps/character-generator/name}}
+		{{> apps/character-generator/stats}}
+		{{> apps/character-generator/class}}
+		{{> apps/character-generator/ancestry}}
+		{{> apps/character-generator/background}}
+		{{> apps/character-generator/hit-points}}
+		{{> darkspace/character-generator/motivation}}
+
+		{{#if level0}}
+			{{> apps/character-generator/gear}}
+		{{else}}
+			{{> apps/character-generator/gold}}
+		{{/if}}
+	</div>
+
+	<div id="create-bar">
+		{{#if editing}}
+			<button data-action="update-character" type="button">
+				{{localize "SHADOWDARK.apps.character-generator.update_character"}}
+			</button>
+		{{else}}
+			<button data-action="create-character" type="button">
+				{{localize "SHADOWDARK.apps.character-generator.create_character"}}
+			</button>
+		{{/if}}
+	</div>
+</form>

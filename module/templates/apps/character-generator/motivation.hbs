@@ -1,0 +1,32 @@
+<div class="SD-box">
+	<div class="header">
+		<label for="actor.system.motivation">
+			{{localize "DARKSPACE.apps.character-generator.motivation"}}
+		</label>
+		<span>
+			{{#unless editing}}
+				<a
+					class="fas fa-dice"
+					data-action='cg-click'
+					name="randomize-motivation"
+				></a>
+			{{/unless}}
+		</span>
+	</div>
+
+	<div class="content">
+		<select name="actor.system.motivation" {{disabled editing}}>
+			<option value=""></option>
+			{{#each motivations}}
+				<option
+					value="{{value}}"
+					{{#ifEq ../actor.system.motivation value}}
+						selected
+					{{/ifEq}}
+				>
+					{{localize label}}
+				</option>
+			{{/each}}
+		</select>
+	</div>
+</div>

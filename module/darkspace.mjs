@@ -1,6 +1,7 @@
 import registerSettings from "./scripts/settings.mjs";
 import * as sheets from "./scripts/sheets/_module.mjs";
 import * as models from "./scripts/models/_module.mjs";
+import CharacterGeneratorDS from "./scripts/apps/characterGeneratorDS.mjs";
 import { DEFAULT_ICONS } from "./scripts/config.mjs";
 
 // -----------------------------------------------
@@ -127,6 +128,24 @@ Hooks.on("init", () => {
         "ui/ds-box":             "modules/darkspace/templates/ui/ds-box.hbs",
         "items/item-header":     "modules/darkspace/templates/items/_partials/item-header.hbs",
         "ship/component-section": "modules/darkspace/templates/actors/ship/_partials/component-section.hbs",
+        // Character generator
+        "darkspace/character-generator/motivation": "modules/darkspace/templates/apps/character-generator/motivation.hbs",
+    });
+
+    // Registered create spacer button
+    Hooks.on("renderActorDirectory", (app, html) => {
+        const footer = html.querySelector("#actors .directory-footer");
+        if (!footer) return;
+
+        footer.querySelector(".character-generator-button")?.closest("div.flexrow")?.remove();
+        footer.querySelector(".shadowdarkling-import-button")?.remove();
+
+        const button = document.createElement("button");
+        button.classList.add("ds-character-generator-button");
+        button.innerHTML = `<i class="fas fa-user-astronaut"></i>
+            <b class="button-text">${game.i18n.localize("DARKSPACE.apps.character-generator.sidebar_create")}</b>`;
+        button.addEventListener("click", () => new CharacterGeneratorDS().render(true));
+        footer.append(button);
     });
 
 });

@@ -1,0 +1,204 @@
+{
+  "_id": "dsStartingGear00",
+  "name": "Starting Gear (Level 0)",
+  "img": "icons/containers/bags/pack-leather-black-brown.webp",
+  "description": "<p>Starting gear for 0-level spacers. Roll once per gear slot granted at character creation.</p>",
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": false,
+  "results": [
+    {
+      "_id": "dsSGresult000001",
+      "name": "Ammo Magazine",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.gear.Item.3pIVULgxmcKzx3zo",
+      "drawn": false,
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000001"
+    },
+    {
+      "_id": "dsSGresult000002",
+      "name": "Energy Cell",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.gear.Item.xAWOLgFSlEcUm8EV",
+      "drawn": false,
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000002"
+    },
+    {
+      "_id": "dsSGresult000003",
+      "name": "Fuel Canister",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.gear.Item.HuC8Wm0TVRb1mPsv",
+      "drawn": false,
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000003"
+    },
+    {
+      "_id": "dsSGresult000004",
+      "name": "Blunt (Light)",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.weapons.Item.WIGOGW0VrooDv17j",
+      "drawn": false,
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000004"
+    },
+    {
+      "_id": "dsSGresult000005",
+      "name": "Edged (Light)",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.weapons.Item.TNjKEUmqzLhbs1Jh",
+      "drawn": false,
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000005"
+    },
+    {
+      "_id": "dsSGresult000006",
+      "name": "Stun Baton",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.weapons.Item.zR1HcUKjwQIPcAgt",
+      "drawn": false,
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000006"
+    },
+    {
+      "_id": "dsSGresult000007",
+      "name": "Pistol (Light)",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.weapons.Item.W1IwiWR49b1pEvot",
+      "drawn": false,
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000007"
+    },
+    {
+      "_id": "dsSGresult000008",
+      "name": "Energy Pistol (Light)",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.weapons.Item.YBeuoAjBrAo5L0zF",
+      "drawn": false,
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000008"
+    },
+    {
+      "_id": "dsSGresult000009",
+      "name": "Molotov Cocktail",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.weapons.Item.6ZihiVAw3y9INJdn",
+      "drawn": false,
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000009"
+    },
+    {
+      "_id": "dsSGresult000010",
+      "name": "Light Armor",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.armor.Item.ExZiBvjoxIwH4O3a",
+      "drawn": false,
+      "range": [
+        10,
+        10
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000010"
+    },
+    {
+      "_id": "dsSGresult000011",
+      "name": "Helmet",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.armor.Item.jtX0eGR1B5LzFXS6",
+      "drawn": false,
+      "range": [
+        11,
+        11
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000011"
+    },
+    {
+      "_id": "dsSGresult000012",
+      "name": "Ballistic Shield",
+      "type": "document",
+      "img": "icons/svg/item-bag.svg",
+      "description": "",
+      "documentUuid": "Compendium.darkspace.armor.Item.EJnIsLBNQFFa2KvS",
+      "drawn": false,
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "flags": {},
+      "_key": "!tables.results!dsStartingGear00.dsSGresult000012"
+    }
+  ],
+  "_key": "!tables!dsStartingGear00"
+}

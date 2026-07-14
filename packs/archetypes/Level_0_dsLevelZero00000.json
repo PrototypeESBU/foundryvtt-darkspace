@@ -1,0 +1,32 @@
+{
+  "_id": "dsLevelZero00000",
+  "name": "Level 0",
+  "type": "Class",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": "<p>Some games begin with 0-level spacers — untested crew who have not yet earned their place among the stars. 0-level spacers are fragile and start with hit points equal to their Constitution modifier (minimum 1).</p>",
+    "hitPoints": "",
+    "allArmor": true,
+    "allMeleeWeapons": false,
+    "allRangedWeapons": false,
+    "allWeapons": true,
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [],
+    "talentChoices": [],
+    "talentChoiceCount": 0,
+    "classTalentTable": null,
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dsLevelZero00000"
+}
