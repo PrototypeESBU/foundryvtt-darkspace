@@ -1,0 +1,17 @@
+{
+  "_id": "dsTraitLifeSuppt",
+  "name": "Life Support",
+  "type": "Talent",
+  "img": "icons/commodities/tech/tube-chamber-lightning.webp",
+  "system": {
+    "description": "<p>You do not require external food, drink, or air to function while connected to your Life Support. You still need to rest and your armor requires a power charge equivalent to a rest to maintain its operational level.</p>",
+    "talentClass": "ancestry",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dsTraitLifeSuppt"
+}

@@ -132,20 +132,20 @@ Hooks.on("init", () => {
         "darkspace/character-generator/motivation": "modules/darkspace/templates/apps/character-generator/motivation.hbs",
     });
 
-    // Registered create spacer button
+    // Create Spacer button at the top of the Actors tab. Shadowdark's footer
+    // buttons are hidden via CSS (overrides.scss) because its render hook
+    // inserts them asynchronously, after this one has already run.
     Hooks.on("renderActorDirectory", (app, html) => {
-        const footer = html.querySelector("#actors .directory-footer");
-        if (!footer) return;
-
-        footer.querySelector(".character-generator-button")?.closest("div.flexrow")?.remove();
-        footer.querySelector(".shadowdarkling-import-button")?.remove();
+        const actions = html.querySelector(".directory-header .header-actions");
+        if (!actions) return;
 
         const button = document.createElement("button");
+        button.type = "button";
         button.classList.add("ds-character-generator-button");
         button.innerHTML = `<i class="fas fa-user-astronaut"></i>
             <b class="button-text">${game.i18n.localize("DARKSPACE.apps.character-generator.sidebar_create")}</b>`;
         button.addEventListener("click", () => new CharacterGeneratorDS().render(true));
-        footer.append(button);
+        actions.prepend(button);
     });
 
 });

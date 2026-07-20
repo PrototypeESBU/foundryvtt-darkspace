@@ -1,0 +1,28 @@
+{
+  "_id": "dsSpeciesAndroid",
+  "name": "Android",
+  "type": "Ancestry",
+  "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+  "system": {
+    "description": "<p>Androids are sentient artificial intelligences in manufactured bodies. They might look organic or robotic and come in a vast array of shapes and sizes.</p><p><b>Species Trait:</b> Mechanical. You do not require food, drink, or air to function. You need a power charge equivalent to a rest to maintain operational level.<br><b>Archetype:</b> Androids can choose any archetype. They can choose the Machine-Based Archetype if they would prefer to be a Multi-Function Android with talents and features tied to how they are built.<br><b>Background / Motivation:</b> Androids can choose any background or motivation.<br><b>The Triad:</b> Androids cannot take The Triad as a talent.</p>",
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.dsTraitMechanic0"
+    ],
+    "talentChoiceCount": 1,
+    "nameTable": "",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dsSpeciesAndroid"
+}

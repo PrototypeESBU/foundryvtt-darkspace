@@ -1,0 +1,17 @@
+{
+  "_id": "dsTraitMechanic0",
+  "name": "Mechanical",
+  "type": "Talent",
+  "img": "icons/commodities/tech/cog-brass.webp",
+  "system": {
+    "description": "<p>You do not require food, drink, or air to function. You need a power charge equivalent to a rest to maintain operational level.</p>",
+    "talentClass": "ancestry",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dsTraitMechanic0"
+}

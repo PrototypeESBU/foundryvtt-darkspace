@@ -18,6 +18,13 @@
   border-radius: 0;
 }
 
+// Hide Shadowdark's character generator and shadowdarkling import buttons in
+// the Actors sidebar footer; DarkSpace puts its own Create Spacer button in
+// the directory header instead.
+#actors .directory-footer div.flexrow:has(.character-generator-button) {
+    display: none;
+}
+
 #sd-roll-dialog h2 {
     font-family: "Rocket-Rinder";
     font-weight: normal;

@@ -32,9 +32,7 @@ export default class Spacer extends ActorBaseDS {
     }
 
     // -----------------------------------------------
-    // Species, Archetype and Background are embedded
-    // items, unlike Shadowdark's uuid links. Override
-    // the accessors so inherited functions still work.
+    // Function Overrides
     // -----------------------------------------------
 
     async getAncestry() {
@@ -64,6 +62,10 @@ export default class Spacer extends ActorBaseDS {
     async addBackground(item) {
         return this.#replaceEmbeddedIdentity(item);
     }
+
+    // -----------------------------------------------
+    // Private Functions
+    // -----------------------------------------------
 
     /**
      * Replaces any existing embedded item of the same type, and the talents

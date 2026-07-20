@@ -85,6 +85,13 @@
             "system": "shadowdark"
         },
         {
+            "name": "species",
+            "label": "DarkSpace Species",
+            "path": "packs/species",
+            "type": "Item",
+            "system": "shadowdark"
+        },
+        {
             "name": "talents",
             "label": "DarkSpace Talents",
             "path": "packs/talents",

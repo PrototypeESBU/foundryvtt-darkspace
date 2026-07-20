@@ -1,0 +1,28 @@
+{
+  "_id": "dsSpeciesPowerAr",
+  "name": "Power Armor",
+  "type": "Ancestry",
+  "img": "icons/equipment/chest/breastplate-layered-steel-grey.webp",
+  "system": {
+    "description": "<p>Some Spacers may just be &ldquo;a guy in a suit&rdquo; and all of their abilities come from a specialized suit of power armor with weapons and features built into it.</p><p><b>Species Trait:</b> Any, including Life Support. You do not require external food, drink, or air to function while connected to your Life Support. You still need to rest and your armor requires a power charge equivalent to a rest to maintain its operational level.<br><b>Archetype:</b> Machine-Based Archetype.<br><b>Background / Motivation:</b> Power Armor Spacers can choose any background or motivation.<br><b>The Triad:</b> Power Armor Spacers can take The Triad as a Species Trait.</p>",
+    "languages": {
+      "common": 0,
+      "rare": 0,
+      "select": 0,
+      "selectOptions": [],
+      "fixed": []
+    },
+    "talents": [
+      "Compendium.darkspace.talents.Item.dsTraitLifeSuppt"
+    ],
+    "talentChoiceCount": 1,
+    "nameTable": "",
+    "source": {
+      "title": "darkspace"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_key": "!items!dsSpeciesPowerAr"
+}
