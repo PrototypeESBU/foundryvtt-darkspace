@@ -106,6 +106,13 @@
     .ds-label-small       { font-size: 11px; }
     .ds-stat-sep          { font-family: "Rocket-Rinder"; }
 
+    .ds-stat-value {
+        font-weight: bold;
+
+        // inputs don't inherit font-weight, so match them to the static values
+        input { font-weight: inherit; }
+    }
+
     .DS-wrapper {
         border: 2px solid black;
         padding: 8px;
