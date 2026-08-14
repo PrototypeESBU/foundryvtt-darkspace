@@ -113,6 +113,22 @@
         input { font-weight: inherit; }
     }
 
+    .ds-level {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        input {
+            width: 3em;
+            text-align: center;
+        }
+    }
+
+    .ds-level-up {
+        cursor: pointer;
+    }
+
     .DS-wrapper {
         border: 2px solid black;
         padding: 8px;

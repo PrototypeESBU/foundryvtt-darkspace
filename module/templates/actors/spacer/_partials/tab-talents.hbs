@@ -13,12 +13,6 @@
                     <li class="ds-item-row" data-item-id="{{item.id}}">
                         <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
                         <span class="ds-item-name">{{item.name}}</span>
-                        <span class="ds-item-actions">
-                            {{#if ../owner}}
-                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
-                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
-                            {{/if}}
-                        </span>
                     </li>
                     {{/each}}
                     {{#unless talents.species.length}}
@@ -40,12 +34,6 @@
                     <li class="ds-item-row" data-item-id="{{item.id}}">
                         <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
                         <span class="ds-item-name">{{item.name}}</span>
-                        <span class="ds-item-actions">
-                            {{#if ../owner}}
-                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
-                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
-                            {{/if}}
-                        </span>
                     </li>
                     {{/each}}
                     {{#unless talents.archetype.length}}
@@ -73,12 +61,6 @@
                         <div class="ds-item-img" style="background-image:url('{{item.img}}')"></div>
                         <span class="ds-item-name">{{item.name}}</span>
                         <span class="ds-talent-level">{{item.system.level}}</span>
-                        <span class="ds-item-actions">
-                            {{#if ../owner}}
-                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
-                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
-                            {{/if}}
-                        </span>
                     </li>
                     {{/each}}
                     {{#unless talents.level.length}}

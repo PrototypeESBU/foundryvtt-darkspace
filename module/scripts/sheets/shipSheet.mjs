@@ -1,3 +1,5 @@
+import ShipLevelUpDS from "../apps/shipLevelUpDS.mjs";
+
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
@@ -6,8 +8,8 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     constructor(object, options) {
 		super(object, options);
 
-		this.editingHp = false;
-		this.editingStats = false;
+		// Unlocks every derived/locked value on the sheet at once
+		this.editing = false;
 	}
 
     static DEFAULT_OPTIONS = {
@@ -26,6 +28,7 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
             "item-attack":       ShipSheet.#onItemAttack,
             "edit-sheet":        ShipSheet.#onEditSheet,
             "credits-to-crew":   ShipSheet.#onCreditsToCrew,
+            "level-up":          ShipSheet.#onLevelUp,
         },
     };
 
@@ -106,9 +109,10 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
         const system = this.actor.system;
         context.system = system;
         context.owner = this.actor.isOwner;
-        context.editingHp = this.editingHp;
-        context.editingStats = this.editingStats;
+        context.editing = this.editing;
         context.maxHp = system.attributes?.hp?.max ?? 0;
+        context.crewLevel = system.getCrewLevel();
+        context.levelUp = system.needsLevelUp;
 
         const items = this.actor.items;
         const shipTypes = new Set([
@@ -127,10 +131,9 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
 
         Object.assign(context, await this.#prepareCrewContext());
 
-        context.shipClass    = (system.class ? await fromUuid(system.class).catch(() => null) : null)
-            ?? items.find(i => i.type === "darkspace.ShipClass") ?? null;
-        context.acProjectile = system.attributes?.acProjectile ?? 0;
-        context.acEnergy     = system.attributes?.acEnergy     ?? 0;
+        context.shipClass    = await system.getShipClass();
+        context.acProjectile = system.attributes?.ac?.projectile ?? 0;
+        context.acEnergy     = system.attributes?.ac?.energy     ?? 0;
 
         context.notesHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
             system.notes ?? "",
@@ -258,8 +261,7 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     }
 
     static #onEditSheet(event, target) {
-        this.editingHp = !this.editingHp;
-        this.editingStats = !this.editingStats;
+        this.editing = !this.editing;
         this.render();
     }
 
@@ -295,6 +297,15 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
             await this.#unassignRoleFromCrew(item.uuid);
         }
         item.delete();
+    }
+
+    static async #onLevelUp(event, target) {
+        // The hit die and talent table both live on the ship class.
+        const shipClass = await this.actor.system.getShipClass();
+        if (!shipClass) {
+            return ui.notifications.warn(game.i18n.localize("DARKSPACE.sheet.ship.level.noClass"));
+        }
+        new ShipLevelUpDS(this.actor.id).render(true);
     }
 
     static async #onCreditsToCrew(event, target) {

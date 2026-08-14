@@ -1,3 +1,6 @@
+import CharacterGeneratorDS from "../apps/characterGeneratorDS.mjs";
+import LevelUpDS from "../apps/levelUpDS.mjs";
+
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
@@ -6,8 +9,8 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     constructor(object, options) {
         super(object, options);
 
-        this.editingHp = false;
-        this.editingStats = false;
+        // Unlocks every derived/locked value on the sheet at once
+        this.editing = false;
     }
 
     static DEFAULT_OPTIONS = {
@@ -23,12 +26,12 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
             "item-attack":     SpacerSheet.#onItemAttack,
             "item-create":     SpacerSheet.#onItemCreate,
             "item-edit":       SpacerSheet.#onItemEdit,
-            "item-delete":     SpacerSheet.#onItemDelete,
             "edit-sheet":      SpacerSheet.#onEditSheet,
             "toggle-equipped": SpacerSheet.#onToggleEquipped,
             "toggle-stashed":  SpacerSheet.#onToggleStashed,
             "credits-to-ship": SpacerSheet.#onCreditsToShip,
             "ship-open":       SpacerSheet.#onShipOpen,
+            "level-up":        SpacerSheet.#onLevelUp,
         },
     };
 
@@ -78,9 +81,12 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
         context.system       = system;
         context.owner        = actor.isOwner;
         context.abilities    = system.abilities;
-        context.editingHp    = this.editingHp;
+        context.editing      = this.editing;
         context.maxHp        = system.attributes?.hp?.max ?? 0;
-        context.editingStats = this.editingStats;
+
+        // Shadowdark advancement: 10 XP per current level
+        context.xpNextLevel = system.level.value * 10;
+        context.levelUp     = system.level.xp >= context.xpNextLevel;
 
         // Item lists
         const items         = actor.items.contents;
@@ -137,6 +143,19 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     }
 
     /** @override */
+    _onFirstRender(context, options) {
+        super._onFirstRender(context, options);
+
+        // Gear and talent rows are edited and deleted from a right click menu.
+        // Bound to the frame so it survives part re-renders.
+        this._createContextMenu(this._getItemContextOptions, ".ds-item-row[data-item-id]", {
+            fixed: true,
+            hookName: "getItemContextOptions",
+            parentClassHooks: false,
+        });
+    }
+
+    /** @override */
     _onRender(context, options) {
         super._onRender(context, options);
 
@@ -173,6 +192,32 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     }
 
     // -----------------------------------------------
+    // Context Menu
+    // -----------------------------------------------
+
+    /**
+     * Right click options for an embedded item row.
+     * @returns {ContextMenuEntry[]}
+     * @protected
+     */
+    _getItemContextOptions() {
+        return [
+            {
+                name: "DARKSPACE.sheet.contextMenu.edit",
+                icon: "<i class=\"fa-solid fa-pen-to-square\"></i>",
+                condition: () => this.actor.isOwner,
+                callback: target => this.actor.items.get(target.dataset.itemId)?.sheet.render(true),
+            },
+            {
+                name: "DARKSPACE.sheet.contextMenu.delete",
+                icon: "<i class=\"fa-solid fa-trash\"></i>",
+                condition: () => this.actor.isOwner,
+                callback: target => this.actor.items.get(target.dataset.itemId)?.delete(),
+            },
+        ];
+    }
+
+    // -----------------------------------------------
     // Drag & Drop
     // -----------------------------------------------
 
@@ -197,9 +242,30 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     }
 
     static #onEditSheet(event, target) {
-        this.editingHp = !this.editingHp;
-        this.editingStats = !this.editingStats;
+        this.editing = !this.editing;
         this.render();
+    }
+
+    static async #onLevelUp(event, target) {
+        const archetype = await this.actor.system.getClass();
+
+        // A level 0 spacer without a real archetype is still being generated,
+        // so it goes back to the generator rather than the level up app.
+        if (this.actor.system.level.value === 0
+            && (!archetype || archetype.name.includes("Level 0"))
+        ) {
+            new CharacterGeneratorDS(this.actor.id).render(true);
+            return this.close();
+        }
+
+        // Hit points and talents are both rolled off the archetype.
+        if (!archetype) {
+            return ui.notifications.warn(
+                game.i18n.localize("DARKSPACE.sheet.spacer.level.noArchetype")
+            );
+        }
+
+        new LevelUpDS(this.actor.id).render(true);
     }
 
     static #onRollAbilityCheck(event, target) {
@@ -236,10 +302,6 @@ export default class SpacerSheet extends HandlebarsApplicationMixin(ActorSheetV2
     static async #onShipOpen(event, target) {
         const ship = await fromUuid(target.dataset.uuid).catch(() => null);
         ship?.sheet.render(true);
-    }
-
-    static async #onItemDelete(event, target) {
-        this.actor.items.get(target.dataset.itemId)?.delete();
     }
 
     static async #onToggleEquipped(event, target) {

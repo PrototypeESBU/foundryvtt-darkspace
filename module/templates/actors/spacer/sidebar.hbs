@@ -33,7 +33,18 @@
                 data-edit="img"
                 data-tooltip="{{ actor.name }}"
             />
-            <div>Level {{actor.level.value}}</div>
+            {{!-- Read-only: the editable copies live in the Details tab, and two
+                  inputs sharing a name would collide on submit --}}
+            <div class="ds-spacer-level">
+                <div>
+                    <span>{{localize "SHADOWDARK.sheet.actor.level"}} {{system.level.value}}</span>
+                    <span>{{species.name}}</span>
+                </div>
+                <div>
+                    <span>{{archetype.name}}</span>
+                    <span>{{background.name}}</span>
+                </div>
+            </div>
         </div>
 
         <div class="ds-sidebar-hp-ac">

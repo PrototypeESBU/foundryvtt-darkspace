@@ -1,0 +1,51 @@
+<form autocomplete="off">
+	<div class="grid-1-columns">
+		<div class="centered">
+			<h2 class="centered">
+				{{actor.name}}
+			</h2>
+			<h3>
+				{{localize "SHADOWDARK.apps.level-up.leveling_to"}}
+				{{targetLevel}}
+			</h3>
+		</div>
+
+		{{!-- Hit Points, rolled from the ship class' hit die --}}
+		<div class="SD-box">
+			<div class="header">
+				<label>
+					{{localize "SHADOWDARK.apps.level-up.hit_points"}}
+				</label>
+				<span>
+					{{hitPoints}}
+					{{#if rolls.hp}}
+						<a class="fas fa-dice" data-action="re-roll-hp"></a>
+					{{/if}}
+				</span>
+			</div>
+
+			<div class="content hit-points">
+				{{#if rolls.hp}}
+					{{rolls.hp}}
+				{{else}}
+					<button type="button" data-action="roll-hp">
+						{{localize "SHADOWDARK.sheet.general.roll_hp"}}
+					</button>
+				{{/if}}
+				{{#if hp.tooltips}}
+					<div style="font-size:12px;text-align:left;margin:4px">{{hp.tooltips}}</div>
+				{{/if}}
+			</div>
+		</div>
+
+		{{> apps/level-up/talents}}
+
+		<button
+			class="level-up-button"
+			data-action="finalize-level-up"
+			type="button"
+		>
+			{{localize "SHADOWDARK.apps.level-up.level_up"}}
+		</button>
+	</div>
+</form>

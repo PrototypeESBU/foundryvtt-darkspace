@@ -57,6 +57,24 @@ export default class Ship extends ActorBaseDS {
         return Math.floor(total / crew.length);
     }
 
+    /**
+     * The ship's class item. Prefers the linked uuid, falling back to whichever
+     * class item is embedded on the ship.
+     * @returns {Promise<Item|null>}
+     */
+    async getShipClass() {
+        const linked = this.class ? await fromUuid(this.class).catch(() => null) : null;
+        return linked ?? this.parent.items.find(i => i.type === "darkspace.ShipClass") ?? null;
+    }
+
+    /**
+     * A ship's level is always equal to or greater than the average Crew Level,
+     * and only ever follows it upwards — a dropping CL leaves the ship as it is.
+     */
+    get needsLevelUp() {
+        return this.getCrewLevel() > (this.level?.value ?? 0);
+    }
+
     prepareBaseData() {
         super.prepareBaseData();
 

@@ -57,6 +57,20 @@
         padding: 2px 6px;
     }
 
+    .ds-spacer-level {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        background: black;
+        color: white;
+
+        > div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
     .ds-name-input {
         display: block;
         font-family: "Rocket-Rinder";
@@ -140,7 +154,11 @@
         font-size: 14px;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
 
-        &:hover { background: rgba(0, 0, 0, 0.04); }
+        // Edit and delete live in a right click menu
+        cursor: context-menu;
+
+        &:hover,
+        &.context { background: rgba(0, 0, 0, 0.04); }
     }
 
     .ds-item-img {

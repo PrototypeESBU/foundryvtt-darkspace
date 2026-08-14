@@ -26,6 +26,9 @@ DARKSPACE.sheet.spacer.tab.notes: Notes
 DARKSPACE.sheet.addItem: Add Item
 DARKSPACE.sheet.newItem: New Item
 DARKSPACE.sheet.editSheet: Edit Sheet
+DARKSPACE.sheet.levelUpTooltip: Level up!
+DARKSPACE.sheet.contextMenu.edit: Edit
+DARKSPACE.sheet.contextMenu.delete: Delete
 DARKSPACE.currency.cr: "cr"
 DARKSPACE.sheet.spacer.gear.slots: Slots
 DARKSPACE.sheet.spacer.gear.equipped: Equipped
@@ -48,12 +51,25 @@ DARKSPACE.sheet.spacer.credits.sendLabel: Credits
 DARKSPACE.sheet.spacer.credits.sendButton: Send
 DARKSPACE.sheet.spacer.credits.sendTooltip: Send credits to ship
 DARKSPACE.sheet.spacer.credits.noShip: This spacer is not assigned to a ship.
+DARKSPACE.sheet.spacer.level.noArchetype: This spacer needs an archetype before it can level up.
 DARKSPACE.sheet.ship.credits.sendTitle: Send Credits to Crew
 DARKSPACE.sheet.ship.credits.sendLabel: Credits (Split Evenly)
 DARKSPACE.sheet.ship.credits.sendButton: Send
 DARKSPACE.sheet.ship.credits.sendTooltip: Send credits to crew
 DARKSPACE.sheet.ship.credits.noCrew: This ship has no crew.
 DARKSPACE.sheet.ship.roles.gunner: "Gunner ({weapon})"
+DARKSPACE.sheet.ship.ac.projectileShort: "P:"
+DARKSPACE.sheet.ship.ac.projectileTooltip: Projectile Armor Class
+DARKSPACE.sheet.ship.ac.energyShort: "E:"
+DARKSPACE.sheet.ship.ac.energyTooltip: Energy Armor Class
+DARKSPACE.sheet.ship.level.label: Ship Level
+DARKSPACE.sheet.ship.level.crewShort: CL
+DARKSPACE.sheet.ship.level.crewTooltip: Average Crew Level
+DARKSPACE.sheet.ship.level.levelUpTooltip: The crew has outlevelled the ship - level up!
+DARKSPACE.sheet.ship.level.noClass: This ship needs a ship class before it can level up.
+DARKSPACE.apps.level-up.errors.missing_talent_table: This spacer's archetype has no talent table.
+DARKSPACE.apps.ship-level-up.title: Ship Level Up
+DARKSPACE.apps.ship-level-up.errors.missing_talent_table: This ship's class has no talent table.
 DARKSPACE.apps.character-generator.title: Spacer Generator
 DARKSPACE.apps.character-generator.motivation: Motivation
 DARKSPACE.apps.character-generator.sidebar_create: Create Spacer

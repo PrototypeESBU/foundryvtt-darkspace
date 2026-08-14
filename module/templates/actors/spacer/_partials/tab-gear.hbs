@@ -24,10 +24,6 @@
                                data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.unequip'}}">
                                 <i class="fas fa-user-shield" style="color:var(--primary)"></i>
                             </a>
-                            {{#if ../owner}}
-                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
-                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
-                            {{/if}}
                         </span>
                     </li>
                     {{/each}}
@@ -72,10 +68,6 @@
                                data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.stash'}}">
                                 <i class="fas fa-box"></i>
                             </a>
-                            {{#if ../owner}}
-                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
-                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
-                            {{/if}}
                         </span>
                     </li>
                     {{/each}}
@@ -109,10 +101,6 @@
                                data-tooltip="{{localize 'DARKSPACE.sheet.spacer.gear.tooltip.unstash'}}">
                                 <i class="fas fa-box" style="color:var(--primary)"></i>
                             </a>
-                            {{#if ../owner}}
-                            <a data-action="item-edit" data-item-id="{{item.id}}"><i class="fas fa-edit"></i></a>
-                            <a data-action="item-delete" data-item-id="{{item.id}}"><i class="fas fa-trash"></i></a>
-                            {{/if}}
                         </span>
                     </li>
                     {{/each}}

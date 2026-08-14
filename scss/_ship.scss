@@ -54,6 +54,15 @@
         }
     }
 
+    .ds-ac-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
     .ds-ac-cell {
         flex: 0 0 36px;
         text-align: center;
@@ -273,6 +282,29 @@
             display: block;
             font-size: 0.85em;
             font-style: italic;
+            color: #707070;
+        }
+    }
+
+    .ds-ship-level {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 6px;
+
+        input {
+            width: 3em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .ds-ship-level-value {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .ds-crew-level {
+            font-size: 11px;
             color: #707070;
         }
     }

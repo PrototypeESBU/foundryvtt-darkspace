@@ -8,13 +8,6 @@
         <div class="DS-wrapper grid-2-columns">
             {{> stats }}
         </div>
-        <div class="DS-wrapper grid-2-columns">
-            <div>{{> hp }}</div>
-            {{#> ui/ds-box header-label="AC"}}
-                Projectile: {{acProjectile}}
-                Energy: {{acEnergy}}
-            {{/ui/ds-box}}
-        </div>
         {{#> ui/ds-box header-label="Weapons" class="ds-sidebar-weapons"}}
             {{#*inline "ds-box-header-span"}}
                 {{#if owner}}
@@ -52,9 +45,36 @@
             {{/if}}
         {{/ui/ds-box}}
 
-        {{#> ui/ds-box header-label="Ship Level"}}
-            <input name="system.level.value" type="number" value="{{system.level.value}}" min="1" />
+        {{#> ui/ds-box header-label=(localize "DARKSPACE.sheet.ship.level.label") content-class="ds-ship-level"}}
+            {{#if editing}}
+                <input name="system.level.value" type="number" value="{{system.level.value}}" min="0" />
+            {{else}}
+                <span class="ds-ship-level-value">{{system.level.value}}</span>
+            {{/if}}
+            <span
+                class="ds-crew-level"
+                data-tooltip="DARKSPACE.sheet.ship.level.crewTooltip"
+            >{{localize "DARKSPACE.sheet.ship.level.crewShort"}} {{crewLevel}}</span>
+            {{#if owner}}
+                {{#if levelUp}}
+                    <a
+                        class="fa-solid fa-arrow-up fa-beat ds-level-up"
+                        data-action="level-up"
+                        data-tooltip="DARKSPACE.sheet.ship.level.levelUpTooltip"
+                    ></a>
+                {{/if}}
+            {{/if}}
         {{/ui/ds-box}}
+
+        <div class="ds-sidebar-hp-ac">
+            {{> hp }}
+            {{#> ui/ds-box header-label="AC" content-class="ds-ac-row"}}
+                <span data-tooltip="DARKSPACE.sheet.ship.ac.projectileTooltip"
+                >{{localize "DARKSPACE.sheet.ship.ac.projectileShort"}} {{acProjectile}}</span>
+                <span data-tooltip="DARKSPACE.sheet.ship.ac.energyTooltip"
+                >{{localize "DARKSPACE.sheet.ship.ac.energyShort"}} {{acEnergy}}</span>
+            {{/ui/ds-box}}
+        </div>
 
         {{#> ui/ds-box header-label="Cargo"}}
             <div class="ds-flex-row">

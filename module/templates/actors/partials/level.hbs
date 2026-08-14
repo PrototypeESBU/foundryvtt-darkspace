@@ -1,0 +1,27 @@
+<div class="DS-box">
+    <div class="header">
+        <label>{{localize 'SHADOWDARK.sheet.actor.level'}}</label>
+        <span></span>
+    </div>
+    <div class="content centered larger ds-level">
+        {{#if editing}}
+            {{numberInput
+                system.level.value
+                name="system.level.value"
+                placeholder="0"
+                min=0
+            }}
+        {{else}}
+            <span>{{system.level.value}}</span>
+            {{#if owner}}
+                {{#if levelUp}}
+                    <a
+                        class="fa-solid fa-arrow-up fa-beat ds-level-up"
+                        data-action="level-up"
+                        data-tooltip="DARKSPACE.sheet.levelUpTooltip"
+                    ></a>
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    </div>
+</div>

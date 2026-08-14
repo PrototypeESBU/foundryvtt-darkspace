@@ -124,6 +124,7 @@ Hooks.on("init", () => {
         stats:   "modules/darkspace/templates/actors/partials/stats.hbs",
         attacks: "modules/darkspace/templates/actors/partials/attacks.hbs",
         hp:      "modules/darkspace/templates/actors/partials/hp.hbs",
+        level:   "modules/darkspace/templates/actors/partials/level.hbs",
         // UI primitives
         "ui/ds-box":             "modules/darkspace/templates/ui/ds-box.hbs",
         "items/item-header":     "modules/darkspace/templates/items/_partials/item-header.hbs",
