@@ -73,3 +73,16 @@ DARKSPACE.apps.ship-level-up.errors.missing_talent_table: This ship's class has 
 DARKSPACE.apps.character-generator.title: Spacer Generator
 DARKSPACE.apps.character-generator.motivation: Motivation
 DARKSPACE.apps.character-generator.sidebar_create: Create Spacer
+DARKSPACE.apps.ship-generator.title: Ship Generator
+DARKSPACE.apps.ship-generator.sidebar_create: Create Ship
+DARKSPACE.apps.ship-generator.create_ship: Create Ship
+DARKSPACE.apps.ship-generator.classification: Classification
+DARKSPACE.apps.ship-generator.design_budget: Design Budget
+DARKSPACE.apps.ship-generator.slots: Slots
+DARKSPACE.apps.ship-generator.systems: Systems
+DARKSPACE.apps.ship-generator.features: Features
+DARKSPACE.apps.ship-generator.free_components: Free Components
+DARKSPACE.apps.ship-generator.base_systems: Base Systems
+DARKSPACE.apps.ship-generator.success: Your ship has been created.
+DARKSPACE.apps.ship-generator.error.name: Your ship needs a name!
+DARKSPACE.apps.ship-generator.error.create: The ship could not be created.

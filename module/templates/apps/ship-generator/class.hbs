@@ -1,0 +1,31 @@
+<div class="SD-box">
+	<div class="header">
+		<label for="actor.system.class">
+			{{localize "DARKSPACE.apps.ship-generator.classification"}}
+		</label>
+		<span>
+			<a
+				class="fas fa-dice"
+				data-action='cg-click'
+				name="randomize-class"
+			></a>
+		</span>
+	</div>
+
+	<div class="content">
+		<select id="class" name="actor.system.class">
+			<option value=""></option>
+			{{#each shipClasses as |value key|}}
+				<option
+					title="{{remove-p-tag value.system.description}}"
+					value="{{value.uuid}}"
+					{{#ifEq ../actor.system.class value.uuid}}
+						selected
+					{{/ifEq}}
+				>
+					{{value.name}}
+				</option>
+			{{/each}}
+		</select>
+	</div>
+</div>

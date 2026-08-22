@@ -2,6 +2,7 @@ import registerSettings from "./scripts/settings.mjs";
 import * as sheets from "./scripts/sheets/_module.mjs";
 import * as models from "./scripts/models/_module.mjs";
 import CharacterGeneratorDS from "./scripts/apps/characterGeneratorDS.mjs";
+import ShipGeneratorDS from "./scripts/apps/shipGeneratorDS.mjs";
 import { DEFAULT_ICONS } from "./scripts/config.mjs";
 
 // -----------------------------------------------
@@ -131,22 +132,49 @@ Hooks.on("init", () => {
         "ship/component-section": "modules/darkspace/templates/actors/ship/_partials/component-section.hbs",
         // Character generator
         "darkspace/character-generator/motivation": "modules/darkspace/templates/apps/character-generator/motivation.hbs",
+        // Ship generator
+        "darkspace/ship-generator/budget":     "modules/darkspace/templates/apps/ship-generator/budget.hbs",
+        "darkspace/ship-generator/class":      "modules/darkspace/templates/apps/ship-generator/class.hbs",
+        "darkspace/ship-generator/details":    "modules/darkspace/templates/apps/ship-generator/details.hbs",
+        "darkspace/ship-generator/hit-points": "modules/darkspace/templates/apps/ship-generator/hit-points.hbs",
+        "darkspace/ship-generator/name":       "modules/darkspace/templates/apps/ship-generator/name.hbs",
     });
 
-    // Create Spacer button at the top of the Actors tab. Shadowdark's footer
-    // buttons are hidden via CSS (overrides.scss) because its render hook
-    // inserts them asynchronously, after this one has already run.
+    // Create Spacer and Create Ship buttons at the top of the Actors tab.
+    // Shadowdark's footer buttons are hidden via CSS (overrides.scss) because
+    // its render hook inserts them asynchronously, after this one has already
+    // run.
     Hooks.on("renderActorDirectory", (app, html) => {
-        const actions = html.querySelector(".directory-header .header-actions");
+        const header = html.querySelector(".directory-header");
+        const actions = header?.querySelector(".header-actions");
         if (!actions) return;
 
-        const button = document.createElement("button");
-        button.type = "button";
-        button.classList.add("ds-character-generator-button");
-        button.innerHTML = `<i class="fas fa-user-astronaut"></i>
-            <b class="button-text">${game.i18n.localize("DARKSPACE.apps.character-generator.sidebar_create")}</b>`;
-        button.addEventListener("click", () => new CharacterGeneratorDS().render(true));
-        actions.prepend(button);
+        const generatorButton = (cssClass, label, onClick) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.classList.add(cssClass);
+            button.innerHTML = `<span>${game.i18n.localize(label)}</span>`;
+            button.addEventListener("click", onClick);
+            return button;
+        };
+
+        // Own row above Create Actor / Create Folder, so the generators are
+        // not squeezed in alongside the core buttons.
+        const generators = document.createElement("div");
+        generators.classList.add("header-actions", "action-buttons", "flexrow", "ds-generator-actions");
+        generators.append(
+            generatorButton(
+                "ds-character-generator-button",
+                "DARKSPACE.apps.character-generator.sidebar_create",
+                () => new CharacterGeneratorDS().render(true)
+            ),
+            generatorButton(
+                "ds-ship-generator-button",
+                "DARKSPACE.apps.ship-generator.sidebar_create",
+                () => new ShipGeneratorDS().render(true)
+            )
+        );
+        actions.before(generators);
     });
 
 });

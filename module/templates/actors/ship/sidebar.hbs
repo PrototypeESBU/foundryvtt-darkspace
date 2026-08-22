@@ -76,12 +76,10 @@
             {{/ui/ds-box}}
         </div>
 
-        {{#> ui/ds-box header-label="Cargo"}}
-            <div class="ds-flex-row">
-                <input class="ds-flex-1" name="system.cargo.value" type="number" value="{{system.cargo.value}}" min="0" />
-                <span>/</span>
-                <input class="ds-flex-1" name="system.cargo.max" type="number" value="{{system.cargo.max}}" min="0" />
-            </div>
+        {{#> ui/ds-box header-label="Cargo" content-class="ds-cargo-total"}}
+            <span>{{system.cargo.value}}</span>
+            <span>/</span>
+            <span>{{system.cargo.max}}</span>
         {{/ui/ds-box}}
 
         {{#> ui/ds-box header-label="Credits"}}

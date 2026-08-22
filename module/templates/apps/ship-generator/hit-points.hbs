@@ -1,0 +1,16 @@
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.apps.level-up.hit_points"}}
+		</label>
+		<span>
+			{{#if shipClass.hpDie}}
+				[{{shipClass.hpDie}}]
+			{{/if}}
+		</span>
+	</div>
+
+	<div class="content centered">
+		{{hitPoints}}
+	</div>
+</div>

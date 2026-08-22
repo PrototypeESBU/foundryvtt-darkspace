@@ -7,6 +7,7 @@ const fields = foundry.data.fields;
 // class > shipClass
 // slots > Cargo
 export default class Ship extends ActorBaseDS {
+
     static defineSchema() {
         return {
             ...super.defineSchema(),
@@ -78,11 +79,12 @@ export default class Ship extends ActorBaseDS {
     prepareBaseData() {
         super.prepareBaseData();
 
-        //set max cargo
+        // Both cargo values are calculated: the capacity is granted purely by
+        // active effects, the load is the sum of the cargo aboard.
         this.cargo = {
             max: 0,
-            value: this._getCargoValue()
-        }
+            value: 0,
+        };
     }
 
     prepareDerivedData() {
@@ -98,14 +100,23 @@ export default class Ship extends ActorBaseDS {
         }
         this.attributes.ac.projectile = acProjectile;
         this.attributes.ac.energy = acEnergy;
+
+        this.cargo.value = this._getCargoValue();
     }
 
     get isPC() {
         return false;
     }
 
+    /**
+     * The cargo aboard the ship.
+     * @returns {Item[]}
+     */
+    getCargoItems() {
+        return (this.parent?.items ?? []).filter(i => i.type === "darkspace.Cargo");
+    }
+
     _getCargoValue() {
-        //TODO 
-        return 0;
+        return this.getCargoItems().reduce((sum, i) => sum + (i.system.units ?? 1), 0);
     }
 }

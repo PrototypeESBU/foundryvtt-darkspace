@@ -1,0 +1,24 @@
+<div class="SD-box">
+	<div class="header">
+		<label for="actor.system.coins.gp">
+			{{localize "DARKSPACE.apps.ship-generator.design_budget"}}
+		</label>
+		<span>
+			<a
+				class="fas fa-dice"
+				data-action="cg-click"
+				name="randomize-budget"
+			></a>
+		</span>
+	</div>
+
+	<div class="content centered">
+		<input
+			type="number"
+			value="{{actor.system.coins.gp}}"
+			name="actor.system.coins.gp"
+			style="width:5em;"
+		/>
+		{{localize "DARKSPACE.currency.cr"}}
+	</div>
+</div>

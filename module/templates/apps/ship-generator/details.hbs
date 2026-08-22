@@ -1,0 +1,59 @@
+<div class="SD-box sg-details">
+
+	<div class="header">
+		<label>
+			{{localize "SHADOWDARK.sheet.item.tab.details"}}
+		</label>
+		<span></span>
+	</div>
+
+	<div class="content details">
+		{{#if shipClass.description}}
+			<p>
+				{{shipClass.description}}
+			</p>
+		{{/if}}
+
+		{{#if actor.system.class}}
+			<p>
+				<b>
+					{{localize "DARKSPACE.apps.ship-generator.slots"}}:
+				</b>
+				{{shipClass.systemSlots}} {{localize "DARKSPACE.apps.ship-generator.systems"}},
+				{{shipClass.featureSlots}} {{localize "DARKSPACE.apps.ship-generator.features"}}
+			</p>
+		{{/if}}
+
+		{{#if shipClass.freeComponents.length}}
+			<p>
+				<b>
+					{{localize "DARKSPACE.apps.ship-generator.free_components"}}:
+				</b>
+				{{#each shipClass.freeComponents as |value key|}}
+					{{value.name}}{{#unless @last}}, {{/unless}}
+				{{/each}}
+			</p>
+		{{/if}}
+
+		{{#if baseSystems.length}}
+			<p>
+				<b>
+					{{localize "DARKSPACE.apps.ship-generator.base_systems"}}:
+				</b>
+				{{#each baseSystems as |value key|}}
+					{{value.name}}{{#unless @last}}, {{/unless}}
+				{{/each}}
+			</p>
+		{{/if}}
+
+		{{#each shipClass.talents as |value key|}}
+			<p>
+				<b>
+					{{value.name}}.
+				</b>
+				{{{value.formattedDescription}}}
+			</p>
+		{{/each}}
+	</div>
+
+</div>

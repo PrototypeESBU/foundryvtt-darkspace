@@ -60,6 +60,31 @@ body {
             background: black;
         }
 
+        // Character generator: the individual ability score labels and the
+        // create/update button default to Shadowdark's newspaper face; use the
+        // DarkSpace display font instead.
+        &.character-generator {
+            .stats label,
+            #create-bar button {
+                font-family: "Rocket-Rinder";
+                font-weight: normal;
+            }
+        }
+
+        // Ship generator: fewer boxes than the spacer generator, so its grid is
+        // a single column of them beside a full height details panel.
+        &.ship-generator {
+            .cg-grid {
+                grid-template-columns: 220px 1fr;
+                grid-template-rows: 40px repeat(7, 70px);
+            }
+
+            .sg-details {
+                grid-column: 2;
+                grid-row: 2 / -1;
+            }
+        }
+
         // Archetype (Class) sheet: hide Shadowdark's spellcasting and alignment
         // fields and the Spells Known tab. Scoped to forms containing the
         // talents table select, which only exists on the Class sheet.

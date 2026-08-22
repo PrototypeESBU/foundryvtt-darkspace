@@ -115,19 +115,12 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
         context.levelUp = system.needsLevelUp;
 
         const items = this.actor.items;
-        const shipTypes = new Set([
-            "darkspace.ShipArmor",
-            "darkspace.ShipClass",
-            "darkspace.ShipComponent",
-            "darkspace.ShipRole",
-            "darkspace.Weapon",
-        ]);
 
         context.systems   = items.filter(i => i.type === "darkspace.ShipComponent" && i.system.type === "System");
         context.features  = items.filter(i => i.type === "darkspace.ShipComponent" && i.system.type === "Feature");
         context.armor     = items.filter(i => i.type === "darkspace.ShipArmor");
         context.weapons   = items.filter(i => i.type === "darkspace.Weapon");
-        context.cargo     = items.filter(i => !shipTypes.has(i.type));
+        context.cargo     = system.getCargoItems();
 
         Object.assign(context, await this.#prepareCrewContext());
 

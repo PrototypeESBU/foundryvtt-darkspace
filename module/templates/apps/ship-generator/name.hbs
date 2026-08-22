@@ -1,0 +1,17 @@
+{{!-- A ship has no name table to roll on, so the name is typed in --}}
+<div class="SD-box">
+	<div class="header">
+		<label>
+			{{localize 'SHADOWDARK.sheet.player.name.label'}}
+		</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<input
+			data-dtype="String"
+			name="actor.name"
+			type="text"
+			value="{{actor.name}}"
+		/>
+	</div>
+</div>

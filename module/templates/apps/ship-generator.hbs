@@ -1,0 +1,27 @@
+<form class="ship-generator" autocomplete="off">
+	<div class="cg-grid">
+
+		<h1 class="title grid-colspan-2">
+			{{localize "DARKSPACE.apps.ship-generator.title"}}
+			<a
+				class="fas fa-dice"
+				data-action="cg-click"
+				name="randomize-all"
+				title="{{localize 'SHADOWDARK.apps.character-generator.tooltip'}}"
+			></a>
+		</h1>
+
+		{{> darkspace/ship-generator/details}}
+		{{> darkspace/ship-generator/name}}
+		{{> darkspace/ship-generator/class}}
+		{{> apps/character-generator/stats}}
+		{{> darkspace/ship-generator/hit-points}}
+		{{> darkspace/ship-generator/budget}}
+	</div>
+
+	<div id="create-bar">
+		<button data-action="create-character" type="button">
+			{{localize "DARKSPACE.apps.ship-generator.create_ship"}}
+		</button>
+	</div>
+</form>

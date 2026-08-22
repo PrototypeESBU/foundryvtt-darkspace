@@ -63,6 +63,15 @@
         white-space: nowrap;
     }
 
+    .ds-cargo-total {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
     .ds-ac-cell {
         flex: 0 0 36px;
         text-align: center;
